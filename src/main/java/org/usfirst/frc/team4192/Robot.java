@@ -16,21 +16,27 @@ public class Robot extends IterativeRobot implements PIDOutput {
   private CANTalon flywheelLeft;
   private CANTalon flywheelRight;
   
+  CANTalon.FeedbackDeviceStatus driveLeftEncoderStatus;
+  boolean driveLeftEncoderExists;
+  
+  CANTalon.FeedbackDeviceStatus driveRightEncoderStatus;
+  boolean driveRightEncoderExists;
+  
   private RobotDrive drive;
   private Joystick joystick;
-  private AHRS ahrs; // the NavX board, I'm calling it AHRS because thats what all the examples call it.
+  private AHRS ahrs;          // the NavX board, I'm calling it AHRS because thats what all the examples call it.
   
-  private double gyroKp;
+  private double gyroKp;      // Gyroscope PID constants
   private double gyroKi;
   private double gyroKd;
   private double gyroTolerance = 2.0f;
   
   
-  private double driveKp;
+  private double driveKp;     // Drive PID constants
   private double driveKi;
   private double drivekd;
   
-  private double flywheelKp;
+  private double flywheelKp;  // Drive PID constants
   private double flywheelKi;
   private double flywheelKd;
   private double flywheelKf;
@@ -40,6 +46,8 @@ public class Robot extends IterativeRobot implements PIDOutput {
   
   private Timer autonTimer;
   
+  private boolean gyroexists = false;
+  
   // updates all the flywheel pid constants to what they are on the dashboard
   private void updateFlywheelConstants() {
     flywheelKp = Double.parseDouble(SmartDashboard.getData("flywheelP").toString());
@@ -48,21 +56,54 @@ public class Robot extends IterativeRobot implements PIDOutput {
     flywheelKf = Double.parseDouble(SmartDashboard.getData("flywheelF").toString());
   }
   
-  // updates all the pid constants for driving, gyroscope, and flywheel from dashboard.
-  private void updatePIDConstants() {
-    gyroKp = Double.parseDouble(SmartDashboard.getData("gyroP").toString());
-    gyroKi = Double.parseDouble(SmartDashboard.getData("gyroI").toString());
-    gyroKd = Double.parseDouble(SmartDashboard.getData("gyroD").toString());
-    
+  private void updateDriveConstants() {
     driveKp = Double.parseDouble(SmartDashboard.getData("driveP").toString());
     driveKi = Double.parseDouble(SmartDashboard.getData("driveI").toString());
     drivekd = Double.parseDouble(SmartDashboard.getData("driveD").toString());
-    
+  }
+  
+  private void updateGyroConstants() {
+    gyroKp = Double.parseDouble(SmartDashboard.getData("gyroP").toString());
+    gyroKi = Double.parseDouble(SmartDashboard.getData("gyroI").toString());
+    gyroKd = Double.parseDouble(SmartDashboard.getData("gyroD").toString());
+  }
+  
+  // updates all the pid constants for driving, gyroscope, and flywheel from dashboard.
+  private void updatePIDConstants() {
+    updateDriveConstants();
+    updateGyroConstants();
     updateFlywheelConstants();
   }
   
+  private void readyDriveTalonsForAuton() {
+    frontLeft.changeControlMode(CANTalon.TalonControlMode.Position);
+    frontRight.changeControlMode(CANTalon.TalonControlMode.Position);
+    frontLeft.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
+    frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
+    
+    /* set the peak and nominal outputs, 12V means full */
+    frontLeft.configNominalOutputVoltage(+0.0f, -0.0f);
+    frontRight.configNominalOutputVoltage(+0.0f, -0.0f);
+    frontLeft.configPeakOutputVoltage(+12.0f, 0.0f);
+    frontRight.configPeakOutputVoltage(+12.0f, 0.0f);
+    
+    frontLeft.setAllowableClosedLoopErr(0);
+    frontRight.setAllowableClosedLoopErr(0);
+    
+    updateDriveConstants();
+    frontLeft.setPID(driveKp, driveKi, drivekd);
+    frontRight.setPID(driveKp, driveKi, drivekd);
+  }
+  
+  //TODO: math to turn inches into encoder ticks for easier programming
+  private void setDrivePosition(double distanceInInches) {
+    double distanceInTicks = distanceInInches*0;    //replace 0 with some calculated factor
+    frontLeft.setPosition(distanceInTicks);
+    frontRight.setPosition(distanceInTicks);
+  }
+  
   /**
-   * @param angle the angle you want to turn to, from -180 to 179
+   * @param angle the angle you want to turn to, from -180 to 180
    */
   private void rotateToAngle(double angle) {
     SmartDashboard.putNumber("targetHeading", angle);
@@ -116,19 +157,35 @@ public class Robot extends IterativeRobot implements PIDOutput {
     
     autonTimer = new Timer();
   
+    driveLeftEncoderStatus = frontLeft.isSensorPresent(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
+    driveLeftEncoderExists = CANTalon.FeedbackDeviceStatus.FeedbackStatusPresent == driveLeftEncoderStatus;
+    driveRightEncoderStatus = frontRight.isSensorPresent(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
+    driveRightEncoderExists = CANTalon.FeedbackDeviceStatus.FeedbackStatusPresent == driveRightEncoderStatus;
+  
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
-    } catch (RuntimeException ex ) {
+      gyroexists = true;
+      SmartDashboard.putBoolean("gyroPIDExists", true);
+    }
+    catch (RuntimeException ex ) {
       DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
+      gyroexists = false;
+      SmartDashboard.putBoolean("gyroPIDExists", false);
     }
     
     updatePIDConstants();
     
-    turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, this);
-    turnController.setInputRange(-180.0f, 180.0f);
-    turnController.setOutputRange(-1.0, 1.0);
-    turnController.setAbsoluteTolerance(gyroTolerance);
-    turnController.setContinuous(true);
+    if (gyroexists) {
+      turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, this);
+      turnController.setInputRange(-180.0f, 180.0f);
+      turnController.setOutputRange(-1.0, 1.0);
+      turnController.setAbsoluteTolerance(gyroTolerance);
+      turnController.setContinuous(true);
+      turnController.disable();
+    } else {
+      System.out.println("GYRO PID DOES NOT EXIST");
+      SmartDashboard.putBoolean("gyroPIDExists", false);
+    }
   }
   
   @Override
@@ -155,7 +212,6 @@ public class Robot extends IterativeRobot implements PIDOutput {
   
   @Override
   public void teleopPeriodic() {
-    
     drive.arcadeDrive(joystick.getY(), joystick.getX(), true);  // if the motors don't need to be inverted, add negatives to the axes.
     updateFlywheelConstants();
   }
