@@ -46,7 +46,7 @@ public class Robot extends IterativeRobot implements PIDOutput {
   
   private Timer autonTimer;
   
-  private boolean gyroexists = false;
+  private boolean gyroExists = false;
   
   // updates all the flywheel pid constants to what they are on the dashboard
   private void updateFlywheelConstants() {
@@ -164,18 +164,18 @@ public class Robot extends IterativeRobot implements PIDOutput {
   
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
-      gyroexists = true;
+      gyroExists = true;
       SmartDashboard.putBoolean("gyroPIDExists", true);
     }
     catch (RuntimeException ex ) {
       DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
-      gyroexists = false;
+      gyroExists = false;
       SmartDashboard.putBoolean("gyroPIDExists", false);
     }
     
     updatePIDConstants();
     
-    if (gyroexists) {
+    if (gyroExists) {
       turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, this);
       turnController.setInputRange(-180.0f, 180.0f);
       turnController.setOutputRange(-1.0, 1.0);
