@@ -46,6 +46,7 @@ public class Robot extends IterativeRobot implements PIDOutput {
   private Timer autonTimer;
   
   private boolean gyroExists = false;
+  private gyroPID gyroPID;
   
   // updates all the flywheel pid constants to what they are on the dashboard
   private void updateFlywheelConstants() {
@@ -55,19 +56,21 @@ public class Robot extends IterativeRobot implements PIDOutput {
     flywheelKf = Double.parseDouble(SmartDashboard.getData("flywheelF").toString());
   }
   
+  // updates all the drive pid constants to what they are on the dashboard
   private void updateDriveConstants() {
     driveKp = Double.parseDouble(SmartDashboard.getData("driveP").toString());
     driveKi = Double.parseDouble(SmartDashboard.getData("driveI").toString());
     drivekd = Double.parseDouble(SmartDashboard.getData("driveD").toString());
   }
   
+  // updates all the gyro pid constants to what they are on the dashboard
   private void updateGyroConstants() {
     gyroKp = Double.parseDouble(SmartDashboard.getData("gyroP").toString());
     gyroKi = Double.parseDouble(SmartDashboard.getData("gyroI").toString());
     gyroKd = Double.parseDouble(SmartDashboard.getData("gyroD").toString());
   }
   
-  // updates all the pid constants for driving, gyroscope, and flywheel from dashboard.
+  // calls the three constants update functions
   private void updatePIDConstants() {
     updateDriveConstants();
     updateGyroConstants();
@@ -166,6 +169,7 @@ public class Robot extends IterativeRobot implements PIDOutput {
       gyroExists = true;
       SmartDashboard.putBoolean("gyroPIDExists", true);
     }
+    // if gyro doesnt initialize correctly, report it and set gyroexists to false. this is so that the robot doesnt crash because of an exception
     catch (RuntimeException ex ) {
       DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
       gyroExists = false;
@@ -175,7 +179,8 @@ public class Robot extends IterativeRobot implements PIDOutput {
     updatePIDConstants();
     
     if (gyroExists) {
-      turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, this);
+      gyroPID = new gyroPID(frontLeft, frontRight);
+      turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, gyroPID);
       turnController.setInputRange(-180.0f, 180.0f);
       turnController.setOutputRange(-1.0, 1.0);
       turnController.setAbsoluteTolerance(gyroTolerance);
