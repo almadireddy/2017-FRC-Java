@@ -42,7 +42,6 @@ public class Robot extends IterativeRobot {
   
   private Timer autonTimer;
   
-
   // updates all the drive pid constants to what they are on the dashboard
   private void updateDriveConstants() {
     driveKp = Double.parseDouble(SmartDashboard.getData("driveP").toString());
@@ -98,7 +97,6 @@ public class Robot extends IterativeRobot {
   
   private void setFlywheelTargetRPM() {
     flywheelLeft.setSetpoint(flywheelTargetRPM);
-    flywheelRight.setSetpoint(flywheelTargetRPM);
   }
   
   private void setFlywheelConstants() {
@@ -106,10 +104,6 @@ public class Robot extends IterativeRobot {
     flywheelLeft.setI(flywheelKi);
     flywheelLeft.setD(flywheelKd);
     flywheelLeft.setF(flywheelKf);
-    flywheelRight.setP(flywheelKp);
-    flywheelRight.setI(flywheelKi);
-    flywheelRight.setD(flywheelKd);
-    flywheelRight.setF(flywheelKf);
   }
   
   // updates all the flywheel pid constants to what they are on the dashboard
@@ -158,19 +152,17 @@ public class Robot extends IterativeRobot {
     frontRight.setInverted(true);
   
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
+    rearLeft.set(frontLeft.getDeviceID());                            // point slaves to their master device id's
     rearRight.changeControlMode(CANTalon.TalonControlMode.Follower);
-    rearLeft.set(0);                                                  // point slaves to their master device id's
-    rearRight.set(1);
+    rearRight.set(frontRight.getDeviceID());
     
     flywheelLeft.changeControlMode(CANTalon.TalonControlMode.Speed);
-    flywheelRight.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheelLeft.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
-    flywheelRight.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
     
+    flywheelRight.changeControlMode(CANTalon.TalonControlMode.Follower);
+    flywheelRight.set(flywheelLeft.getDeviceID());
     flywheelLeft.setProfile(0);
-    flywheelRight.setProfile(0);
-    
-    flywheelRight.setInverted(true); // needs to be inverted so pid can take positive value but spins counter-clockwise (outwards)
+    flywheelRight.setInverted(true); // needs to be inverted so it spins counter-clockwise (outwards) when left side spins clockwise
     
     drive = new RobotDrive(frontLeft, frontRight);
     drive.setExpiration(0.1);
@@ -215,7 +207,6 @@ public class Robot extends IterativeRobot {
         updateFlywheelTargetRPM();
         updateFlywheelConstants();
         flywheelLeft.setSetpoint(flywheelTargetRPM);
-        flywheelRight.setSetpoint(flywheelTargetRPM);
       }
     });
     flywheelControlThread.start();
@@ -263,4 +254,3 @@ public class Robot extends IterativeRobot {
     drive.arcadeDrive(joystick.getY(), joystick.getX(), true);  // if the motors don't need to be inverted, add negatives to the axes.
   }
 }
-

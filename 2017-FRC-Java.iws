@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.iws" afterPath="$PROJECT_DIR$/2017-FRC-Java.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
     </list>
@@ -83,8 +82,8 @@
       <file leaf-file-name="gyroPID.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="351">
+              <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#gyroPID#0" expanded="false" />
@@ -96,25 +95,16 @@
       <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+            <state relative-caret-position="405">
+              <caret line="140" column="2" lean-forward="true" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Robot#0" expanded="false" />
-                <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-                <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-                <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
-                <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
-                <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-                <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-                <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-                <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
-                <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
-                <element signature="e#9244#9245#0" expanded="true" />
-                <element signature="e#9278#9279#0" expanded="true" />
-                <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
-                <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
-                <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
+                <element signature="e#3629#3630#0" expanded="true" />
+                <element signature="e#3682#3683#0" expanded="true" />
+                <element signature="e#8960#8961#0" expanded="true" />
+                <element signature="e#8994#8995#0" expanded="true" />
+                <element signature="e#9284#9285#0" expanded="true" />
+                <element signature="e#9321#9322#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -617,16 +607,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2017-FRC-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="2017-FRC-Java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -698,21 +678,21 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="462" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="459" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="461" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="458" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="462" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="458" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="461" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="458" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="239" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="246" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="244" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="318" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="316" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1043" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1036" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://X:/Projects/FIRST/2017-FRC-Java/libs/navx_frc.jar!/com/kauailabs/navx/frc/AHRS.class" />
   </component>
@@ -1123,7 +1103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1485138346384</updated>
       <workItem from="1485138347499" duration="2793000" />
-      <workItem from="1485316823349" duration="5713000" />
+      <workItem from="1485316823349" duration="6453000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -1160,11 +1140,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485318632283</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added missing functions to update flywheel PID. Added a thread for flywheel PID updates. Added a thread for dashboard updates. Added ready Talons for teleop function, in addition to the ready talons for Auton functions that was already there.">
+      <created>1485322743652</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1485322743652</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8506000" />
+    <option name="totallyTimeSpent" value="9246000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1187,7 +1174,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19501625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19501625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1705757" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1212,7 +1199,8 @@
     <MESSAGE value="added project files to gitignore" />
     <MESSAGE value="gyroPID is now a PIDOutput subclass that takes two motors as parameters, and will set them to the opposite outputs, to achieve turning. Needs to be tested to ensure positive error means turning in positive direction." />
     <MESSAGE value="not much" />
-    <option name="LAST_COMMIT_MESSAGE" value="not much" />
+    <MESSAGE value="Added missing functions to update flywheel PID. Added a thread for flywheel PID updates. Added a thread for dashboard updates. Added ready Talons for teleop function, in addition to the ready talons for Auton functions that was already there." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added missing functions to update flywheel PID. Added a thread for flywheel PID updates. Added a thread for dashboard updates. Added ready Talons for teleop function, in addition to the ready talons for Auton functions that was already there." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1240,21 +1228,12 @@
           <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
-            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
-            <element signature="e#9244#9245#0" expanded="true" />
-            <element signature="e#9278#9279#0" expanded="true" />
-            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
-            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
-            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3682#3683#0" expanded="true" />
+            <element signature="e#8960#8961#0" expanded="true" />
+            <element signature="e#8994#8995#0" expanded="true" />
+            <element signature="e#9284#9285#0" expanded="true" />
+            <element signature="e#9321#9322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1273,21 +1252,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
-            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
-            <element signature="e#9244#9245#0" expanded="true" />
-            <element signature="e#9278#9279#0" expanded="true" />
-            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
-            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
-            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3682#3683#0" expanded="true" />
+            <element signature="e#8960#8961#0" expanded="true" />
+            <element signature="e#8994#8995#0" expanded="true" />
+            <element signature="e#9284#9285#0" expanded="true" />
+            <element signature="e#9321#9322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1306,21 +1276,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
-            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
-            <element signature="e#9244#9245#0" expanded="true" />
-            <element signature="e#9278#9279#0" expanded="true" />
-            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
-            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
-            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3682#3683#0" expanded="true" />
+            <element signature="e#8960#8961#0" expanded="true" />
+            <element signature="e#8994#8995#0" expanded="true" />
+            <element signature="e#9284#9285#0" expanded="true" />
+            <element signature="e#9321#9322#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1381,17 +1342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#gyroPID#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/libs/navx_frc.jar!/com/kauailabs/navx/frc/AHRS.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6447">
@@ -1445,27 +1395,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+        <state relative-caret-position="351">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
-            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
-            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
-            <element signature="e#9244#9245#0" expanded="true" />
-            <element signature="e#9278#9279#0" expanded="true" />
-            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
-            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
-            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="docComment;class#gyroPID#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="140" column="2" lean-forward="true" selection-start-line="140" selection-start-column="2" selection-end-line="140" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3629#3630#0" expanded="true" />
+            <element signature="e#3682#3683#0" expanded="true" />
+            <element signature="e#8960#8961#0" expanded="true" />
+            <element signature="e#8994#8995#0" expanded="true" />
+            <element signature="e#9284#9285#0" expanded="true" />
+            <element signature="e#9321#9322#0" expanded="true" />
           </folding>
         </state>
       </provider>
