@@ -4,6 +4,7 @@
     <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.iws" afterPath="$PROJECT_DIR$/2017-FRC-Java.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -82,37 +83,39 @@
       <file leaf-file-name="gyroPID.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="434">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#gyroPID#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="581">
+              <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+                <element signature="docComment;class#Robot#0" expanded="false" />
                 <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
                 <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-                <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+                <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
+                <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
+                <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+                <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+                <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+                <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
+                <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
+                <element signature="e#9244#9245#0" expanded="true" />
+                <element signature="e#9278#9279#0" expanded="true" />
+                <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
+                <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
+                <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -125,6 +128,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pidget</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -555,8 +563,8 @@
         <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/thirdparty.frc.ctre/Toolsuite-Java/4.4.1.8/4b42c2e4f0c5f4a525b7c868e614cb2ba1b49a43/Toolsuite-Java-4.4.1.8.jar!/com/ctre/CANTalon.class" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPIDOutput.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
       </list>
     </option>
   </component>
@@ -706,6 +714,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1043" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;jar://X:/Projects/FIRST/2017-FRC-Java/libs/navx_frc.jar!/com/kauailabs/navx/frc/AHRS.class" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -1114,7 +1123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1485138346384</updated>
       <workItem from="1485138347499" duration="2793000" />
-      <workItem from="1485316823349" duration="1792000" />
+      <workItem from="1485316823349" duration="5713000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -1144,11 +1153,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485318570309</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="not much">
+      <created>1485318632283</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1485318632283</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4585000" />
+    <option name="totallyTimeSpent" value="8506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1193,15 +1209,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="not much" />
     <MESSAGE value="added project files to gitignore" />
     <MESSAGE value="gyroPID is now a PIDOutput subclass that takes two motors as parameters, and will set them to the opposite outputs, to achieve turning. Needs to be tested to ensure positive error means turning in positive direction." />
-    <option name="LAST_COMMIT_MESSAGE" value="gyroPID is now a PIDOutput subclass that takes two motors as parameters, and will set them to the opposite outputs, to achieve turning. Needs to be tested to ensure positive error means turning in positive direction." />
+    <MESSAGE value="not much" />
+    <option name="LAST_COMMIT_MESSAGE" value="not much" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1224,10 +1240,21 @@
           <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
+            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
+            <element signature="e#9244#9245#0" expanded="true" />
+            <element signature="e#9278#9279#0" expanded="true" />
+            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
+            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1246,10 +1273,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
+            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
+            <element signature="e#9244#9245#0" expanded="true" />
+            <element signature="e#9278#9279#0" expanded="true" />
+            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
+            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1268,10 +1306,21 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
+            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
+            <element signature="e#9244#9245#0" expanded="true" />
+            <element signature="e#9278#9279#0" expanded="true" />
+            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
+            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1281,20 +1330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="130" column="9" lean-forward="false" selection-start-line="130" selection-start-column="9" selection-end-line="130" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/libs/navx_frc.jar!/com/kauailabs/navx/frc/AHRS.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/thirdparty.frc.ctre/Toolsuite-Java/4.4.1.8/4b42c2e4f0c5f4a525b7c868e614cb2ba1b49a43/Toolsuite-Java-4.4.1.8.jar!/com/ctre/CANTalon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1322,29 +1357,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/PIDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1356,25 +1373,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/gyroPID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#gyroPID#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/navx_frc.jar!/com/kauailabs/navx/frc/AHRS.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6447">
+          <caret line="378" column="22" lean-forward="false" selection-start-line="378" selection-start-column="16" selection-end-line="378" selection-end-column="22" />
+          <folding>
+            <element signature="e#6036#6037#0" expanded="true" />
+            <element signature="e#6073#6074#0" expanded="true" />
+            <element signature="e#11673#11674#0" expanded="true" />
+            <element signature="e#11770#11771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/PIDSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Runnable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="695" column="29" lean-forward="false" selection-start-line="695" selection-start-column="29" selection-end-line="695" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/thirdparty.frc.ctre/Toolsuite-Java/4.4.1.8/4b42c2e4f0c5f4a525b7c868e614cb2ba1b49a43/Toolsuite-Java-4.4.1.8.jar!/com/ctre/CANTalon.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="599" column="14" lean-forward="false" selection-start-line="599" selection-start-column="14" selection-end-line="599" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/PIDController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1787">
+          <caret line="204" column="9" lean-forward="false" selection-start-line="204" selection-start-column="9" selection-end-line="204" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="266" column="0" lean-forward="true" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForAuton#0;class#Robot#0" expanded="false" />
+            <element signature="method#readyDriveTalonsForTeleop#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveTarget#0;class#Robot#0" expanded="false" />
+            <element signature="method#rotateToAngle#0;class#Robot#0" expanded="false" />
+            <element signature="e#9244#9245#0" expanded="true" />
+            <element signature="e#9278#9279#0" expanded="true" />
+            <element signature="method#autonomousInit#0;class#Robot#0" expanded="false" />
+            <element signature="method#autonomousPeriodic#0;class#Robot#0" expanded="false" />
+            <element signature="method#teleopPeriodic#0;class#Robot#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
