@@ -204,9 +204,8 @@ public class Robot extends IterativeRobot {
     // function will not get hung up and flywheel will continue at the last set RPM and constants.
     Thread flywheelControlThread = new Thread(() -> {
       while (!Thread.interrupted()) {
-        updateFlywheelTargetRPM();
         updateFlywheelConstants();
-        flywheelLeft.setSetpoint(flywheelTargetRPM);
+        updateFlywheelTargetRPM();
       }
     });
     flywheelControlThread.start();
