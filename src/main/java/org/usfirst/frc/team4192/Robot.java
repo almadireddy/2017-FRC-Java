@@ -31,7 +31,6 @@ public class Robot extends IterativeRobot implements PIDOutput {
   private double gyroKd;
   private double gyroTolerance = 2.0f;
   
-  
   private double driveKp;     // Drive PID constants
   private double driveKi;
   private double drivekd;
