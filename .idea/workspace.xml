@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="493f2cec-4c10-4a51-847f-e88d7bb1820c" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="verification" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="other" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="gradlerio" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="documentation" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="build setup" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="2017-FRC-Java" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="build" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="253" column="2" lean-forward="true" selection-start-line="253" selection-start-column="2" selection-end-line="253" selection-end-column="2" />
+              <folding>
+                <element signature="docComment;class#Robot#0" expanded="false" />
+                <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+                <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+                <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gradlew" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="C:\Users\szydlikr\.gradle\wrapper\dists\gradle-3.2.1-all\8lz77g2tsnl6gxlpeowwkfgj1\gradle-3.2.1" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3.2.1" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="2017-FRC-Java" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="2017-FRC-Java" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project '2017-FRC-Java'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project '2017-FRC-Java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Restart User Code running on the RoboRIO" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="restart_rio_code" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Cleans all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project '2017-FRC-Java'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project '2017-FRC-Java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deploy Java Code to the RoboRIO" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="deploy" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse classpath file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project '2017-FRC-Java'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project '2017-FRC-Java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Resolve Dependencies from Maven" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="resolveNativeDeps" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project '2017-FRC-Java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Determine the active address for the RoboRIO" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="determine_rio_address" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project '2017-FRC-Java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse JDT settings file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse project file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project '2017-FRC-Java'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1486168161660" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/gradle.plugin.jaci.openrio.gradle/GradleRIO/2017.1.0/42ce09415b45982f4524a444611bfcd23087f1ef/GradleRIO-2017.1.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hidetake/groovy-ssh/2.7.0/8ab5ff7debb45f254cd304af5f966d805154bc16/groovy-ssh-2.7.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.7/c5371aaa20bcdca1175d9477fc0811f4fd99b68a/groovy-all-2.4.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.7/2b8019b6249bb05d81d3a3094e468753e2b21311/slf4j-api-1.7.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch/0.1.53/658b682d5c817b27ae795637dfec047c63d29935/jsch-0.1.53.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.connector-factory/0.0.7/780e0312287dd4e4f3601d401a073a081e403f2d/jsch.agentproxy.connector-factory-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.jsch/0.0.7/ff3a71caf45efeb00980f93f0c39a9750640e8d8/jsch.agentproxy.jsch-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.core/0.0.7/9bcf818dc9e5247b01b1b18671a12caac293ae40/jsch.agentproxy.core-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.usocket-jna/0.0.7/98cf51ca8d7882c203729ffa48e9b7be4c50b835/jsch.agentproxy.usocket-jna-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.usocket-nc/0.0.7/aff6f0f3a68f9731580d7c48075fdf177532dfe6/jsch.agentproxy.usocket-nc-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.sshagent/0.0.7/5c09a3d2a0562de53cf616794f43f51a3c0a496c/jsch.agentproxy.sshagent-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jsch.agentproxy.pageant/0.0.7/b40c0d9b10d79a0683ca93e3f70360b3d8045b62/jsch.agentproxy.pageant-0.0.7.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/3.4.0/803ff252fedbd395baffd43b37341dc4a150a554/jna-3.4.0.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/platform/3.4.0/e3f70017be8100d3d6923f50b3d2ee17714e9c13/platform-3.4.0.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="2017-FRC-Java" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/announce" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/antlr" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/base-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/base-services-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/build-comparison" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/build-init" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/cli" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/code-quality" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/composite-builds" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/dependency-management" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/diagnostics" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/ear" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/ide" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/ide-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/ide-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/installation-beacon" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/internal-android-performance-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/internal-integ-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/internal-performance-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/internal-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/ivy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/jacoco" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/javascript" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/jetty" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/jvm-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/language-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/language-java" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/language-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/language-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/language-scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/launcher" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/logging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/maven" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/messaging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/model-core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/model-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/open-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/osgi" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/platform-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/platform-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/platform-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/platform-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/plugin-development" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/plugin-use" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/plugins" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/process-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/publish" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/reporting" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/resources" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/resources-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/resources-s3" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/resources-sftp" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/signing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/task-cache-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/test-kit" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/testing-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/testing-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/testing-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/tooling-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/tooling-api-builders" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/ui" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/src/wrapper" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/ant-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/ant-launcher-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-base-services-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-base-services-groovy-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-cli-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-core-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-docs-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-installation-beacon-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-jvm-services-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-launcher-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-logging-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-messaging-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-model-core-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-model-groovy-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-native-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-open-api-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-process-services-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-resources-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-script-kotlin-0.4.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-tooling-api-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-ui-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/gradle-wrapper-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/groovy-all-2.4.7.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-announce-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-antlr-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-build-comparison-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-build-init-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-code-quality-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-composite-builds-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-dependency-management-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-diagnostics-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-ear-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-ide-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-ide-native-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-ide-play-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-ivy-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-jacoco-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-javascript-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-jetty-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-language-groovy-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-language-java-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-language-jvm-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-language-native-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-language-scala-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-maven-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-osgi-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-platform-base-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-platform-jvm-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-platform-native-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-platform-play-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-plugin-development-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-plugin-use-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-plugins-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-publish-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-reporting-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-resources-http-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-resources-s3-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-resources-sftp-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-scala-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-signing-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-task-cache-http-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-test-kit-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-testing-base-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-testing-jvm-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-testing-native-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/gradle-tooling-api-builders-3.2.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.2.1-all/8lz77g2tsnl6gxlpeowwkfgj1/gradle-3.2.1/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017-FRC-Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017-FRC-Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017-FRC-Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017-FRC-Java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="team4192" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager" selected="Gradle.2017-FRC-Java [deploy]">
+    <configuration default="false" name="2017-FRC-Java [deploy]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="deploy" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="2017-FRC-Java [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="2017-FRC-Java [restart_rio_code]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="restart_rio_code" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="2017-FRC-Java [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="2017-FRC-Java [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="2017-FRC-Java" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [deploy]" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [jar]" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [restart_rio_code]" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [clean]" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [build]" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [build]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [clean]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [restart_rio_code]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [jar]" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.2017-FRC-Java [deploy]" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="493f2cec-4c10-4a51-847f-e88d7bb1820c" name="Default" comment="" />
+      <created>1486168183705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1486168183705</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="2017-FRC-Java_[check] - 2017.02.06 at 17h 17m 29s.xml">
+      <configuration name="2017-FRC-Java [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="NetConsole" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3386924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17110874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/Robot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9170#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Robot.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/navx_frc.jar!/com/kauailabs/navx/frc/AHRS.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="253" column="2" lean-forward="true" selection-start-line="253" selection-start-column="2" selection-end-line="253" selection-end-column="2" />
+          <folding>
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

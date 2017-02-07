@@ -78,7 +78,7 @@ public class Robot extends IterativeRobot {
     frontLeft.setAllowableClosedLoopErr(0);
     frontRight.setAllowableClosedLoopErr(0);
     
-    updateDriveConstants();
+    //updateDriveConstants();
     frontLeft.setPID(driveKp, driveKi, drivekd);
     frontRight.setPID(driveKp, driveKi, drivekd);
   }
@@ -141,20 +141,22 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(0);                // make CAN Talon SRX objects
-    frontRight = new CANTalon(1);
-    rearLeft = new CANTalon(2);
-    rearRight = new CANTalon(3);
-    flywheelLeft = new CANTalon(4);
-    flywheelRight = new CANTalon(5);
+    frontLeft = new CANTalon(1);                // make CAN Talon SRX objects
+    frontRight = new CANTalon(2);
+
+    rearLeft = new CANTalon(3);
+    rearRight = new CANTalon(4);
+
+    flywheelLeft = new CANTalon(5);
+    flywheelRight = new CANTalon(6);
     
     frontLeft.setInverted(true);   // These might not need to be inverted.
     frontRight.setInverted(true);
   
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
-    rearLeft.set(frontLeft.getDeviceID());                            // point slaves to their master device id's
+    rearLeft.set(1);                            // point slaves to their master device id's
     rearRight.changeControlMode(CANTalon.TalonControlMode.Follower);
-    rearRight.set(frontRight.getDeviceID());
+    rearRight.set(2);
     
     flywheelLeft.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheelLeft.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
@@ -174,6 +176,7 @@ public class Robot extends IterativeRobot {
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
       gyroExists = true;
+      DriverStation.reportError("instantiated navX MXP:  ", false);
       SmartDashboard.putBoolean("gyroPIDExists", true);
     }
     // if gyro doesnt initialize correctly, report it and set gyroexists to false. this is so that the robot doesnt crash because of an exception
@@ -182,7 +185,7 @@ public class Robot extends IterativeRobot {
       gyroExists = false;
       SmartDashboard.putBoolean("gyroPIDExists", false);
     }
-    
+    /*
     if (gyroExists) {
       gyroPID = new gyroPID(frontLeft, frontRight);
       turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, gyroPID);
@@ -195,7 +198,7 @@ public class Robot extends IterativeRobot {
       System.out.println("GYRO PID DOES NOT EXIST");
       SmartDashboard.putBoolean("gyroPIDExists", false);
     }
-  
+
     updatePIDConstants();
     updateFlywheelTargetRPM();
     
@@ -221,7 +224,7 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
       }
     });
-    dashboardUpdateThread.start();
+    dashboardUpdateThread.start();*/
   }
   
   @Override
@@ -245,11 +248,13 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void teleopInit() {
+    ahrs.reset();       // reset the gyro board
     readyDriveTalonsForTeleop();
   }
   
   @Override
   public void teleopPeriodic() {
+    SmartDashboard.putNumber("Gyro", ahrs.getAngle());
     drive.arcadeDrive(joystick.getY(), joystick.getX(), true);  // if the motors don't need to be inverted, add negatives to the axes.
   }
 }
