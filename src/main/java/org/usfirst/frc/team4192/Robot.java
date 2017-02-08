@@ -152,6 +152,9 @@ public class Robot extends IterativeRobot {
     
     frontLeft.setInverted(true);   // These might not need to be inverted.
     frontRight.setInverted(true);
+
+    frontLeft.setVoltageRampRate(12);
+    frontRight.setVoltageRampRate(12);
   
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
     rearLeft.set(1);                            // point slaves to their master device id's
@@ -185,10 +188,10 @@ public class Robot extends IterativeRobot {
       gyroExists = false;
       SmartDashboard.putBoolean("gyroPIDExists", false);
     }
-    /*
+
     if (gyroExists) {
       gyroPID = new gyroPID(frontLeft, frontRight);
-      turnController = new PIDController(gyroKp, gyroKi, gyroKd, ahrs, gyroPID);
+      turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPID);
       turnController.setInputRange(-180.0f, 180.0f);
       turnController.setOutputRange(-1.0, 1.0);
       turnController.setAbsoluteTolerance(gyroTolerance);
@@ -199,6 +202,7 @@ public class Robot extends IterativeRobot {
       SmartDashboard.putBoolean("gyroPIDExists", false);
     }
 
+    /*
     updatePIDConstants();
     updateFlywheelTargetRPM();
     
@@ -235,7 +239,6 @@ public class Robot extends IterativeRobot {
   @Override
   public void autonomousInit() {
     ahrs.reset();       // reset the gyro board
-    readyDriveTalonsForAuton();
     
     autonTimer.reset();
     autonTimer.start();
@@ -243,18 +246,18 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void autonomousPeriodic() {
-    
   }
   
   @Override
   public void teleopInit() {
     ahrs.reset();       // reset the gyro board
     readyDriveTalonsForTeleop();
+    turnController.disable();
   }
   
   @Override
   public void teleopPeriodic() {
-    SmartDashboard.putNumber("Gyro", ahrs.getAngle());
+    SmartDashboard.putString("DB/String 0", ""+frontLeft.get());
     drive.arcadeDrive(joystick.getY(), joystick.getX(), true);  // if the motors don't need to be inverted, add negatives to the axes.
   }
 }

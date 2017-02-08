@@ -17,6 +17,6 @@ public class gyroPID implements PIDOutput {
   @Override
   public void pidWrite(double output) {
     left.set(output);
-    right.set(-output);
+    right.set(output);
   }
 }
