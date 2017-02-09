@@ -152,9 +152,9 @@ public class Robot extends IterativeRobot {
     
     frontLeft.setInverted(true);   // These might not need to be inverted.
     frontRight.setInverted(true);
-
-    frontLeft.setVoltageRampRate(12);
-    frontRight.setVoltageRampRate(12);
+//
+//    frontLeft.setVoltageRampRate(12);
+//    frontRight.setVoltageRampRate(12);
   
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
     rearLeft.set(1);                            // point slaves to their master device id's
@@ -257,7 +257,6 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void teleopPeriodic() {
-    SmartDashboard.putString("DB/String 0", ""+frontLeft.get());
     drive.arcadeDrive(joystick.getY(), joystick.getX(), true);  // if the motors don't need to be inverted, add negatives to the axes.
   }
 }
