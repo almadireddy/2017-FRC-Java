@@ -33,6 +33,6 @@ public class turn extends Command {
   
   @Override
   public boolean isFinished() {
-    return false;
+    return Robot.gyroOnTarget();
   }
 }

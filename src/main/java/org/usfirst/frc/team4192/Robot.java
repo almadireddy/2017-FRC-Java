@@ -134,6 +134,10 @@ public class Robot extends IterativeRobot {
   public static boolean driveOnTarget() {
     return (frontLeft.getClosedLoopError() < drivePIDThreshold) && (frontRight.getClosedLoopError() < drivePIDThreshold);
   }
+
+  public static boolean gyroOnTarget() {
+    return turnController.onTarget();
+  }
     
   @Override
   public void robotInit() {
