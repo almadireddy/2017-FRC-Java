@@ -9,8 +9,8 @@ import org.usfirst.frc.team4192.Robot;
 public class driveOn extends Command {
   double driveTarget;
   
-  public driveOn(double inches) {
-    driveTarget = inches / (6 * Math.PI); // driveTarget needs to be in wheel revolutions before being set as target. We are using 6 inch wheels.
+  public driveOn(double inches) {   // 4096 units per revolution
+    driveTarget = inches * (4096/(6*Math.PI)); // Scale factor for native units to inches: 4096/6pi = ticks/inch
   }
   
   public void initialize() {

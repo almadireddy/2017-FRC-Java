@@ -192,7 +192,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/2017-FRC-Java.iml" filepath="$PROJECT_DIR$/.idea/modules/2017-FRC-Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/2017-FRC-Java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/2017-FRC-Java_main.iml" group="2017-FRC-Java" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/2017-FRC-Java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/2017-FRC-Java_test.iml" group="2017-FRC-Java" />
-      <module fileurl="file://$PROJECT_DIR$/TestBed/TestBed.iml" filepath="$PROJECT_DIR$/TestBed/TestBed.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8 (1)" project-jdk-type="JavaSDK">
