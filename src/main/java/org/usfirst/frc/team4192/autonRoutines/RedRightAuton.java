@@ -11,5 +11,7 @@ public class RedRightAuton extends CommandGroup {
   public RedRightAuton() {
     addSequential(new driveOn(120));
     addSequential(new turn(45));
+    addSequential(new driveOn(-24));
+    addSequential(new turn(-30));
   }
 }

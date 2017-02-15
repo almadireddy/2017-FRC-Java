@@ -8,9 +8,11 @@ import org.usfirst.frc.team4192.Robot;
  */
 public class driveOn extends Command {
   double driveTarget;
+  double targetCounter;
   
   public driveOn(double inches) {   // 4096 units per revolution
     driveTarget = inches * (4096/(6*Math.PI)); // Scale factor for native units to inches: 4096/6pi = ticks/inch
+    targetCounter = 0;
   }
   
   public void initialize() {
@@ -20,11 +22,14 @@ public class driveOn extends Command {
   public void execute() {
     Robot.frontLeft.set(driveTarget);
     Robot.frontRight.set(driveTarget);
+    if (Robot.driveOnTarget())
+      targetCounter++;
   }
   
   public void end() {
     Robot.frontLeft.disable();
     Robot.frontRight.disable();
+    Robot.switchDriveMotorsToDefaultControl();
   }
   
   public void interrupted() {
@@ -33,6 +38,6 @@ public class driveOn extends Command {
   
   @Override
   protected boolean isFinished() {
-    return Robot.driveOnTarget();
+    return Robot.driveOnTarget() && targetCounter >= 100;
   }
 }

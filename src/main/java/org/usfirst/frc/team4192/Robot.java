@@ -16,13 +16,16 @@ public class Robot extends IterativeRobot {
   public static CANTalon frontRight;
   private static CANTalon rearLeft;
   private static CANTalon rearRight;
-  public static CANTalon flywheelLeft;
-  public static CANTalon flywheelRight;
+  public static CANTalon flywheel;
+  public static CANTalon lift;
+  public static CANTalon intake;
+  public static CANTalon agitator;
+  
   private static int drivePIDThreshold = 10;
   
   private RobotDrive drive;
   private Joystick joystick;
-  private AHRS ahrs;          // the NavX board, I'm calling it AHRS because thats what all the examples call it.
+  private AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
   
   private static double gyroKp;      // Gyroscope PID constants
   private static double gyroKi;
@@ -53,22 +56,41 @@ public class Robot extends IterativeRobot {
   private BlueRightAuton blueRightAuton;
   /// End Autonomous Stuff ///
   
+  
+  private static void setDriveConstants() {
+    frontLeft.setPID(driveKp, driveKi, drivekd);
+    frontRight.setPID(driveKp, driveKi, drivekd);
+  }
+  
+  private static void setGyroConstants() {
+    turnController.setPID(gyroKp, gyroKi, gyroKd);
+  }
+  
+  private static void setFlywheelConstants() {
+    flywheel.setP(flywheelKp);
+    flywheel.setI(flywheelKi);
+    flywheel.setD(flywheelKd);
+    flywheel.setF(flywheelKf);
+  }
+    
   // updates all the drive pid constants to what they are on the dashboard
-  private static void updateDriveConstants() {
+  public static void updateDriveConstants() {
     driveKp = Double.parseDouble(SmartDashboard.getData("driveP").toString());
     driveKi = Double.parseDouble(SmartDashboard.getData("driveI").toString());
     drivekd = Double.parseDouble(SmartDashboard.getData("driveD").toString());
+    setDriveConstants();
   }
   
   // updates all the gyro pid constants to what they are on the dashboard
-  private static void updateGyroConstants() {
+  public static void updateGyroConstants() {
     gyroKp = Double.parseDouble(SmartDashboard.getData("gyroP").toString());
     gyroKi = Double.parseDouble(SmartDashboard.getData("gyroI").toString());
     gyroKd = Double.parseDouble(SmartDashboard.getData("gyroD").toString());
+    setGyroConstants();
   }
   
   // updates all the flywheel pid constants to what they are on the dashboard
-  private static void updateFlywheelConstants() {
+  public static void updateFlywheelConstants() {
     flywheelKp = Double.parseDouble(SmartDashboard.getData("flywheelP").toString());
     flywheelKi = Double.parseDouble(SmartDashboard.getData("flywheelI").toString());
     flywheelKd = Double.parseDouble(SmartDashboard.getData("flywheelD").toString());
@@ -77,53 +99,40 @@ public class Robot extends IterativeRobot {
   }
   
   // calls the three constants update functions
-  private static void updatePIDConstants() {
+  public static void updatePIDConstants() {
     updateDriveConstants();
     updateGyroConstants();
     updateFlywheelConstants();
   }
   
-  private void setFlywheelTargetRPM() {
-    flywheelLeft.setSetpoint(flywheelTargetRPM);
+  public void setFlywheelTargetRPM() {
+    flywheel.setSetpoint(flywheelTargetRPM);
   }
   
-  private void updateFlywheelTargetRPM() {
+  public static void updateFlywheelTargetRPM() {
     flywheelTargetRPM = Double.parseDouble(SmartDashboard.getData("targetRPMControl").toString());
     setFlywheelTargetRPM();
-  }
-  
-  private static void setFlywheelConstants() {
-    flywheelLeft.setP(flywheelKp);
-    flywheelLeft.setI(flywheelKi);
-    flywheelLeft.setD(flywheelKd);
-    flywheelLeft.setF(flywheelKf);
   }
   
   public static void switchDriveMotorsToPositionControl() {
     frontLeft.changeControlMode(CANTalon.TalonControlMode.Position);
     frontRight.changeControlMode(CANTalon.TalonControlMode.Position);
-    frontLeft.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
-    frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     
     /* set the peak and nominal outputs, 12V means full */
     frontLeft.configNominalOutputVoltage(+0.0f, -0.0f);
     frontRight.configNominalOutputVoltage(+0.0f, -0.0f);
-    frontLeft.configPeakOutputVoltage(+12.0f, 0.0f);
-    frontRight.configPeakOutputVoltage(+12.0f, 0.0f);
+    frontLeft.configPeakOutputVoltage(+12.0f, -12.0f);
+    frontRight.configPeakOutputVoltage(+12.0f, -12.0f);
     
     frontLeft.setAllowableClosedLoopErr(drivePIDThreshold);
     frontRight.setAllowableClosedLoopErr(drivePIDThreshold);
     
     updateDriveConstants();
-    frontLeft.setPID(driveKp, driveKi, drivekd);
-    frontRight.setPID(driveKp, driveKi, drivekd);
   }
   
   public static void switchDriveMotorsToDefaultControl() {
     frontLeft.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     frontRight.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-    frontLeft.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
-    frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     
     frontLeft.configNominalOutputVoltage(+0.0f, -0.0f);
     frontRight.configNominalOutputVoltage(+0.0f, -0.0f);
@@ -138,7 +147,7 @@ public class Robot extends IterativeRobot {
   public static boolean gyroOnTarget() {
     return turnController.onTarget();
   }
-    
+  
   @Override
   public void robotInit() {
     frontLeft = new CANTalon(1);                // make CAN Talon SRX objects
@@ -147,8 +156,10 @@ public class Robot extends IterativeRobot {
     rearLeft = new CANTalon(3);
     rearRight = new CANTalon(4);
 
-    flywheelLeft = new CANTalon(5);
-    flywheelRight = new CANTalon(6);
+    flywheel = new CANTalon(5);
+    lift = new CANTalon(6);
+    intake = new CANTalon(7);
+    agitator = new CANTalon(8);
     
     frontLeft.setInverted(true);   // These might not need to be inverted.
     frontRight.setInverted(true);
@@ -156,18 +167,17 @@ public class Robot extends IterativeRobot {
     frontLeft.setVoltageRampRate(12);
     frontRight.setVoltageRampRate(12);
   
+    frontLeft.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
+    frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
+  
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
     rearLeft.set(1);                                                  // point slaves to their master device id's
     rearRight.changeControlMode(CANTalon.TalonControlMode.Follower);
     rearRight.set(2);
     
-    flywheelLeft.changeControlMode(CANTalon.TalonControlMode.Speed);
-    flywheelLeft.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
-    
-    flywheelRight.changeControlMode(CANTalon.TalonControlMode.Follower);
-    flywheelRight.set(flywheelLeft.getDeviceID());
-    flywheelLeft.setProfile(0);
-    flywheelRight.setInverted(true); // needs to be inverted so it spins counter-clockwise (outwards) when left side spins clockwise
+    flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
+    flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
+    flywheel.setProfile(0);
     
     drive = new RobotDrive(frontLeft, frontRight);
     drive.setExpiration(0.1);
@@ -177,7 +187,7 @@ public class Robot extends IterativeRobot {
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
       gyroExists = true;
-      DriverStation.reportError("instantiated navX MXP:  ", false);
+      DriverStation.reportWarning("instantiated navX MXP:  ", false);
       SmartDashboard.putBoolean("gyroPIDExists", true);
     }
     // if gyro doesnt initialize correctly, report it and set gyroexists to false. this is so that the robot doesnt crash because of an exception
@@ -201,7 +211,6 @@ public class Robot extends IterativeRobot {
     }
 
     updatePIDConstants();
-    updateFlywheelTargetRPM();
     
     redLeftAuton = new RedLeftAuton();
     redMiddleAuton = new RedMiddleAuton();
@@ -220,15 +229,13 @@ public class Robot extends IterativeRobot {
       }
     });
     flywheelControlThread.start();
-
-
+    
     // Another thread that handles updating all the values on driverstation so that teleopPeriodic
     // doesn't get hung up in the case of slow network speeds.
     Thread dashboardUpdateThread = new Thread(() -> {
       while (!Thread.interrupted()) {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
-        SmartDashboard.putNumber("leftActualRPM", flywheelLeft.getEncVelocity());
-        SmartDashboard.putNumber("rightActualRPM", flywheelRight.getEncVelocity());
+        SmartDashboard.putNumber("leftActualRPM", flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
       }
     });
@@ -279,8 +286,11 @@ public class Robot extends IterativeRobot {
   @Override
   public void teleopInit() {
     ahrs.reset();       // reset the gyro board
+    if (turnController.isEnabled())
+      turnController.disable();
+    
     switchDriveMotorsToDefaultControl();
-    turnController.disable();
+    Scheduler.getInstance().removeAll();
   }
   
   @Override

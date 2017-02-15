@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.ipr" afterPath="$PROJECT_DIR$/2017-FRC-Java.ipr" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/shoot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.iws" afterPath="$PROJECT_DIR$/2017-FRC-Java.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -70,24 +72,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1755">
-              <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+            <state relative-caret-position="377">
+              <caret line="99" column="2" lean-forward="true" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Robot#0" expanded="false" />
+                <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
                 <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
                 <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-                <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
                 <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
                 <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-                <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
                 <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
                 <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
                 <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-                <element signature="e#5422#5423#0" expanded="true" />
-                <element signature="e#5464#5465#0" expanded="true" />
+                <element signature="e#5341#5342#0" expanded="true" />
+                <element signature="e#5383#5384#0" expanded="true" />
+                <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+                <element signature="e#9936#9937#0" expanded="true" />
+                <element signature="e#9975#9976#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shoot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/shoot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#shoot#0" expanded="false" />
+                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#903#904#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,8 +120,8 @@
       <file leaf-file-name="gyroPID.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/gyroPID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="567">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,46 +129,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="driveOn.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="driveOn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="112" lean-forward="false" selection-start-line="12" selection-start-column="112" selection-end-line="12" selection-end-column="112" />
+            <state relative-caret-position="162">
+              <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#944#945#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedRightAuton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="turn.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/turn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlueLeftAuton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueLeftAuton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -152,9 +146,11 @@
       <file leaf-file-name="RedMiddleAuton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="81">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#RedMiddleAuton#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,10 +158,11 @@
       <file leaf-file-name="RedLeftAuton.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#RedLeftAuton#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -176,7 +173,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="docComment;class#BlueRightAuton#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -186,7 +185,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="docComment;class#BlueMiddleAuton#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -646,7 +647,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/redMiddleAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/redRightAuton.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/blueRightAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueRightAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/blueMiddleAuton.java" />
@@ -654,8 +654,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/blueLeftAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueLeftAuton.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/startFlywheel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/shoot.java" />
       </list>
     </option>
   </component>
@@ -683,9 +686,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
-  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -701,6 +701,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -790,8 +792,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -837,118 +837,6 @@
       <recent name="C:\Users\szydlikr\Documents\GitHub\2017-FRC-Java\TestBed\src" />
       <recent name="C:\Users\szydlikr\Documents\GitHub\2017-FRC-Java" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/turn.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
@@ -1370,7 +1258,9 @@
       <workItem from="1485839167053" duration="426000" />
       <workItem from="1486236049679" duration="596000" />
       <workItem from="1486610087848" duration="7292000" />
-      <workItem from="1486703784926" duration="1062000" />
+      <workItem from="1486703784926" duration="1272000" />
+      <workItem from="1486859914296" duration="1679000" />
+      <workItem from="1487126234219" duration="6353000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -1421,11 +1311,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486622786576</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Calculated scale factor to convert native units to inches.">
+      <created>1486704877559</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1486704877559</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21147000" />
+    <option name="totallyTimeSpent" value="29389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1445,7 +1342,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18176973" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1475,12 +1372,13 @@
     <MESSAGE value="not much" />
     <MESSAGE value="Added missing functions to update flywheel PID. Added a thread for flywheel PID updates. Added a thread for dashboard updates. Added ready Talons for teleop function, in addition to the ready talons for Auton functions that was already there." />
     <MESSAGE value="Added a way to use Commands and Scheduler to run them during Autonomous. It probably won't work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a way to use Commands and Scheduler to run them during Autonomous. It probably won't work." />
+    <MESSAGE value="Calculated scale factor to convert native units to inches." />
+    <option name="LAST_COMMIT_MESSAGE" value="Calculated scale factor to convert native units to inches." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1489,78 +1387,26 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <marker date="1486609342318" expanded="true" signature="120:191" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
-            <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
-            <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <marker date="1486609342318" expanded="true" signature="120:191" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitattributes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4644">
           <caret line="172" column="2" lean-forward="true" selection-start-line="172" selection-start-column="2" selection-end-line="172" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
             <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+            <element signature="e#9936#9937#0" expanded="true" />
+            <element signature="e#9975#9976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1601,17 +1447,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
             <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+            <element signature="e#9936#9937#0" expanded="true" />
+            <element signature="e#9975#9976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1632,17 +1481,20 @@
           <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
             <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+            <element signature="e#9936#9937#0" expanded="true" />
+            <element signature="e#9975#9976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1663,17 +1515,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
             <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+            <element signature="e#9936#9937#0" expanded="true" />
+            <element signature="e#9975#9976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1694,17 +1549,20 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
             <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
             <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+            <element signature="e#9936#9937#0" expanded="true" />
+            <element signature="e#9975#9976#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1752,13 +1610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5">
@@ -1789,13 +1640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="286" column="29" lean-forward="false" selection-start-line="286" selection-start-column="29" selection-end-line="286" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1831,7 +1675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1843,20 +1686,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/PIDController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="75" column="17" lean-forward="true" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+          <folding>
+            <element signature="e#20880#20881#0" expanded="false" />
+            <element signature="e#20919#20920#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="32" column="2" lean-forward="true" selection-start-line="32" selection-start-column="2" selection-end-line="32" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RedLeftAuton#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1865,65 +1738,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/PIDController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-197">
-          <caret line="75" column="18" lean-forward="false" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
           <folding>
-            <element signature="e#20880#20881#0" expanded="false" />
-            <element signature="e#20919#20920#0" expanded="false" />
+            <element signature="docComment;class#BlueRightAuton#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/thirdparty.frc.ctre/Toolsuite-Java/4.4.1.8/4b42c2e4f0c5f4a525b7c868e614cb2ba1b49a43/Toolsuite-Java-4.4.1.8.jar!/com/ctre/CANTalon.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5371">
-          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/gyroPID.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1755">
-          <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
-            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
-            <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
-            <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
-            <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
-            <element signature="e#5422#5423#0" expanded="true" />
-            <element signature="e#5464#5465#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1931,26 +1748,143 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#BlueMiddleAuton#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#RedMiddleAuton#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/command/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/turn.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="864">
+          <caret line="55" column="17" lean-forward="false" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/gyroPID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/command/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="112" lean-forward="false" selection-start-line="12" selection-start-column="112" selection-end-line="12" selection-end-column="112" />
+        <state relative-caret-position="306">
+          <caret line="292" column="17" lean-forward="false" selection-start-line="292" selection-start-column="17" selection-end-line="292" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/buttons/JoystickButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/startFlywheel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="97" column="16" lean-forward="false" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+          <folding>
+            <element signature="e#3425#3426#0" expanded="false" />
+            <element signature="e#3455#3456#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/thirdparty.frc.ctre/Toolsuite-Java/4.4.1.8/4b42c2e4f0c5f4a525b7c868e614cb2ba1b49a43/Toolsuite-Java-4.4.1.8.jar!/com/ctre/CANTalon.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="214" column="14" lean-forward="false" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
+          <folding>
+            <element signature="e#7292#7293#0" expanded="true" />
+            <element signature="e#7320#7321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/shoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="docComment;class#shoot#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="99" column="2" lean-forward="true" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Robot#0" expanded="false" />
+            <element signature="method#setDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+            <element signature="method#switchDriveMotorsToPositionControl#0;class#Robot#0" expanded="false" />
+            <element signature="method#switchDriveMotorsToDefaultControl#0;class#Robot#0" expanded="false" />
+            <element signature="method#driveOnTarget#0;class#Robot#0" expanded="false" />
+            <element signature="e#5341#5342#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="method#robotInit#0;class#Robot#0" expanded="false" />
+            <element signature="e#9936#9937#0" expanded="true" />
+            <element signature="e#9975#9976#0" expanded="true" />
           </folding>
         </state>
       </provider>
