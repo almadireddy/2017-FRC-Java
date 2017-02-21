@@ -11,5 +11,13 @@ public class BlueLeftAuton extends CommandGroup {
   public BlueLeftAuton() {
     addSequential(new driveOn(120));
     addSequential(new turn(45));
+    addSequential(new driveOn(34));
+    addSequential(new turn(75));
+    addSequential(new driveOn(456));
+
+
+
+
+
   }
 }
