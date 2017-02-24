@@ -14,8 +14,6 @@ import org.usfirst.frc.team4192.utilities.gyroPID;
 public class Robot extends IterativeRobot {
   public static CANTalon frontLeft;
   public static CANTalon frontRight;
-  private static CANTalon rearLeft;
-  private static CANTalon rearRight;
   public static CANTalon flywheel;
   public static CANTalon lift;
   public static CANTalon intake;
@@ -105,7 +103,7 @@ public class Robot extends IterativeRobot {
     updateFlywheelConstants();
   }
   
-  public void setFlywheelTargetRPM() {
+  public static void setFlywheelTargetRPM() {
     flywheel.setSetpoint(flywheelTargetRPM);
   }
   
@@ -152,9 +150,9 @@ public class Robot extends IterativeRobot {
   public void robotInit() {
     frontLeft = new CANTalon(1);                // make CAN Talon SRX objects
     frontRight = new CANTalon(2);
-
-    rearLeft = new CANTalon(3);
-    rearRight = new CANTalon(4);
+  
+    CANTalon rearLeft = new CANTalon(3);
+    CANTalon rearRight = new CANTalon(4);
 
     flywheel = new CANTalon(5);
     lift = new CANTalon(6);
