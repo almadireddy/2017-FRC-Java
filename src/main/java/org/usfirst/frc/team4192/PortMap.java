@@ -17,4 +17,6 @@ public class PortMap {
   public static int agitator    = 0;
   public static int lift        = 0;
   
+  public static int joystick    = 0;
+  
 }

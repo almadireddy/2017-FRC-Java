@@ -148,16 +148,16 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(1);                // make CAN Talon SRX objects
-    frontRight = new CANTalon(2);
+    frontLeft = new CANTalon(PortMap.frontLeft);                // make CAN Talon SRX objects
+    frontRight = new CANTalon(PortMap.frontRight);
   
-    CANTalon rearLeft = new CANTalon(3);
-    CANTalon rearRight = new CANTalon(4);
+    CANTalon rearLeft = new CANTalon(PortMap.rearLeft);
+    CANTalon rearRight = new CANTalon(PortMap.rearRight);
 
-    flywheel = new CANTalon(5);
-    lift = new CANTalon(6);
-    intake = new CANTalon(7);
-    agitator = new CANTalon(8);
+    flywheel = new CANTalon(PortMap.flywheel);
+    lift = new CANTalon(PortMap.lift);
+    intake = new CANTalon(PortMap.intake);
+    agitator = new CANTalon(PortMap.agitator);
     
     frontLeft.setInverted(true);   // These might not need to be inverted.
     frontRight.setInverted(true);
@@ -169,9 +169,9 @@ public class Robot extends IterativeRobot {
     frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
   
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
-    rearLeft.set(1);                                                  // point slaves to their master device id's
+    rearLeft.set(PortMap.frontLeft);                                                  // point slaves to their master device id's
     rearRight.changeControlMode(CANTalon.TalonControlMode.Follower);
-    rearRight.set(2);
+    rearRight.set(PortMap.rearRight);
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
@@ -180,7 +180,7 @@ public class Robot extends IterativeRobot {
     drive = new RobotDrive(frontLeft, frontRight);
     drive.setExpiration(0.1);
     
-    joystick = new Joystick(0);
+    joystick = new Joystick(PortMap.joystick);
     
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
