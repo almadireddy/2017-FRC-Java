@@ -73,26 +73,26 @@ public class Robot extends IterativeRobot {
     
   // updates all the drive pid constants to what they are on the dashboard
   public static void updateDriveConstants() {
-    driveKp = Double.parseDouble(SmartDashboard.getData("driveP").toString());
-    driveKi = Double.parseDouble(SmartDashboard.getData("driveI").toString());
-    drivekd = Double.parseDouble(SmartDashboard.getData("driveD").toString());
+    driveKp = SmartDashboard.getNumber("driveP", 0.0);
+    driveKi = SmartDashboard.getNumber("driveI", 0.0);
+    drivekd = SmartDashboard.getNumber("driveD", 0.0);
     setDriveConstants();
   }
   
   // updates all the gyro pid constants to what they are on the dashboard
   public static void updateGyroConstants() {
-    gyroKp = Double.parseDouble(SmartDashboard.getData("gyroP").toString());
-    gyroKi = Double.parseDouble(SmartDashboard.getData("gyroI").toString());
-    gyroKd = Double.parseDouble(SmartDashboard.getData("gyroD").toString());
+    gyroKp = SmartDashboard.getNumber("gyroP", 0.0);
+    gyroKi = SmartDashboard.getNumber("gyroI", 0.0);
+    gyroKd = SmartDashboard.getNumber("gyroD", 0.0);
     setGyroConstants();
   }
   
   // updates all the flywheel pid constants to what they are on the dashboard
   public static void updateFlywheelConstants() {
-    flywheelKp = Double.parseDouble(SmartDashboard.getData("flywheelP").toString());
-    flywheelKi = Double.parseDouble(SmartDashboard.getData("flywheelI").toString());
-    flywheelKd = Double.parseDouble(SmartDashboard.getData("flywheelD").toString());
-    flywheelKf = Double.parseDouble(SmartDashboard.getData("flywheelF").toString());
+    flywheelKp = SmartDashboard.getNumber("flywheelP", 0.0);
+    flywheelKi = SmartDashboard.getNumber("flywheelI", 0.0);
+    flywheelKd = SmartDashboard.getNumber("flywheelD", 0.0);
+    flywheelKf = SmartDashboard.getNumber("flywheelF", 0.0);
     setFlywheelConstants();
   }
   
@@ -108,7 +108,7 @@ public class Robot extends IterativeRobot {
   }
   
   public static void updateFlywheelTargetRPM() {
-    flywheelTargetRPM = Double.parseDouble(SmartDashboard.getData("targetRPMControl").toString());
+    flywheelTargetRPM = SmartDashboard.getNumber("targetRPMControl", 0.0);
     setFlywheelTargetRPM();
   }
   

@@ -5,12 +5,12 @@ import edu.wpi.first.wpilibj.Joystick;
 /**
  * Created by Al on 2/23/2017.
  */
-public class joystickHandler {
+public class JaggernautJoystick {
   boolean[] buttons;
   boolean[] lastButtons;
   Joystick joystick;
   
-  public joystickHandler(Joystick stick) {
+  public JaggernautJoystick(Joystick stick) {
     joystick = stick;
     updateValues();
   }

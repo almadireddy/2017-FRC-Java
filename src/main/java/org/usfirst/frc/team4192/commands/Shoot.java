@@ -7,11 +7,11 @@ import org.usfirst.frc.team4192.Robot;
 /**
  * Created by Al on 2/14/2017.
  */
-public class shoot extends Command {
+public class Shoot extends Command {
   private int time;
   private Timer timer;
   
-  public shoot(int timeInSeconds) {
+  public Shoot(int timeInSeconds) {
     time = timeInSeconds;
   }
   
