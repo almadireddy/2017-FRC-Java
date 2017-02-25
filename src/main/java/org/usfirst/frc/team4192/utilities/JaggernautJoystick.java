@@ -43,7 +43,19 @@ public class JaggernautJoystick {
     return createDeadzone(joystick.getX());
   }
   
-  public double getyYaxis() {
+  public double getYaxis() {
     return createDeadzone(joystick.getY());
+  }
+  
+  public boolean isHeldDown(int index) {
+    return buttons[index] && lastButtons[index];
+  }
+  
+  public boolean buttonPressed(int index) {
+    return buttons[index] && !lastButtons[index];
+  }
+  
+  public boolean buttonReleased(int index) {
+    return !buttons[index] && lastButtons[index];
   }
 }
