@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
-import org.usfirst.frc.team4192.utilities.gyroPID;
+import org.usfirst.frc.team4192.utilities.GyroPID;
 
 /**
  * Created by Al on 1/22/2017.
@@ -42,7 +42,7 @@ public class Robot extends IterativeRobot {
   
   public static PIDController turnController;
   private boolean gyroExists = false;
-  private gyroPID gyroPID;
+  private GyroPID gyroPID;
     
   /// Start Autonomous Stuff ///
   private RedLeftAuton redLeftAuton;
@@ -196,7 +196,7 @@ public class Robot extends IterativeRobot {
     }
 
     if (gyroExists) {
-      gyroPID = new gyroPID(frontLeft, frontRight);
+      gyroPID = new GyroPID(frontLeft, frontRight);
       turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPID);
       turnController.setInputRange(-180.0f, 180.0f);
       turnController.setOutputRange(-1.0, 1.0);
@@ -288,7 +288,6 @@ public class Robot extends IterativeRobot {
       turnController.disable();
     
     switchDriveMotorsToDefaultControl();
-    Scheduler.getInstance().removeAll();
   }
   
   @Override

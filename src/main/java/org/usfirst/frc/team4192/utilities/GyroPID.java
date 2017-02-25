@@ -6,10 +6,10 @@ import edu.wpi.first.wpilibj.PIDOutput;
 /**
  * Created by Al on 1/24/2017.
  */
-public class gyroPID implements PIDOutput {
+public class GyroPID implements PIDOutput {
   private CANTalon left, right;
 
-  public gyroPID(CANTalon leftSide, CANTalon rightSide) {
+  public GyroPID(CANTalon leftSide, CANTalon rightSide) {
     left = leftSide;
     right = rightSide;
   }
