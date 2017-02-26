@@ -6,7 +6,8 @@ import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
-import org.usfirst.frc.team4192.utilities.GyroPID;
+import org.usfirst.frc.team4192.utilities.JaggernautGyroDrive;
+import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 
 /**
  * Created by Al on 1/22/2017.
@@ -21,10 +22,11 @@ public class Robot extends IterativeRobot {
   public static CANTalon intake;
   public static CANTalon agitator;
   
+  public JankoDrive jankoDrive;
+  
   private static int drivePIDThreshold = 10;
   
-  private RobotDrive drive;
-  private Joystick joystick;
+  private JaggernautJoystick joystick;
   private AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
   
   private static double gyroKp;      // Gyroscope PID constants
@@ -44,7 +46,7 @@ public class Robot extends IterativeRobot {
   
   public static PIDController turnController;
   private boolean gyroExists = false;
-  private GyroPID gyroPID;
+  private JaggernautGyroDrive jaggernautGyroDrive;
     
   /// Start Autonomous Stuff ///
   private RedLeftAuton redLeftAuton;
@@ -113,32 +115,6 @@ public class Robot extends IterativeRobot {
     flywheelTargetRPM = SmartDashboard.getNumber("targetRPMControl", 0.0);
     setFlywheelTargetRPM();
   }
-  
-  public static void switchDriveMotorsToPositionControl() {
-    frontLeft.changeControlMode(CANTalon.TalonControlMode.Position);
-    frontRight.changeControlMode(CANTalon.TalonControlMode.Position);
-    
-    /* set the peak and nominal outputs, 12V means full */
-    frontLeft.configNominalOutputVoltage(+0.0f, -0.0f);
-    frontRight.configNominalOutputVoltage(+0.0f, -0.0f);
-    frontLeft.configPeakOutputVoltage(+12.0f, -12.0f);
-    frontRight.configPeakOutputVoltage(+12.0f, -12.0f);
-    
-    frontLeft.setAllowableClosedLoopErr(drivePIDThreshold);
-    frontRight.setAllowableClosedLoopErr(drivePIDThreshold);
-    
-    updateDriveConstants();
-  }
-  
-  public static void switchDriveMotorsToDefaultControl() {
-    frontLeft.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-    frontRight.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-    
-    frontLeft.configNominalOutputVoltage(+0.0f, -0.0f);
-    frontRight.configNominalOutputVoltage(+0.0f, -0.0f);
-    frontLeft.configPeakOutputVoltage(+12.0f, -12.0f);
-    frontRight.configPeakOutputVoltage(+12.0f, -12.0f);
-  }
     
   public static boolean driveOnTarget() {
     return (frontLeft.getClosedLoopError() < drivePIDThreshold) && (frontRight.getClosedLoopError() < drivePIDThreshold);
@@ -148,58 +124,45 @@ public class Robot extends IterativeRobot {
     return turnController.onTarget();
   }
   
+  private void zeroSensors() {
+    ahrs.reset();
+  }
+  
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(PortMap.frontLeft);                // make CAN Talon SRX objects
+    frontLeft = new CANTalon(PortMap.frontLeft);
     frontRight = new CANTalon(PortMap.frontRight);
-  
     rearLeft  = new CANTalon(PortMap.rearLeft);
     rearRight = new CANTalon(PortMap.rearRight);
+    
+    jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
+    jankoDrive.setExpiration(0.1);
 
     flywheel = new CANTalon(PortMap.flywheel);
     lift = new CANTalon(PortMap.lift);
     intake = new CANTalon(PortMap.intake);
     agitator = new CANTalon(PortMap.agitator);
     
-    frontLeft.setInverted(true);
-    frontRight.setInverted(true);
-    
-    frontLeft.setVoltageRampRate(12);
-    frontRight.setVoltageRampRate(12);
-  
-    frontLeft.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
-    frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
-  
-    rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
-    rearLeft.set(PortMap.frontLeft);                                                  // point slaves to their master device id's
-    rearRight.changeControlMode(CANTalon.TalonControlMode.Follower);
-    rearRight.set(PortMap.rearRight);
-    
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
     flywheel.setProfile(0);
     
-    drive = new RobotDrive(frontLeft, frontRight);
-    drive.setExpiration(0.1);
-    
-    joystick = new Joystick(PortMap.joystick);
+    joystick = new JaggernautJoystick(PortMap.joystick);
     
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
       gyroExists = true;
       DriverStation.reportWarning("instantiated navX MXP:  ", false);
       SmartDashboard.putBoolean("gyroPIDExists", true);
-    }
-    // if gyro doesnt initialize correctly, report it and set gyroexists to false. this is so that the robot doesnt crash because of an exception
-    catch (RuntimeException ex ) {
+    } catch (RuntimeException ex ) {
       DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
       gyroExists = false;
       SmartDashboard.putBoolean("gyroPIDExists", false);
     }
 
     if (gyroExists) {
-      gyroPID = new GyroPID(frontLeft, frontRight);
-      turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPID);
+      jaggernautGyroDrive = new JaggernautGyroDrive(frontLeft, frontRight);
+      turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
       turnController.setInputRange(-180.0f, 180.0f);
       turnController.setOutputRange(-1.0, 1.0);
       turnController.setAbsoluteTolerance(gyroTolerance);
@@ -219,9 +182,6 @@ public class Robot extends IterativeRobot {
     blueMiddleAuton = new BlueMiddleAuton();
     blueRightAuton = new BlueRightAuton();
 
-    // A new thread to continually update flywheel constants and target RPM from Driverstation.
-    // This way, if driverstation is slow to send a package, then the teleopPeriodic
-    // function will not get hung up and flywheel will continue at the last set RPM and constants.
     Thread flywheelControlThread = new Thread(() -> {
       while (!Thread.interrupted()) {
         updateFlywheelConstants();
@@ -230,8 +190,6 @@ public class Robot extends IterativeRobot {
     });
     flywheelControlThread.start();
     
-    // Another thread that handles updating all the values on driverstation so that teleopPeriodic
-    // doesn't get hung up in the case of slow network speeds.
     Thread dashboardUpdateThread = new Thread(() -> {
       while (!Thread.interrupted()) {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
@@ -249,7 +207,8 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void autonomousInit() {
-    ahrs.reset();       // reset the gyro board
+    zeroSensors();
+    jankoDrive.prepareForAuton();
     
     switch (SmartDashboard.getData("Selected Autonomous").toString()) {
       case "Red Left":
@@ -283,17 +242,41 @@ public class Robot extends IterativeRobot {
     Scheduler.getInstance().run();
   }
   
+  private void intakeControl() {
+    if (joystick.isHeldDown(6))
+      intake.set(1);
+    else if (joystick.isHeldDown(7))
+      intake.set(-1);
+    else
+      intake.set(0);
+  }
+  
+  private void flywheelControl() {
+    if (joystick.buttonPressed(PortMap.flywheelToggle)) {
+      if (flywheel.isEnabled())
+        flywheel.disable();
+      else {
+        flywheel.enable();
+        flywheel.set(flywheelTargetRPM);
+      }
+    }
+  }
+  
   @Override
   public void teleopInit() {
-    ahrs.reset();       // reset the gyro board
+    zeroSensors();
+    
     if (turnController.isEnabled())
       turnController.disable();
     
-    switchDriveMotorsToDefaultControl();
+    jankoDrive.prepareForTeleop();
   }
   
   @Override
   public void teleopPeriodic() {
-    drive.arcadeDrive(joystick.getY(), joystick.getX(), true);  // if the motors don't need to be inverted, add negatives to the axes.
+    jankoDrive.arcadeDrive(joystick.getYaxis(), joystick.getXaxis(), true);
+    joystick.update();
+    intakeControl();
+    flywheelControl();
   }
 }
