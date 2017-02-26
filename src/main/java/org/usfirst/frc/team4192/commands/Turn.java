@@ -6,10 +6,10 @@ import org.usfirst.frc.team4192.Robot;
 /**
  * Created by Al on 2/9/2017.
  */
-public class turn extends Command {
+public class Turn extends Command {
   double gyroTarget;
   
-  public turn(double degrees) {
+  public Turn(double degrees) {
     gyroTarget = degrees;
   }
   

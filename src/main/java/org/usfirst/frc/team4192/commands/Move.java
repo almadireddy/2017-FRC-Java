@@ -6,11 +6,11 @@ import org.usfirst.frc.team4192.Robot;
 /**
  * Created by Al on 2/8/2017.
  */
-public class driveOn extends Command {
+public class Move extends Command {
   double driveTarget;
   double targetCounter;
   
-  public driveOn(double inches) {   // 4096 units per revolution
+  public Move(double inches) {   // 4096 units per revolution
     driveTarget = inches * (4096/(6*Math.PI)); // Scale factor for native units to inches: 4096/6pi = ticks/inch
     targetCounter = 0;
   }

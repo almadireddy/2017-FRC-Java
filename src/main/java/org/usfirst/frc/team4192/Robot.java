@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
-import org.usfirst.frc.team4192.utilities.gyroPID;
+import org.usfirst.frc.team4192.utilities.GyroPID;
 
 /**
  * Created by Al on 1/22/2017.
@@ -14,8 +14,8 @@ import org.usfirst.frc.team4192.utilities.gyroPID;
 public class Robot extends IterativeRobot {
   public static CANTalon frontLeft;
   public static CANTalon frontRight;
-  private static CANTalon rearLeft;
-  private static CANTalon rearRight;
+  public static CANTalon rearLeft;
+  public static CANTalon rearRight;
   public static CANTalon flywheel;
   public static CANTalon lift;
   public static CANTalon intake;
@@ -44,7 +44,7 @@ public class Robot extends IterativeRobot {
   
   public static PIDController turnController;
   private boolean gyroExists = false;
-  private gyroPID gyroPID;
+  private GyroPID gyroPID;
     
   /// Start Autonomous Stuff ///
   private RedLeftAuton redLeftAuton;
@@ -75,26 +75,26 @@ public class Robot extends IterativeRobot {
     
   // updates all the drive pid constants to what they are on the dashboard
   public static void updateDriveConstants() {
-    driveKp = Double.parseDouble(SmartDashboard.getData("driveP").toString());
-    driveKi = Double.parseDouble(SmartDashboard.getData("driveI").toString());
-    drivekd = Double.parseDouble(SmartDashboard.getData("driveD").toString());
+    driveKp = SmartDashboard.getNumber("driveP", 0.0);
+    driveKi = SmartDashboard.getNumber("driveI", 0.0);
+    drivekd = SmartDashboard.getNumber("driveD", 0.0);
     setDriveConstants();
   }
   
   // updates all the gyro pid constants to what they are on the dashboard
   public static void updateGyroConstants() {
-    gyroKp = Double.parseDouble(SmartDashboard.getData("gyroP").toString());
-    gyroKi = Double.parseDouble(SmartDashboard.getData("gyroI").toString());
-    gyroKd = Double.parseDouble(SmartDashboard.getData("gyroD").toString());
+    gyroKp = SmartDashboard.getNumber("gyroP", 0.0);
+    gyroKi = SmartDashboard.getNumber("gyroI", 0.0);
+    gyroKd = SmartDashboard.getNumber("gyroD", 0.0);
     setGyroConstants();
   }
   
   // updates all the flywheel pid constants to what they are on the dashboard
   public static void updateFlywheelConstants() {
-    flywheelKp = Double.parseDouble(SmartDashboard.getData("flywheelP").toString());
-    flywheelKi = Double.parseDouble(SmartDashboard.getData("flywheelI").toString());
-    flywheelKd = Double.parseDouble(SmartDashboard.getData("flywheelD").toString());
-    flywheelKf = Double.parseDouble(SmartDashboard.getData("flywheelF").toString());
+    flywheelKp = SmartDashboard.getNumber("flywheelP", 0.0);
+    flywheelKi = SmartDashboard.getNumber("flywheelI", 0.0);
+    flywheelKd = SmartDashboard.getNumber("flywheelD", 0.0);
+    flywheelKf = SmartDashboard.getNumber("flywheelF", 0.0);
     setFlywheelConstants();
   }
   
@@ -105,12 +105,12 @@ public class Robot extends IterativeRobot {
     updateFlywheelConstants();
   }
   
-  public void setFlywheelTargetRPM() {
+  public static void setFlywheelTargetRPM() {
     flywheel.setSetpoint(flywheelTargetRPM);
   }
   
   public static void updateFlywheelTargetRPM() {
-    flywheelTargetRPM = Double.parseDouble(SmartDashboard.getData("targetRPMControl").toString());
+    flywheelTargetRPM = SmartDashboard.getNumber("targetRPMControl", 0.0);
     setFlywheelTargetRPM();
   }
   
@@ -150,18 +150,18 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(1);                // make CAN Talon SRX objects
-    frontRight = new CANTalon(2);
+    frontLeft = new CANTalon(PortMap.frontLeft);                // make CAN Talon SRX objects
+    frontRight = new CANTalon(PortMap.frontRight);
+  
+    rearLeft  = new CANTalon(PortMap.rearLeft);
+    rearRight = new CANTalon(PortMap.rearRight);
 
-    rearLeft = new CANTalon(3);
-    rearRight = new CANTalon(4);
-
-    flywheel = new CANTalon(5);
-    lift = new CANTalon(6);
-    intake = new CANTalon(7);
-    agitator = new CANTalon(8);
+    flywheel = new CANTalon(PortMap.flywheel);
+    lift = new CANTalon(PortMap.lift);
+    intake = new CANTalon(PortMap.intake);
+    agitator = new CANTalon(PortMap.agitator);
     
-    frontLeft.setInverted(true);   // These might not need to be inverted.
+    frontLeft.setInverted(true);
     frontRight.setInverted(true);
     
     frontLeft.setVoltageRampRate(12);
@@ -171,9 +171,9 @@ public class Robot extends IterativeRobot {
     frontRight.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
   
     rearLeft.changeControlMode(CANTalon.TalonControlMode.Follower);   // switch the rear motors to slaves
-    rearLeft.set(1);                                                  // point slaves to their master device id's
+    rearLeft.set(PortMap.frontLeft);                                                  // point slaves to their master device id's
     rearRight.changeControlMode(CANTalon.TalonControlMode.Follower);
-    rearRight.set(2);
+    rearRight.set(PortMap.rearRight);
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
@@ -182,7 +182,7 @@ public class Robot extends IterativeRobot {
     drive = new RobotDrive(frontLeft, frontRight);
     drive.setExpiration(0.1);
     
-    joystick = new Joystick(0);
+    joystick = new Joystick(PortMap.joystick);
     
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
@@ -198,7 +198,7 @@ public class Robot extends IterativeRobot {
     }
 
     if (gyroExists) {
-      gyroPID = new gyroPID(frontLeft, frontRight);
+      gyroPID = new GyroPID(frontLeft, frontRight);
       turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPID);
       turnController.setInputRange(-180.0f, 180.0f);
       turnController.setOutputRange(-1.0, 1.0);
@@ -290,7 +290,6 @@ public class Robot extends IterativeRobot {
       turnController.disable();
     
     switchDriveMotorsToDefaultControl();
-    Scheduler.getInstance().removeAll();
   }
   
   @Override
