@@ -14,6 +14,8 @@ import org.usfirst.frc.team4192.utilities.GyroPID;
 public class Robot extends IterativeRobot {
   public static CANTalon frontLeft;
   public static CANTalon frontRight;
+  public static CANTalon rearLeft;
+  public static CANTalon rearRight;
   public static CANTalon flywheel;
   public static CANTalon lift;
   public static CANTalon intake;
@@ -151,15 +153,15 @@ public class Robot extends IterativeRobot {
     frontLeft = new CANTalon(PortMap.frontLeft);                // make CAN Talon SRX objects
     frontRight = new CANTalon(PortMap.frontRight);
   
-    CANTalon rearLeft = new CANTalon(PortMap.rearLeft);
-    CANTalon rearRight = new CANTalon(PortMap.rearRight);
+    rearLeft  = new CANTalon(PortMap.rearLeft);
+    rearRight = new CANTalon(PortMap.rearRight);
 
     flywheel = new CANTalon(PortMap.flywheel);
     lift = new CANTalon(PortMap.lift);
     intake = new CANTalon(PortMap.intake);
     agitator = new CANTalon(PortMap.agitator);
     
-    frontLeft.setInverted(true);   // These might not need to be inverted.
+    frontLeft.setInverted(true);
     frontRight.setInverted(true);
     
     frontLeft.setVoltageRampRate(12);

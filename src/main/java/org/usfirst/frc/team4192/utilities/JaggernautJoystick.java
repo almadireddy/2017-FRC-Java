@@ -29,7 +29,7 @@ public class JaggernautJoystick {
   }
   
   //
-  // Run update() once per loop.
+  // Run update() in the periodic function.
   //
   public void update() {
     updateValues();
@@ -51,7 +51,7 @@ public class JaggernautJoystick {
     return buttons[index] && lastButtons[index];
   }
   
-  public boolean buttonPressed(int index) {
+  public boolean buttonFirstPressed(int index) {
     return buttons[index] && !lastButtons[index];
   }
   
