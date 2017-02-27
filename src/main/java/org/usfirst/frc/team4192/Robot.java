@@ -91,7 +91,7 @@ public class Robot extends IterativeRobot {
     setGyroConstants();
   }
   
-  // updates all the flywheel pid constants to what they are on the dashboard
+  // updates all the flywheelID pid constants to what they are on the dashboard
   public static void updateFlywheelConstants() {
     flywheelKp = SmartDashboard.getNumber("flywheelP", 0.0);
     flywheelKi = SmartDashboard.getNumber("flywheelI", 0.0);
@@ -130,18 +130,18 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(PortMap.frontLeft);
-    frontRight = new CANTalon(PortMap.frontRight);
-    rearLeft  = new CANTalon(PortMap.rearLeft);
-    rearRight = new CANTalon(PortMap.rearRight);
+    frontLeft = new CANTalon(PortMap.frontLeftID);
+    frontRight = new CANTalon(PortMap.frontRightID);
+    rearLeft  = new CANTalon(PortMap.rearLeftID);
+    rearRight = new CANTalon(PortMap.rearRightID);
     
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
     jankoDrive.setExpiration(0.1);
 
-    flywheel = new CANTalon(PortMap.flywheel);
-    lift = new CANTalon(PortMap.lift);
-    intake = new CANTalon(PortMap.intake);
-    agitator = new CANTalon(PortMap.agitator);
+    flywheel = new CANTalon(PortMap.flywheelID);
+    lift = new CANTalon(PortMap.liftID);
+    intake = new CANTalon(PortMap.intakeID);
+    agitator = new CANTalon(PortMap.agitatorID);
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
