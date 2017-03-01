@@ -49,4 +49,9 @@ public class JankoDrive extends RobotDrive {
     leftMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
   }
+  
+  public void setPID(double p, double i, double d) {
+    leftMaster.setPID(p, i, d);
+    rightMaster.setPID(p, i, d);
+  }
 }

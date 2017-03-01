@@ -59,12 +59,11 @@ public class Robot extends IterativeRobot {
   /// End Autonomous Stuff ///
   
   
-  private static void setDriveConstants() {
-    frontLeft.setPID(driveKp, driveKi, drivekd);
-    frontRight.setPID(driveKp, driveKi, drivekd);
+  private void setDriveConstants() {
+    jankoDrive.setPID(drivekd, driveKi, drivekd);
   }
   
-  private static void setGyroConstants() {
+  private void setGyroConstants() {
     turnController.setPID(gyroKp, gyroKi, gyroKd);
   }
   
@@ -74,44 +73,44 @@ public class Robot extends IterativeRobot {
     flywheel.setD(flywheelKd);
     flywheel.setF(flywheelKf);
   }
-    
+  
   // updates all the drive pid constants to what they are on the dashboard
-  public static void updateDriveConstants() {
-    driveKp = SmartDashboard.getNumber("driveP", 0.0);
-    driveKi = SmartDashboard.getNumber("driveI", 0.0);
-    drivekd = SmartDashboard.getNumber("driveD", 0.0);
+  public void updateDriveConstants() {
+    driveKp = SmartDashboard.getNumber("driveP", JankoConstants.defaultDriveKp);
+    driveKi = SmartDashboard.getNumber("driveI", JankoConstants.defaultDriveKi);
+    drivekd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
     setDriveConstants();
   }
   
   // updates all the gyro pid constants to what they are on the dashboard
-  public static void updateGyroConstants() {
-    gyroKp = SmartDashboard.getNumber("gyroP", 0.0);
-    gyroKi = SmartDashboard.getNumber("gyroI", 0.0);
-    gyroKd = SmartDashboard.getNumber("gyroD", 0.0);
+  public void updateGyroConstants() {
+    gyroKp = SmartDashboard.getNumber("gyroP", JankoConstants.defaultGyroKp);
+    gyroKi = SmartDashboard.getNumber("gyroI", JankoConstants.defaultGyroKi);
+    gyroKd = SmartDashboard.getNumber("gyroD", JankoConstants.defaultGyroKd);
     setGyroConstants();
   }
   
   // updates all the flywheelID pid constants to what they are on the dashboard
   public static void updateFlywheelConstants() {
-    flywheelKp = SmartDashboard.getNumber("flywheelP", 0.0);
-    flywheelKi = SmartDashboard.getNumber("flywheelI", 0.0);
-    flywheelKd = SmartDashboard.getNumber("flywheelD", 0.0);
-    flywheelKf = SmartDashboard.getNumber("flywheelF", 0.0);
+    flywheelKp = SmartDashboard.getNumber("flywheelP", JankoConstants.defaultFlywheelKp);
+    flywheelKi = SmartDashboard.getNumber("flywheelI", JankoConstants.defaultFlywheelKi);
+    flywheelKd = SmartDashboard.getNumber("flywheelD", JankoConstants.defaultFlywheelKd);
+    flywheelKf = SmartDashboard.getNumber("flywheelF", JankoConstants.defaultFlywheelKf);
     setFlywheelConstants();
   }
   
   // calls the three constants update functions
-  public static void updatePIDConstants() {
+  private void updatePIDConstants() {
     updateDriveConstants();
     updateGyroConstants();
     updateFlywheelConstants();
   }
   
-  public static void setFlywheelTargetRPM() {
+  private void setFlywheelTargetRPM() {
     flywheel.setSetpoint(flywheelTargetRPM);
   }
   
-  public static void updateFlywheelTargetRPM() {
+  private void updateFlywheelTargetRPM() {
     flywheelTargetRPM = SmartDashboard.getNumber("targetRPMControl", 0.0);
     setFlywheelTargetRPM();
   }
@@ -130,24 +129,24 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(PortMap.frontLeftID);
-    frontRight = new CANTalon(PortMap.frontRightID);
-    rearLeft  = new CANTalon(PortMap.rearLeftID);
-    rearRight = new CANTalon(PortMap.rearRightID);
+    frontLeft = new CANTalon(JankoConstants.frontLeftID);
+    frontRight = new CANTalon(JankoConstants.frontRightID);
+    rearLeft  = new CANTalon(JankoConstants.rearLeftID);
+    rearRight = new CANTalon(JankoConstants.rearRightID);
     
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
     jankoDrive.setExpiration(0.1);
 
-    flywheel = new CANTalon(PortMap.flywheelID);
-    lift = new CANTalon(PortMap.liftID);
-    intake = new CANTalon(PortMap.intakeID);
-    agitator = new CANTalon(PortMap.agitatorID);
+    flywheel = new CANTalon(JankoConstants.flywheelID);
+    lift = new CANTalon(JankoConstants.liftID);
+    intake = new CANTalon(JankoConstants.intakeID);
+    agitator = new CANTalon(JankoConstants.agitatorID);
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
     flywheel.setProfile(0);
     
-    joystick = new JaggernautJoystick(PortMap.joystick);
+    joystick = new JaggernautJoystick(JankoConstants.joystick);
     
     try {
       ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
@@ -252,7 +251,7 @@ public class Robot extends IterativeRobot {
   }
   
   private void flywheelControl() {
-    if (joystick.buttonPressed(PortMap.flywheelToggle)) {
+    if (joystick.buttonPressed(JankoConstants.flywheelToggle)) {
       if (flywheel.isEnabled())
         flywheel.disable();
       else {
