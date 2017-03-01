@@ -22,7 +22,7 @@ public class Robot extends IterativeRobot {
   public static CANTalon intake;
   public static CANTalon agitator;
   
-  public JankoDrive jankoDrive;
+  private JankoDrive jankoDrive;
   
   private static int drivePIDThreshold = 10;
   
@@ -47,7 +47,7 @@ public class Robot extends IterativeRobot {
   public static PIDController turnController;
   private boolean gyroExists = false;
   private JaggernautGyroDrive jaggernautGyroDrive;
-    
+  
   /// Start Autonomous Stuff ///
   private RedLeftAuton redLeftAuton;
   private RedMiddleAuton redMiddleAuton;
@@ -59,6 +59,8 @@ public class Robot extends IterativeRobot {
   /// End Autonomous Stuff ///
   
   
+  ////// End Instance Variables //////
+  
   private void setDriveConstants() {
     jankoDrive.setPID(drivekd, driveKi, drivekd);
   }
@@ -67,7 +69,7 @@ public class Robot extends IterativeRobot {
     turnController.setPID(gyroKp, gyroKi, gyroKd);
   }
   
-  private static void setFlywheelConstants() {
+  private void setFlywheelConstants() {
     flywheel.setP(flywheelKp);
     flywheel.setI(flywheelKi);
     flywheel.setD(flywheelKd);
@@ -75,7 +77,7 @@ public class Robot extends IterativeRobot {
   }
   
   // updates all the drive pid constants to what they are on the dashboard
-  public void updateDriveConstants() {
+  private void updateDriveConstants() {
     driveKp = SmartDashboard.getNumber("driveP", JankoConstants.defaultDriveKp);
     driveKi = SmartDashboard.getNumber("driveI", JankoConstants.defaultDriveKi);
     drivekd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
@@ -83,7 +85,7 @@ public class Robot extends IterativeRobot {
   }
   
   // updates all the gyro pid constants to what they are on the dashboard
-  public void updateGyroConstants() {
+  private void updateGyroConstants() {
     gyroKp = SmartDashboard.getNumber("gyroP", JankoConstants.defaultGyroKp);
     gyroKi = SmartDashboard.getNumber("gyroI", JankoConstants.defaultGyroKi);
     gyroKd = SmartDashboard.getNumber("gyroD", JankoConstants.defaultGyroKd);
@@ -91,7 +93,7 @@ public class Robot extends IterativeRobot {
   }
   
   // updates all the flywheelID pid constants to what they are on the dashboard
-  public static void updateFlywheelConstants() {
+  public void updateFlywheelConstants() {
     flywheelKp = SmartDashboard.getNumber("flywheelP", JankoConstants.defaultFlywheelKp);
     flywheelKi = SmartDashboard.getNumber("flywheelI", JankoConstants.defaultFlywheelKi);
     flywheelKd = SmartDashboard.getNumber("flywheelD", JankoConstants.defaultFlywheelKd);
@@ -148,29 +150,18 @@ public class Robot extends IterativeRobot {
     
     joystick = new JaggernautJoystick(JankoConstants.joystick);
     
-    try {
-      ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
-      gyroExists = true;
-      DriverStation.reportWarning("instantiated navX MXP:  ", false);
-      SmartDashboard.putBoolean("gyroPIDExists", true);
-    } catch (RuntimeException ex ) {
-      DriverStation.reportError("Error instantiating navX MXP:  " + ex.getMessage(), true);
-      gyroExists = false;
-      SmartDashboard.putBoolean("gyroPIDExists", false);
-    }
-
-    if (gyroExists) {
-      jaggernautGyroDrive = new JaggernautGyroDrive(frontLeft, frontRight);
-      turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
-      turnController.setInputRange(-180.0f, 180.0f);
-      turnController.setOutputRange(-1.0, 1.0);
-      turnController.setAbsoluteTolerance(gyroTolerance);
-      turnController.setContinuous(true);
-      turnController.disable();
-    } else {
-      System.out.println("GYRO PID DOES NOT EXIST");
-      SmartDashboard.putBoolean("gyroPIDExists", false);
-    }
+    ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
+    gyroExists = true;
+    DriverStation.reportWarning("instantiated navX MXP:  ", false);
+    SmartDashboard.putBoolean("gyroPIDExists", true);
+    
+    jaggernautGyroDrive = new JaggernautGyroDrive(frontLeft, frontRight);
+    turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
+    turnController.setInputRange(-180.0f, 180.0f);
+    turnController.setOutputRange(-1.0, 1.0);
+    turnController.setAbsoluteTolerance(gyroTolerance);
+    turnController.setContinuous(true);
+    turnController.disable();
 
     updatePIDConstants();
     
@@ -197,6 +188,8 @@ public class Robot extends IterativeRobot {
       }
     });
     dashboardUpdateThread.start();
+    
+    CameraServer.getInstance().startAutomaticCapture("frontCamera", "http://10.41.92.10:8000/?action-stream");
   }
   
   @Override
@@ -277,5 +270,7 @@ public class Robot extends IterativeRobot {
     joystick.update();
     intakeControl();
     flywheelControl();
+    CameraServer.getInstance().putVideo("frontCamera", 640, 320);
+    
   }
 }
