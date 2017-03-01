@@ -9,30 +9,27 @@ import org.usfirst.frc.team4192.Robot;
  */
 public class Shoot extends Command {
   private int time;
+  private double targetRPM;
   private Timer timer;
   
-  public Shoot(int timeInSeconds) {
+  public Shoot(int timeInSeconds, double targetRPM) {
     time = timeInSeconds;
+    this.targetRPM = targetRPM;
   }
   
   public void initialize() {
-    Robot.updateFlywheelConstants();
-    Robot.updateFlywheelTargetRPM();
-    
     Robot.flywheel.enable();
-    Robot.intake.enable();
-    Robot.agitator.enable();
-  
     timer.start();
   }
   
   public void execute() {
+    Robot.flywheel.set(targetRPM);
     Robot.intake.set(1);
     Robot.agitator.set(1);
   }
   
   public void end() {
-    Robot.flywheel.set(0);
+    Robot.flywheel.disable();
     Robot.intake.set(0);
     Robot.agitator.set(0);
   }

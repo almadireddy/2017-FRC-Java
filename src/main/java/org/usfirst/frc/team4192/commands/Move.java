@@ -16,20 +16,19 @@ public class Move extends Command {
   }
   
   public void initialize() {
-    Robot.switchDriveMotorsToPositionControl();
+    Robot.jankoDrive.prepareForAuton();
   }
   
   public void execute() {
-    Robot.frontLeft.set(driveTarget);
-    Robot.frontRight.set(driveTarget);
-    if (Robot.driveOnTarget())
+    Robot.jankoDrive.set(driveTarget);
+    if (Robot.jankoDrive.isOnTarget())
       targetCounter++;
   }
   
   public void end() {
     Robot.frontLeft.disable();
     Robot.frontRight.disable();
-    Robot.switchDriveMotorsToDefaultControl();
+    Robot.jankoDrive.prepareForTeleop();
   }
   
   public void interrupted() {
@@ -38,6 +37,6 @@ public class Move extends Command {
   
   @Override
   protected boolean isFinished() {
-    return Robot.driveOnTarget() && targetCounter >= 100;
+    return Robot.jankoDrive.isOnTarget() && targetCounter >= 100;
   }
 }
