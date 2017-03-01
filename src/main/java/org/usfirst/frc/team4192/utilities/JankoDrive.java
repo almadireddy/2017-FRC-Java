@@ -1,4 +1,4 @@
-package org.usfirst.frc.team4192;
+package org.usfirst.frc.team4192.utilities;
 
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.RobotDrive;
@@ -7,15 +7,15 @@ import edu.wpi.first.wpilibj.RobotDrive;
  * Created by aahladmadireddy on 2/25/17.
  */
 public class JankoDrive extends RobotDrive {
-  private CANTalon leftMaster, leftSlave, rightMaster, rightSlave;
+  private CANTalon leftMaster, rightMaster;
+  
+  private double threshold = 2.0;
   
   public JankoDrive(CANTalon leftMaster, CANTalon leftSlave, CANTalon rightMaster, CANTalon rightSlave) {
     super(leftMaster, rightMaster);
     
     this.leftMaster  = leftMaster;
     this.rightMaster = rightMaster;
-    this.leftSlave   = leftSlave;
-    this.rightSlave  = rightSlave;
     
     leftMaster.setInverted(true);
     rightMaster.setInverted(true);
@@ -33,6 +33,8 @@ public class JankoDrive extends RobotDrive {
     leftMaster.configPeakOutputVoltage(+12.0f, -12.0f);
     rightMaster.configNominalOutputVoltage(+0.0f, -0.0f);
     rightMaster.configPeakOutputVoltage(+12.0f, -12.0f);
+    
+    setExpiration(0.1);
   }
   
   public void setSlewRate(double rampRate) {
@@ -53,5 +55,22 @@ public class JankoDrive extends RobotDrive {
   public void setPID(double p, double i, double d) {
     leftMaster.setPID(p, i, d);
     rightMaster.setPID(p, i, d);
+  }
+  
+  public void set(double setpoint) {
+    leftMaster.set(setpoint);
+    rightMaster.set(setpoint);
+  }
+  
+  public boolean isOnTarget() {
+    return (leftMaster.getClosedLoopError() < threshold) && (rightMaster.getClosedLoopError() < threshold);
+  }
+  
+  public double getThreshold() {
+    return threshold;
+  }
+  
+  public void setThreshold(double threshold) {
+    this.threshold = threshold;
   }
 }

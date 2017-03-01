@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
 import org.usfirst.frc.team4192.utilities.JaggernautGyroDrive;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
+import org.usfirst.frc.team4192.utilities.JankoDrive;
 
 /**
  * Created by Al on 1/22/2017.
@@ -15,14 +16,14 @@ import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 public class Robot extends IterativeRobot {
   public static CANTalon frontLeft;
   public static CANTalon frontRight;
-  public static CANTalon rearLeft;
-  public static CANTalon rearRight;
+  private static CANTalon rearLeft;
+  private static CANTalon rearRight;
   public static CANTalon flywheel;
-  public static CANTalon lift;
+  private static CANTalon lift;
   public static CANTalon intake;
   public static CANTalon agitator;
   
-  private JankoDrive jankoDrive;
+  public static JankoDrive jankoDrive;
   
   private static int drivePIDThreshold = 10;
   
@@ -32,7 +33,6 @@ public class Robot extends IterativeRobot {
   private static double gyroKp;      // Gyroscope PID constants
   private static double gyroKi;
   private static double gyroKd;
-  private static double gyroTolerance = 2.0f;
   
   private static double driveKp;     // Drive PID constants
   private static double driveKi;
@@ -45,10 +45,9 @@ public class Robot extends IterativeRobot {
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  private boolean gyroExists = false;
   private JaggernautGyroDrive jaggernautGyroDrive;
   
-  /// Start Autonomous Stuff ///
+  
   private RedLeftAuton redLeftAuton;
   private RedMiddleAuton redMiddleAuton;
   private RedRightAuton redRightAuton;
@@ -56,8 +55,6 @@ public class Robot extends IterativeRobot {
   private BlueLeftAuton blueLeftAuton;
   private BlueMiddleAuton blueMiddleAuton;
   private BlueRightAuton blueRightAuton;
-  /// End Autonomous Stuff ///
-  
   
   ////// End Instance Variables //////
   
@@ -93,7 +90,7 @@ public class Robot extends IterativeRobot {
   }
   
   // updates all the flywheelID pid constants to what they are on the dashboard
-  public void updateFlywheelConstants() {
+  private void updateFlywheelConstants() {
     flywheelKp = SmartDashboard.getNumber("flywheelP", JankoConstants.defaultFlywheelKp);
     flywheelKi = SmartDashboard.getNumber("flywheelI", JankoConstants.defaultFlywheelKi);
     flywheelKd = SmartDashboard.getNumber("flywheelD", JankoConstants.defaultFlywheelKd);
@@ -116,14 +113,6 @@ public class Robot extends IterativeRobot {
     flywheelTargetRPM = SmartDashboard.getNumber("targetRPMControl", 0.0);
     setFlywheelTargetRPM();
   }
-    
-  public static boolean driveOnTarget() {
-    return (frontLeft.getClosedLoopError() < drivePIDThreshold) && (frontRight.getClosedLoopError() < drivePIDThreshold);
-  }
-
-  public static boolean gyroOnTarget() {
-    return turnController.onTarget();
-  }
   
   private void zeroSensors() {
     ahrs.reset();
@@ -137,7 +126,7 @@ public class Robot extends IterativeRobot {
     rearRight = new CANTalon(JankoConstants.rearRightID);
     
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
-    jankoDrive.setExpiration(0.1);
+    jankoDrive.setSlewRate(12);
 
     flywheel = new CANTalon(JankoConstants.flywheelID);
     lift = new CANTalon(JankoConstants.liftID);
@@ -151,7 +140,6 @@ public class Robot extends IterativeRobot {
     joystick = new JaggernautJoystick(JankoConstants.joystick);
     
     ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
-    gyroExists = true;
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
     SmartDashboard.putBoolean("gyroPIDExists", true);
     
@@ -159,7 +147,7 @@ public class Robot extends IterativeRobot {
     turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
     turnController.setInputRange(-180.0f, 180.0f);
     turnController.setOutputRange(-1.0, 1.0);
-    turnController.setAbsoluteTolerance(gyroTolerance);
+    turnController.setAbsoluteTolerance(2.0);
     turnController.setContinuous(true);
     turnController.disable();
 

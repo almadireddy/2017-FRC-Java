@@ -7,14 +7,15 @@ import org.usfirst.frc.team4192.Robot;
  * Created by Al on 2/9/2017.
  */
 public class Turn extends Command {
-  double gyroTarget;
+  private double gyroTarget;
   
   public Turn(double degrees) {
     gyroTarget = degrees;
   }
   
   public void initialize() {
-    Robot.switchDriveMotorsToDefaultControl();
+    Robot.jankoDrive.prepareForTeleop();
+    Robot.turnController.enable();
   }
   
   public void execute() {
@@ -33,6 +34,6 @@ public class Turn extends Command {
   
   @Override
   public boolean isFinished() {
-    return Robot.gyroOnTarget();
+    return Robot.turnController.onTarget();
   }
 }

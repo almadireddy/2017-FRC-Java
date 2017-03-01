@@ -19,4 +19,8 @@ public class JaggernautGyroDrive implements PIDOutput {
     left.set(output);
     right.set(output);
   }
+  
+  public boolean onTarget() {
+    return onTarget();
+  }
 }
