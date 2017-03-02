@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" line="58" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" line="64" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="">
+    <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="got gyro pid turning working. tuning needed.">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautGyroDrive.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/GyroPIDHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.iws" afterPath="$PROJECT_DIR$/2017-FRC-Java.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueLeftAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueLeftAuton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueMiddleAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueMiddleAuton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueRightAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/BlueRightAuton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Shoot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Shoot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JankoDrive.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JankoDrive.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -71,22 +85,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="263" column="1" lean-forward="true" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
+            <state relative-caret-position="7224">
+              <caret line="274" column="1" lean-forward="false" selection-start-line="274" selection-start-column="1" selection-end-line="274" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Robot#0" expanded="false" />
-                <element signature="e#1979#1980#0" expanded="true" />
-                <element signature="e#2033#2034#0" expanded="true" />
-                <element signature="e#3806#3807#0" expanded="true" />
-                <element signature="e#3855#3856#0" expanded="true" />
-                <element signature="e#4042#4043#0" expanded="true" />
-                <element signature="e#4064#4065#0" expanded="true" />
-                <element signature="e#7279#7280#0" expanded="true" />
-                <element signature="e#7318#7319#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,37 +118,35 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1092">
-              <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+              <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding>
                 <element signature="docComment;class#JaggernautJoystick#0" expanded="false" />
-                <element signature="e#392#393#0" expanded="false" />
-                <element signature="e#417#418#0" expanded="false" />
-                <element signature="e#730#731#0" expanded="false" />
-                <element signature="e#788#789#0" expanded="false" />
-                <element signature="e#860#861#0" expanded="false" />
-                <element signature="e#890#891#0" expanded="false" />
-                <element signature="e#928#929#0" expanded="false" />
-                <element signature="e#974#975#0" expanded="false" />
-                <element signature="e#1006#1007#0" expanded="false" />
-                <element signature="e#1054#1055#0" expanded="false" />
+                <element signature="e#842#843#0" expanded="false" />
+                <element signature="e#900#901#0" expanded="false" />
+                <element signature="e#972#973#0" expanded="false" />
+                <element signature="e#1002#1003#0" expanded="false" />
+                <element signature="e#1040#1041#0" expanded="false" />
                 <element signature="e#1086#1087#0" expanded="false" />
-                <element signature="e#1134#1135#0" expanded="false" />
-                <element signature="e#1179#1180#0" expanded="false" />
-                <element signature="e#1234#1235#0" expanded="false" />
-                <element signature="e#1282#1283#0" expanded="false" />
-                <element signature="e#1338#1339#0" expanded="false" />
-                <element signature="e#1387#1388#0" expanded="false" />
-                <element signature="e#1443#1444#0" expanded="false" />
+                <element signature="e#1118#1119#0" expanded="false" />
+                <element signature="e#1166#1167#0" expanded="false" />
+                <element signature="e#1198#1199#0" expanded="false" />
+                <element signature="e#1246#1247#0" expanded="false" />
+                <element signature="e#1291#1292#0" expanded="false" />
+                <element signature="e#1346#1347#0" expanded="false" />
+                <element signature="e#1394#1395#0" expanded="false" />
+                <element signature="e#1450#1451#0" expanded="false" />
+                <element signature="e#1499#1500#0" expanded="false" />
+                <element signature="e#1555#1556#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JankoConstants.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JankoConstants.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-156">
-              <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+            <state relative-caret-position="166">
+              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
               <folding>
                 <element signature="docComment;class#JankoConstants#0" expanded="false" />
               </folding>
@@ -154,16 +157,15 @@
       <file leaf-file-name="Turn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+            <state relative-caret-position="1064">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <element signature="docComment;class#Turn#0" expanded="false" />
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#491#492#0" expanded="true" />
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#661#662#0" expanded="true" />
-                <element signature="e#708#709#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#840#841#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,8 +174,8 @@
       <file leaf-file-name="Shoot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Shoot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="336">
+              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -182,10 +184,9 @@
       <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="36" column="2" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+            <state relative-caret-position="224">
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
-                <element signature="e#485#486#0" expanded="true" />
                 <element signature="e#529#530#0" expanded="true" />
                 <element signature="e#829#830#0" expanded="true" />
                 <element signature="e#844#845#0" expanded="true" />
@@ -196,14 +197,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JaggernautGyroDrive.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautGyroDrive.java">
+      <file leaf-file-name="GyroPIDHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/GyroPIDHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="168">
+              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding>
-                <element signature="e#493#494#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+                <marker date="1488422792000" expanded="true" signature="298:347" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -696,13 +698,14 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/PortMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Shoot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautGyroDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JankoDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautGyroDrive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/GyroPIDHandler.java" />
       </list>
     </option>
   </component>
@@ -1342,7 +1345,7 @@
       <workItem from="1488157206957" duration="33000" />
       <workItem from="1488157269820" duration="1472000" />
       <workItem from="1488161391498" duration="177000" />
-      <workItem from="1488344566406" duration="7551000" />
+      <workItem from="1488344566406" duration="9320000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -1484,45 +1487,52 @@
       <option name="project" value="LOCAL" />
       <updated>1488403464125</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="restructuring and working on auton commands.">
+      <created>1488407718603</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1488407718603</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54695000" />
+    <option name="totallyTimeSpent" value="56464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24216868" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23012048" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1981402" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24216868" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23012048" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1981402" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1533,6 +1543,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="added project files to gitignore" />
     <MESSAGE value="gyroPID is now a PIDOutput subclass that takes two motors as parameters, and will set them to the opposite outputs, to achieve turning. Needs to be tested to ensure positive error means turning in positive direction." />
     <MESSAGE value="not much" />
@@ -1549,7 +1560,9 @@
     <MESSAGE value="cleaned some stuff up" />
     <MESSAGE value="took out gyro initization check" />
     <MESSAGE value="restructuring and working on auton commands." />
-    <option name="LAST_COMMIT_MESSAGE" value="restructuring and working on auton commands." />
+    <MESSAGE value="got turning working" />
+    <MESSAGE value="got gyro pid turning working. tuning needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="got gyro pid turning working. tuning needed." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1563,28 +1576,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4536">
           <caret line="168" column="0" lean-forward="true" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#3806#3807#0" expanded="true" />
-            <element signature="e#3855#3856#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4064#4065#0" expanded="true" />
-            <element signature="e#7279#7280#0" expanded="true" />
-            <element signature="e#7318#7319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1602,15 +1599,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#3806#3807#0" expanded="true" />
-            <element signature="e#3855#3856#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4064#4065#0" expanded="true" />
-            <element signature="e#7279#7280#0" expanded="true" />
-            <element signature="e#7318#7319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1628,15 +1616,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#3806#3807#0" expanded="true" />
-            <element signature="e#3855#3856#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4064#4065#0" expanded="true" />
-            <element signature="e#7279#7280#0" expanded="true" />
-            <element signature="e#7318#7319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1826,27 +1805,25 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
-          <caret line="55" column="30" lean-forward="false" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
           <folding>
             <element signature="docComment;class#JaggernautJoystick#0" expanded="false" />
-            <element signature="e#392#393#0" expanded="false" />
-            <element signature="e#417#418#0" expanded="false" />
-            <element signature="e#730#731#0" expanded="false" />
-            <element signature="e#788#789#0" expanded="false" />
-            <element signature="e#860#861#0" expanded="false" />
-            <element signature="e#890#891#0" expanded="false" />
-            <element signature="e#928#929#0" expanded="false" />
-            <element signature="e#974#975#0" expanded="false" />
-            <element signature="e#1006#1007#0" expanded="false" />
-            <element signature="e#1054#1055#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#972#973#0" expanded="false" />
+            <element signature="e#1002#1003#0" expanded="false" />
+            <element signature="e#1040#1041#0" expanded="false" />
             <element signature="e#1086#1087#0" expanded="false" />
-            <element signature="e#1134#1135#0" expanded="false" />
-            <element signature="e#1179#1180#0" expanded="false" />
-            <element signature="e#1234#1235#0" expanded="false" />
-            <element signature="e#1282#1283#0" expanded="false" />
-            <element signature="e#1338#1339#0" expanded="false" />
-            <element signature="e#1387#1388#0" expanded="false" />
-            <element signature="e#1443#1444#0" expanded="false" />
+            <element signature="e#1118#1119#0" expanded="false" />
+            <element signature="e#1166#1167#0" expanded="false" />
+            <element signature="e#1198#1199#0" expanded="false" />
+            <element signature="e#1246#1247#0" expanded="false" />
+            <element signature="e#1291#1292#0" expanded="false" />
+            <element signature="e#1346#1347#0" expanded="false" />
+            <element signature="e#1394#1395#0" expanded="false" />
+            <element signature="e#1450#1451#0" expanded="false" />
+            <element signature="e#1499#1500#0" expanded="false" />
+            <element signature="e#1555#1556#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1878,16 +1855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-          <folding>
-            <element signature="docComment;class#JankoConstants#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/b9c601dd747d233f99054dd2abd7e8198f446a69/athena-2017.1.1-sources.jar!/edu/wpi/first/wpilibj/MotorSafety.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -1903,56 +1870,6 @@
           <folding>
             <element signature="e#28584#28585#0" expanded="false" />
             <element signature="e#28631#28632#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Shoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="36" column="2" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
-          <folding>
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautGyroDrive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
-          <folding>
-            <element signature="docComment;class#Turn#0" expanded="false" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1974,19 +1891,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="263" column="1" lean-forward="true" selection-start-line="263" selection-start-column="1" selection-end-line="263" selection-end-column="1" />
+        <state relative-caret-position="7224">
+          <caret line="274" column="1" lean-forward="false" selection-start-line="274" selection-start-column="1" selection-end-line="274" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Robot#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="true" />
-            <element signature="e#2033#2034#0" expanded="true" />
-            <element signature="e#3806#3807#0" expanded="true" />
-            <element signature="e#3855#3856#0" expanded="true" />
-            <element signature="e#4042#4043#0" expanded="true" />
-            <element signature="e#4064#4065#0" expanded="true" />
-            <element signature="e#7279#7280#0" expanded="true" />
-            <element signature="e#7318#7319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Volumes/Al's Flash /2017-FRC-Java/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1484">
+          <caret line="198" column="4" lean-forward="true" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding>
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Shoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/GyroPIDHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <marker date="1488422792000" expanded="true" signature="298:347" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="docComment;class#JankoConstants#0" expanded="false" />
           </folding>
         </state>
       </provider>

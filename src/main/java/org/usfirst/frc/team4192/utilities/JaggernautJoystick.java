@@ -12,6 +12,8 @@ public class JaggernautJoystick {
   
   public JaggernautJoystick(int port) {
     joystick = new Joystick(port);
+    buttons = new boolean[joystick.getButtonCount()];
+    lastButtons = new boolean[joystick.getButtonCount()];
     updateButtonStates();
   }
   
@@ -23,7 +25,7 @@ public class JaggernautJoystick {
     if (buttons.length > 0) {
       System.arraycopy(buttons, 0, lastButtons, 0, buttons.length);
     }
-    for (int i = 0; i < joystick.getButtonCount(); i++) {
+    for (int i = 1; i < joystick.getButtonCount(); i++) {
       buttons[i] = joystick.getRawButton(i);
     }
   }
