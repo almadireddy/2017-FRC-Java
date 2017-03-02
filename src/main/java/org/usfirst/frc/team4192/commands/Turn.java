@@ -1,24 +1,27 @@
 package org.usfirst.frc.team4192.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.Robot;
 
 /**
  * Created by Al on 2/9/2017.
  */
-public class turn extends Command {
-  double gyroTarget;
+public class Turn extends Command {
+  private double gyroTarget;
   
-  public turn(double degrees) {
+  public Turn(double degrees) {
     gyroTarget = degrees;
   }
   
   public void initialize() {
-    Robot.switchDriveMotorsToDefaultControl();
+    Robot.jankoDrive.prepareForTeleop();
+    Robot.turnController.enable();
   }
   
   public void execute() {
     Robot.turnController.setSetpoint(gyroTarget);
+    SmartDashboard.putString("turnOut", ""+Robot.turnController.get());
   }
   
   public void end() {
@@ -33,6 +36,6 @@ public class turn extends Command {
   
   @Override
   public boolean isFinished() {
-    return Robot.gyroOnTarget();
+    return Robot.turnController.onTarget();
   }
 }
