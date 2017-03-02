@@ -34,7 +34,7 @@ public class JankoConstants {
   public static double defaultDriveKi = 0.0;
   public static double defaultDriveKd = 0.0;
   
-  public static double defaultGyroKp = 0.0;
+  public static double defaultGyroKp = 0.1;
   public static double defaultGyroKi = 0.0;
   public static double defaultGyroKd = 0.0;
   

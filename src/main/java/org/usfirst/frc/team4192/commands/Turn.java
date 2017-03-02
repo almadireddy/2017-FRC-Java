@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4192.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.Robot;
 
 /**
@@ -20,6 +21,7 @@ public class Turn extends Command {
   
   public void execute() {
     Robot.turnController.setSetpoint(gyroTarget);
+    SmartDashboard.putString("turnOut", ""+Robot.turnController.get());
   }
   
   public void end() {

@@ -4,9 +4,10 @@ import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
-import org.usfirst.frc.team4192.utilities.JaggernautGyroDrive;
+import org.usfirst.frc.team4192.utilities.GyroPIDHandler;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 import org.usfirst.frc.team4192.utilities.JankoDrive;
 
@@ -45,7 +46,7 @@ public class Robot extends IterativeRobot {
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  private JaggernautGyroDrive jaggernautGyroDrive;
+  private GyroPIDHandler gyroPIDHandler;
   
   
   private RedLeftAuton redLeftAuton;
@@ -55,6 +56,8 @@ public class Robot extends IterativeRobot {
   private BlueLeftAuton blueLeftAuton;
   private BlueMiddleAuton blueMiddleAuton;
   private BlueRightAuton blueRightAuton;
+  
+  private NetworkTable table;
   
   ////// End Instance Variables //////
   
@@ -125,6 +128,8 @@ public class Robot extends IterativeRobot {
     rearLeft  = new CANTalon(JankoConstants.rearLeftID);
     rearRight = new CANTalon(JankoConstants.rearRightID);
     
+    table = NetworkTable.getTable("Autonomous Boolean");
+    
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
     jankoDrive.setSlewRate(12);
 
@@ -143,12 +148,12 @@ public class Robot extends IterativeRobot {
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
     SmartDashboard.putBoolean("gyroPIDExists", true);
     
-    jaggernautGyroDrive = new JaggernautGyroDrive(frontLeft, frontRight);
-    turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
-    turnController.setInputRange(-180.0f, 180.0f);
+    gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
+    turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPIDHandler);
+    turnController.setInputRange(-360.0f, 360.0f);
     turnController.setOutputRange(-1.0, 1.0);
     turnController.setAbsoluteTolerance(2.0);
-    turnController.setContinuous(true);
+    turnController.setContinuous(false);
     turnController.disable();
 
     updatePIDConstants();
@@ -177,20 +182,22 @@ public class Robot extends IterativeRobot {
     });
     dashboardUpdateThread.start();
     
-    CameraServer.getInstance().startAutomaticCapture("frontCamera", "http://10.41.92.10:8000/?action-stream");
+//    CameraServer.getInstance().startAutomaticCapture("frontCamera", "http://10.41.92.165:8080/?action-stream");
   }
   
   @Override
   public void disabledPeriodic() {
     super.disabledPeriodic();
+    table.putBoolean("TeleopPeriodic", false);
   }
   
   @Override
   public void autonomousInit() {
     zeroSensors();
     jankoDrive.prepareForAuton();
+    updateGyroConstants();
     
-    switch (SmartDashboard.getData("Selected Autonomous").toString()) {
+    switch (SmartDashboard.getString("Selected Autonomous", "default")) {
       case "Red Left":
         redLeftAuton.start();
         break;
@@ -213,6 +220,10 @@ public class Robot extends IterativeRobot {
         
       case "Blue Right":
         blueRightAuton.start();
+        break;
+      case "default":
+        break;
+      default:
         break;
     }
   }
@@ -250,6 +261,7 @@ public class Robot extends IterativeRobot {
       turnController.disable();
     
     jankoDrive.prepareForTeleop();
+    table.putBoolean("TeleopInit", true);
   }
   
   @Override
@@ -258,7 +270,6 @@ public class Robot extends IterativeRobot {
     joystick.update();
     intakeControl();
     flywheelControl();
-    CameraServer.getInstance().putVideo("frontCamera", 640, 320);
-    
+    table.putBoolean("TeleopPeriodic", true);
   }
 }
