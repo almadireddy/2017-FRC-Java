@@ -10,13 +10,20 @@ import org.usfirst.frc.team4192.Robot;
 public class Turn extends Command {
   private double gyroTarget;
   
+  public Turn(double degrees, double timeout) {
+    super(timeout);
+    gyroTarget = degrees;
+  }
+  
   public Turn(double degrees) {
+    super(5);
     gyroTarget = degrees;
   }
   
   public void initialize() {
     Robot.jankoDrive.prepareForTeleop();
     Robot.turnController.enable();
+    Robot.zeroSensors();
   }
   
   public void execute() {

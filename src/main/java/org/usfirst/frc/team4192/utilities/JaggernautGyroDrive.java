@@ -16,8 +16,8 @@ public class JaggernautGyroDrive implements PIDOutput {
   
   @Override
   public void pidWrite(double output) {
-    left.set(-output);
-    right.set(-output);
+    left.set(output);
+    right.set(output);
   }
   
   public boolean onTarget() {

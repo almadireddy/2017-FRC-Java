@@ -2,7 +2,10 @@ package org.usfirst.frc.team4192;
 
 import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
-import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.PIDController;
+import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -29,7 +32,7 @@ public class Robot extends IterativeRobot {
   private static int drivePIDThreshold = 10;
   
   private JaggernautJoystick joystick;
-  private AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
+  private static AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
   
   private static double gyroKp;      // Gyroscope PID constants
   private static double gyroKi;
@@ -57,7 +60,7 @@ public class Robot extends IterativeRobot {
   private BlueMiddleAuton blueMiddleAuton;
   private BlueRightAuton blueRightAuton;
   
-  private NetworkTable table;
+  private NetworkTable stateTable;
   
   ////// End Instance Variables //////
   
@@ -117,7 +120,7 @@ public class Robot extends IterativeRobot {
     setFlywheelTargetRPM();
   }
   
-  private void zeroSensors() {
+  public static void zeroSensors() {
     ahrs.reset();
   }
   
@@ -128,10 +131,11 @@ public class Robot extends IterativeRobot {
     rearLeft  = new CANTalon(JankoConstants.rearLeftID);
     rearRight = new CANTalon(JankoConstants.rearRightID);
     
-    table = NetworkTable.getTable("Autonomous Boolean");
+    NetworkTable.setServerMode();
+    stateTable = NetworkTable.getTable("stateTable");
     
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
-    jankoDrive.setSlewRate(12);
+    jankoDrive.setSlewRate(36);
 
     flywheel = new CANTalon(JankoConstants.flywheelID);
     lift = new CANTalon(JankoConstants.liftID);
@@ -152,8 +156,8 @@ public class Robot extends IterativeRobot {
     turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
     turnController.setInputRange(-360.0f, 360.0f);
     turnController.setOutputRange(-1.0, 1.0);
-    turnController.setAbsoluteTolerance(2.0);
-    turnController.setContinuous(false);
+    turnController.setAbsoluteTolerance(3.0);
+    turnController.setContinuous(true);
     turnController.disable();
 
     updatePIDConstants();
@@ -178,17 +182,20 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
         SmartDashboard.putNumber("leftActualRPM", flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
+        
       }
     });
     dashboardUpdateThread.start();
-    
-//    CameraServer.getInstance().startAutomaticCapture("frontCamera", "http://10.41.92.165:8080/?action-stream");
+  }
+  
+  @Override
+  public void disabledInit() {
+    stateTable.putBoolean("autonomousMode", false);
   }
   
   @Override
   public void disabledPeriodic() {
     super.disabledPeriodic();
-    table.putBoolean("TeleopPeriodic", false);
   }
   
   @Override
@@ -196,7 +203,7 @@ public class Robot extends IterativeRobot {
     zeroSensors();
     jankoDrive.prepareForAuton();
     updateGyroConstants();
-    
+    stateTable.putBoolean("autonomousMode", true);
     switch (SmartDashboard.getString("Selected Autonomous", "default")) {
       case "Red Left":
         redLeftAuton.start();
@@ -233,6 +240,12 @@ public class Robot extends IterativeRobot {
     Scheduler.getInstance().run();
   }
   
+  
+  private void sensitivityControl() {
+    if (joystick.isHeldDown(2)) jankoDrive.setSlewRate(12);
+    else jankoDrive.setSlewRate(60);
+  }
+  
   private void intakeControl() {
     if (joystick.isHeldDown(6))
       intake.set(1);
@@ -261,15 +274,16 @@ public class Robot extends IterativeRobot {
       turnController.disable();
     
     jankoDrive.prepareForTeleop();
-    table.putBoolean("TeleopInit", true);
+    stateTable.putBoolean("autonomousMode", false);
   }
   
   @Override
   public void teleopPeriodic() {
-    jankoDrive.arcadeDrive(joystick.getYaxis(), joystick.getXaxis(), true);
+    jankoDrive.arcadeDrive(-joystick.getYaxis()*.8, -joystick.getXaxis()*.8, true);
     joystick.update();
     intakeControl();
     flywheelControl();
-    table.putBoolean("TeleopPeriodic", true);
+    sensitivityControl();
+    stateTable.putBoolean("TeleopPeriodic", true);
   }
 }

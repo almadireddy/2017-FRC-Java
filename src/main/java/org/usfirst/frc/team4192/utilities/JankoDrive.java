@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.RobotDrive;
  * Created by aahladmadireddy on 2/25/17.
  */
 public class JankoDrive extends RobotDrive {
-  private CANTalon leftMaster, rightMaster;
+  private CANTalon leftMaster, leftSlave, rightMaster, rightSlave;
   
   private double threshold = 2.0;
   
@@ -16,9 +16,11 @@ public class JankoDrive extends RobotDrive {
     
     this.leftMaster  = leftMaster;
     this.rightMaster = rightMaster;
+    this.leftSlave = leftSlave;
+    this.rightSlave = rightSlave;
     
-    leftMaster.setInverted(true);
-    rightMaster.setInverted(true);
+    leftMaster.setInverted(false);
+    rightMaster.setInverted(false);
   
     leftMaster.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     rightMaster.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);

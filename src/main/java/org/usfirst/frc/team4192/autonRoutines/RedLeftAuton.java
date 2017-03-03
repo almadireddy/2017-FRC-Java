@@ -8,6 +8,7 @@ import org.usfirst.frc.team4192.commands.Turn;
  */
 public class RedLeftAuton extends CommandGroup {
   public RedLeftAuton() {
-    addSequential(new Turn(45), 50);
+    addSequential(new Turn(45), 5);
+    addSequential(new Turn(-90), 5);
   }
 }

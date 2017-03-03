@@ -31,7 +31,7 @@ public class JaggernautJoystick {
   }
   
   private double createDeadzone(double axisValue) {
-    return Math.abs(axisValue) < 0.1 ? 0 : axisValue;
+    return Math.abs(axisValue) < 0.05 ? 0 : axisValue;
   }
   
   // Run update() in the periodic function.
@@ -44,7 +44,7 @@ public class JaggernautJoystick {
   }
   
   public double getXaxis() {
-    return createDeadzone(joystick.getX());
+    return createDeadzone(joystick.getRawAxis(4));
   }
   
   public double getYaxis() {
