@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
-import org.usfirst.frc.team4192.utilities.JaggernautGyroDrive;
+import org.usfirst.frc.team4192.utilities.GyroPIDHandler;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 import org.usfirst.frc.team4192.utilities.JankoDrive;
 
@@ -49,7 +49,7 @@ public class Robot extends IterativeRobot {
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  private JaggernautGyroDrive jaggernautGyroDrive;
+  private GyroPIDHandler gyroPIDHandler;
   
   
   private RedLeftAuton redLeftAuton;
@@ -152,8 +152,8 @@ public class Robot extends IterativeRobot {
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
     SmartDashboard.putBoolean("gyroPIDExists", true);
     
-    jaggernautGyroDrive = new JaggernautGyroDrive(frontLeft, frontRight);
-    turnController = new PIDController(0.01, 0.0, 0, ahrs, jaggernautGyroDrive);
+    gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
+    turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPIDHandler);
     turnController.setInputRange(-360.0f, 360.0f);
     turnController.setOutputRange(-1.0, 1.0);
     turnController.setAbsoluteTolerance(3.0);
