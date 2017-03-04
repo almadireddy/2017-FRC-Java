@@ -8,31 +8,34 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Collision {
   private AHRS ahrs;
-  private double lastAccelX, lastAccelY;
-  private double collisionThreshold = 0.5;
-  boolean collisionDetected;
-  double currentAccelX, currentJerkX, currentAccelY, currentJerkY;
+  double last_world_linear_accel_x;
+  double last_world_linear_accel_y;
+  boolean collisionDetected = false;
+  
+  final static double kCollisionThreshold_DeltaG = 0.5f;
   
   public Collision(AHRS ahrs) {
     this.ahrs = ahrs;
   }
   
-  Thread collisionDetectionThread = new Thread(() -> {
+  private Thread collisionDetectionThread = new Thread(() -> {
     while (!Thread.interrupted()) {
       collisionDetected = false;
   
-      currentAccelX = ahrs.getWorldLinearAccelX();
-      currentJerkX = currentAccelX - lastAccelX;
-      lastAccelX = currentAccelX;
+      double curr_world_linear_accel_x = ahrs.getWorldLinearAccelX();
+      double currentJerkX = curr_world_linear_accel_x - last_world_linear_accel_x;
+      last_world_linear_accel_x = curr_world_linear_accel_x;
+      double curr_world_linear_accel_y = ahrs.getWorldLinearAccelY();
+      double currentJerkY = curr_world_linear_accel_y - last_world_linear_accel_y;
+      last_world_linear_accel_y = curr_world_linear_accel_y;
   
-      currentAccelY = ahrs.getWorldLinearAccelY();
-      currentJerkY = currentAccelY - lastAccelY;
-      lastAccelY = currentAccelY;
-      
-      if (Math.abs(currentJerkX) > collisionThreshold || Math.abs(currentJerkY) > collisionThreshold)
+      if ( ( Math.abs(currentJerkX) > kCollisionThreshold_DeltaG ) ||
+          ( Math.abs(currentJerkY) > kCollisionThreshold_DeltaG) ) {
         collisionDetected = true;
-  
-      SmartDashboard.putBoolean("Collision Detected", true);
+      }
+      SmartDashboard.putBoolean("CollisionDetected", collisionDetected);
+      SmartDashboard.putNumber("jerkX", currentJerkX);
+      SmartDashboard.putNumber("jerkY", currentJerkY);
     }
   });
   

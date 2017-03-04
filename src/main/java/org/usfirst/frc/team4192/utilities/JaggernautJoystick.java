@@ -66,6 +66,5 @@ public class JaggernautJoystick {
   
   public void rumble() {
     joystick.setRumble(GenericHID.RumbleType.kLeftRumble, 1.0);
-    joystick.setRumble(GenericHID.RumbleType.kRightRumble, 1.0);
   }
 }

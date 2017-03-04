@@ -197,6 +197,8 @@ public class Robot extends IterativeRobot {
       }
     });
     dashboardUpdateThread.start();
+  
+    collisionDetector.start();
   }
   
   @Override
@@ -291,7 +293,7 @@ public class Robot extends IterativeRobot {
     jankoDrive.prepareForTeleop();
     stateTable.putBoolean("autonomousMode", false);
     
-    collisionDetector.start();
+    
   }
   
   @Override
@@ -302,6 +304,6 @@ public class Robot extends IterativeRobot {
     intakeControl();
     flywheelControl();
     sensitivityControl();
-    
+    collisionRumble();
   }
 }
