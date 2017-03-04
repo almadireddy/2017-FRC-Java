@@ -2,10 +2,7 @@ package org.usfirst.frc.team4192;
 
 import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
-import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.PIDController;
-import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -28,6 +25,7 @@ public class Robot extends IterativeRobot {
   public static CANTalon agitator;
   
   public static JankoDrive jankoDrive;
+  DriveHelper driveHelper;
   
   private static int drivePIDThreshold = 10;
   
@@ -136,7 +134,9 @@ public class Robot extends IterativeRobot {
     
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
     jankoDrive.setSlewRate(36);
-
+  
+    driveHelper = new DriveHelper();
+    
     flywheel = new CANTalon(JankoConstants.flywheelID);
     lift = new CANTalon(JankoConstants.liftID);
     intake = new CANTalon(JankoConstants.intakeID);
@@ -154,10 +154,10 @@ public class Robot extends IterativeRobot {
     
     gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
     turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPIDHandler);
-    turnController.setInputRange(-360.0f, 360.0f);
+    turnController.setInputRange(-720.0, 720.0);
     turnController.setOutputRange(-1.0, 1.0);
     turnController.setAbsoluteTolerance(3.0);
-    turnController.setContinuous(true);
+    turnController.setContinuous(false);
     turnController.disable();
 
     updatePIDConstants();
@@ -201,7 +201,6 @@ public class Robot extends IterativeRobot {
   @Override
   public void autonomousInit() {
     zeroSensors();
-    jankoDrive.prepareForAuton();
     updateGyroConstants();
     stateTable.putBoolean("autonomousMode", true);
     switch (SmartDashboard.getString("Selected Autonomous", "default")) {
@@ -242,7 +241,7 @@ public class Robot extends IterativeRobot {
   
   
   private void sensitivityControl() {
-    if (joystick.isHeldDown(2)) jankoDrive.setSlewRate(12);
+    if (joystick.isHeldDown(6)) jankoDrive.setSlewRate(12);
     else jankoDrive.setSlewRate(60);
   }
   
@@ -280,10 +279,11 @@ public class Robot extends IterativeRobot {
   @Override
   public void teleopPeriodic() {
     jankoDrive.arcadeDrive(-joystick.getYaxis()*.8, -joystick.getXaxis()*.8, true);
+//    jankoDrive.set(driveHelper.cheesyDrive(joystick.getYaxis(), -joystick.getXaxis(), joystick.isHeldDown(5)));
     joystick.update();
     intakeControl();
     flywheelControl();
     sensitivityControl();
-    stateTable.putBoolean("TeleopPeriodic", true);
+    
   }
 }

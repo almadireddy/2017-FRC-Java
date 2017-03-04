@@ -64,6 +64,11 @@ public class JankoDrive extends RobotDrive {
     rightMaster.set(setpoint);
   }
   
+  public void set(DriveSignal signal) {
+    leftMaster.set(signal.leftMotor);
+    rightMaster.set(signal.rightMotor);
+  }
+  
   public boolean isOnTarget() {
     return (leftMaster.getClosedLoopError() < threshold) && (rightMaster.getClosedLoopError() < threshold);
   }
