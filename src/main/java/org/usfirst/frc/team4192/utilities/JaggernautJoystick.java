@@ -1,5 +1,6 @@
 package org.usfirst.frc.team4192.utilities;
 
+import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 
 /**
@@ -61,5 +62,10 @@ public class JaggernautJoystick {
   
   public boolean buttonReleased(int button) {
     return !buttons[button] && lastButtons[button];
+  }
+  
+  public void rumble() {
+    joystick.setRumble(GenericHID.RumbleType.kLeftRumble, 1.0);
+    joystick.setRumble(GenericHID.RumbleType.kRightRumble, 1.0);
   }
 }

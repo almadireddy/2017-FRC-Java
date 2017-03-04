@@ -18,22 +18,24 @@ public class Turn extends Command {
     super(5);
     gyroTarget = degrees;
     Robot.jankoDrive.setPID(p, i, d);
+    Robot.turnController.reset();
   }
   
   public void initialize() {
-    Robot.jankoDrive.prepareForAuton();
+    Robot.jankoDrive.prepareForTeleop();
     Robot.zeroSensors();
+    Robot.turnController.enable();
   }
   
   public void execute() {
-    Robot.jankoDrive.setSetpoint(gyroTarget);
+    Robot.turnController.setSetpoint(gyroTarget);
     SmartDashboard.putString("Left turnOut", ""+Robot.jankoDrive.getLeft());
   }
   
   public void end() {
     Robot.frontLeft.set(0);
     Robot.frontRight.set(0);
-    Robot.jankoDrive.disable();
+    Robot.turnController.disable();
   }
   
   public void interrupted() {
@@ -42,6 +44,6 @@ public class Turn extends Command {
   
   @Override
   public boolean isFinished() {
-    return Robot.jankoDrive.isOnTarget();
+    return Robot.turnController.onTarget();
   }
 }

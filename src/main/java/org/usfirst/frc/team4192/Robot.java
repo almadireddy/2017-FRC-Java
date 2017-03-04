@@ -2,13 +2,13 @@ package org.usfirst.frc.team4192;
 
 import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
-import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
+import org.usfirst.frc.team4192.utilities.Collision;
+import org.usfirst.frc.team4192.utilities.GyroPIDHandler;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 import org.usfirst.frc.team4192.utilities.JankoDrive;
 
@@ -48,6 +48,10 @@ public class Robot extends IterativeRobot {
   private static double flywheelKf;
   private static double flywheelTargetRPM;
   
+  public static PIDController turnController;
+  private GyroPIDHandler gyroPIDHandler;
+  
+  
   private RedLeftAuton redLeftAuton;
   private RedMiddleAuton redMiddleAuton;
   private RedRightAuton redRightAuton;
@@ -58,6 +62,8 @@ public class Robot extends IterativeRobot {
   
   private NetworkTable stateTable;
   
+  private Collision collisionDetector;
+  
   ////// End Instance Variables //////
   
   private void setDriveConstants() {
@@ -65,7 +71,7 @@ public class Robot extends IterativeRobot {
   }
   
   private void setGyroConstants() {
-    jankoDrive.setPID(gyroKp, gyroKi, gyroKd);
+    turnController.setPID(gyroKp, gyroKi, gyroKd);
   }
   
   private void setFlywheelConstants() {
@@ -154,14 +160,14 @@ public class Robot extends IterativeRobot {
     ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
     SmartDashboard.putBoolean("gyroPIDExists", true);
-//
-//    gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
-//    turnController = new PIDController(0.01, 0.0, 0, 0.0, ahrs, jankoDrive);
-//    turnController.setInputRange(-180.0, 180.0);
-//    turnController.setOutputRange(-1.0, 1.0);
-//    turnController.setAbsoluteTolerance(3.0);
-//    turnController.setContinuous(false);
-//    turnController.disable();
+    
+    gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
+    turnController = new PIDController(0.01, 0.0, 0, 0.0, ahrs, jankoDrive);
+    turnController.setInputRange(-180.0, 180.0);
+    turnController.setOutputRange(-1.0, 1.0);
+    turnController.setAbsoluteTolerance(3.0);
+    turnController.setContinuous(true);
+    turnController.disable();
 
     updatePIDConstants();
     
@@ -171,6 +177,8 @@ public class Robot extends IterativeRobot {
     blueLeftAuton = new BlueLeftAuton();
     blueMiddleAuton = new BlueMiddleAuton();
     blueRightAuton = new BlueRightAuton();
+    
+    collisionDetector = new Collision(ahrs);
 
     Thread flywheelControlThread = new Thread(() -> {
       while (!Thread.interrupted()) {
@@ -268,12 +276,22 @@ public class Robot extends IterativeRobot {
     }
   }
   
+  public void collisionRumble() {
+    if (collisionDetector.isCollisionDetected())
+      joystick.rumble();
+  }
+  
   @Override
   public void teleopInit() {
     zeroSensors();
     
+    if (turnController.isEnabled())
+      turnController.disable();
+    
     jankoDrive.prepareForTeleop();
     stateTable.putBoolean("autonomousMode", false);
+    
+    collisionDetector.start();
   }
   
   @Override
