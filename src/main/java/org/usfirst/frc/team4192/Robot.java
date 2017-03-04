@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
 import org.usfirst.frc.team4192.utilities.Collision;
-import org.usfirst.frc.team4192.utilities.GyroPIDHandler;
+import org.usfirst.frc.team4192.utilities.gyroPID;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 import org.usfirst.frc.team4192.utilities.JankoDrive;
 
@@ -49,7 +49,7 @@ public class Robot extends IterativeRobot {
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  private GyroPIDHandler gyroPIDHandler;
+  private gyroPID gyroPIDHandler;
   
   
   private RedLeftAuton redLeftAuton;
@@ -161,7 +161,7 @@ public class Robot extends IterativeRobot {
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
     SmartDashboard.putBoolean("gyroPIDExists", true);
     
-    gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
+    gyroPIDHandler = new gyroPID(frontLeft, frontRight);
     turnController = new PIDController(0.01, 0.0, 0, 0.0, ahrs, jankoDrive);
     turnController.setInputRange(-180.0, 180.0);
     turnController.setOutputRange(-1.0, 1.0);
@@ -305,5 +305,9 @@ public class Robot extends IterativeRobot {
     flywheelControl();
     sensitivityControl();
     collisionRumble();
+  }
+  
+  public static boolean gyroOnTarget() {
+    return turnController.onTarget();
   }
 }

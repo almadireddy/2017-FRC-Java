@@ -8,7 +8,7 @@ import org.usfirst.frc.team4192.Robot;
  * Created by Al on 2/9/2017.
  */
 public class Turn extends Command {
-  private double gyroTarget;
+  double gyroTarget;
   
   public Turn(double degrees) {
     gyroTarget = degrees;
@@ -44,6 +44,6 @@ public class Turn extends Command {
   
   @Override
   public boolean isFinished() {
-    return Robot.turnController.onTarget();
+    return Robot.gyroOnTarget();
   }
 }

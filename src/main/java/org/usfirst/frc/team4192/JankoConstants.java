@@ -21,13 +21,13 @@ public class JankoConstants {
   public static int joystick        = 0;
   
   public static int flywheelToggle  = 1;
-
+  
   public static int climberUp       = 3;
   public static int climberDown     = 4;
-
+  
   public static int intakeIn        = 6;
   public static int intakeOut       = 7;
-
+  
   public static int agitatorToggle  = 8;
   
   public static double defaultDriveKp = 0.0;

@@ -11,8 +11,8 @@ import org.usfirst.frc.team4192.utilities.Util;
  * Helper class to implement "Cheesy Drive". "Cheesy Drive" simply means that
  * the "turning" stick controls the curvature of the robot's path rather than
  * its rate of heading change. This helps make the robot more controllable at
- * high speeds. Also handles the robot's quick turn functionality - "quick turn"
- * overrides constant-curvature turning for turn-in-place maneuvers.
+ * high speeds. Also handles the robot's quick Turn functionality - "quick Turn"
+ * overrides constant-curvature turning for Turn-in-place maneuvers.
  */
 public class DriveHelper {
   
