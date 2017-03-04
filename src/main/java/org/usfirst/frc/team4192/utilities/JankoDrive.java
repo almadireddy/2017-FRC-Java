@@ -1,12 +1,13 @@
 package org.usfirst.frc.team4192.utilities;
 
 import com.ctre.CANTalon;
+import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.RobotDrive;
 
 /**
  * Created by aahladmadireddy on 2/25/17.
  */
-public class JankoDrive extends RobotDrive {
+public class JankoDrive extends RobotDrive implements PIDOutput {
   private CANTalon leftMaster, leftSlave, rightMaster, rightSlave;
   
   private double threshold = 2.0;
@@ -79,5 +80,15 @@ public class JankoDrive extends RobotDrive {
   
   public void setThreshold(double threshold) {
     this.threshold = threshold;
+  }
+  
+  /**
+   * Set the output to the value calculated by PIDController.
+   *
+   * @param output the value calculated by PIDController
+   */
+  @Override
+  public void pidWrite(double output) {
+    set(output);
   }
 }

@@ -26,6 +26,7 @@ public class Robot extends IterativeRobot {
   
   public static JankoDrive jankoDrive;
   DriveHelper driveHelper;
+  public static double driveSensitivity;
   
   private static int drivePIDThreshold = 10;
   
@@ -133,7 +134,8 @@ public class Robot extends IterativeRobot {
     stateTable = NetworkTable.getTable("stateTable");
     
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
-    jankoDrive.setSlewRate(36);
+    jankoDrive.setSlewRate(60);
+    driveSensitivity = 0.8;
   
     driveHelper = new DriveHelper();
     
@@ -153,8 +155,8 @@ public class Robot extends IterativeRobot {
     SmartDashboard.putBoolean("gyroPIDExists", true);
     
     gyroPIDHandler = new GyroPIDHandler(frontLeft, frontRight);
-    turnController = new PIDController(0.01, 0.0, 0, ahrs, gyroPIDHandler);
-    turnController.setInputRange(-720.0, 720.0);
+    turnController = new PIDController(0.01, 0.0, 0, 0.0, ahrs, jankoDrive);
+    turnController.setInputRange(-180.0, 180.0);
     turnController.setOutputRange(-1.0, 1.0);
     turnController.setAbsoluteTolerance(3.0);
     turnController.setContinuous(false);
@@ -241,8 +243,8 @@ public class Robot extends IterativeRobot {
   
   
   private void sensitivityControl() {
-    if (joystick.isHeldDown(6)) jankoDrive.setSlewRate(12);
-    else jankoDrive.setSlewRate(60);
+    if (joystick.isHeldDown(6)) driveSensitivity = 0.5;
+    else driveSensitivity = 0.9;
   }
   
   private void intakeControl() {
@@ -278,7 +280,7 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void teleopPeriodic() {
-    jankoDrive.arcadeDrive(-joystick.getYaxis()*.8, -joystick.getXaxis()*.8, true);
+    jankoDrive.arcadeDrive(-joystick.getYaxis()*driveSensitivity, -joystick.getXaxis()*driveSensitivity, true);
 //    jankoDrive.set(driveHelper.cheesyDrive(joystick.getYaxis(), -joystick.getXaxis(), joystick.isHeldDown(5)));
     joystick.update();
     intakeControl();
