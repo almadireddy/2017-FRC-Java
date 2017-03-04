@@ -2,13 +2,15 @@ package org.usfirst.frc.team4192;
 
 import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
-import edu.wpi.first.wpilibj.*;
+import edu.wpi.first.wpilibj.DriverStation;
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.PIDController;
+import edu.wpi.first.wpilibj.SPI;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
 import org.usfirst.frc.team4192.utilities.Collision;
-import org.usfirst.frc.team4192.utilities.gyroPID;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 import org.usfirst.frc.team4192.utilities.JankoDrive;
 
@@ -49,7 +51,6 @@ public class Robot extends IterativeRobot {
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  private gyroPID gyroPIDHandler;
   
   
   private RedLeftAuton redLeftAuton;
@@ -161,7 +162,6 @@ public class Robot extends IterativeRobot {
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
     SmartDashboard.putBoolean("gyroPIDExists", true);
     
-    gyroPIDHandler = new gyroPID(frontLeft, frontRight);
     turnController = new PIDController(0.01, 0.0, 0, 0.0, ahrs, jankoDrive);
     turnController.setInputRange(-180.0, 180.0);
     turnController.setOutputRange(-1.0, 1.0);
