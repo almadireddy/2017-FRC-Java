@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
-import org.usfirst.frc.team4192.utilities.Collision;
+import org.usfirst.frc.team4192.utilities.CollisionDetector;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 import org.usfirst.frc.team4192.utilities.JankoDrive;
 
@@ -63,7 +63,7 @@ public class Robot extends IterativeRobot {
   
   private NetworkTable stateTable;
   
-  private Collision collisionDetector;
+  private CollisionDetector collisionDetector;
   
   ////// End Instance Variables //////
   
@@ -127,10 +127,6 @@ public class Robot extends IterativeRobot {
     ahrs.reset();
   }
   
-  public static AHRS getGyro() {
-    return ahrs;
-  }
-  
   @Override
   public void robotInit() {
     frontLeft = new CANTalon(JankoConstants.frontLeftID);
@@ -178,7 +174,7 @@ public class Robot extends IterativeRobot {
     blueMiddleAuton = new BlueMiddleAuton();
     blueRightAuton = new BlueRightAuton();
     
-    collisionDetector = new Collision(ahrs);
+    collisionDetector = new CollisionDetector(ahrs);
 
     Thread flywheelControlThread = new Thread(() -> {
       while (!Thread.interrupted()) {
@@ -254,7 +250,7 @@ public class Robot extends IterativeRobot {
   
   
   private void sensitivityControl() {
-    if (joystick.isHeldDown(6)) driveSensitivity = 0.5;
+    if (joystick.isHeldDown(JankoConstants.sensitivityButton)) driveSensitivity = 0.5;
     else driveSensitivity = 0.9;
   }
   
@@ -278,7 +274,7 @@ public class Robot extends IterativeRobot {
     }
   }
   
-  public void collisionRumble() {
+  private void collisionRumble() {
     if (collisionDetector.isCollisionDetected())
       joystick.rumble();
   }

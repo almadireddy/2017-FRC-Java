@@ -30,6 +30,8 @@ public class JankoConstants {
   
   public static int agitatorToggle  = 8;
   
+  public static int sensitivityButton = 5;
+  
   public static double defaultDriveKp = 0.0;
   public static double defaultDriveKi = 0.0;
   public static double defaultDriveKd = 0.0;

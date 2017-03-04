@@ -14,7 +14,7 @@ public class driveOn extends Command {
   }
   
   public void initialize() {
-    Robot.switchDriveMotorsToPositionControl();
+    Robot.jankoDrive.prepareForAuton();
   }
   
   public void execute() {
@@ -33,6 +33,6 @@ public class driveOn extends Command {
   
   @Override
   protected boolean isFinished() {
-    return Robot.driveOnTarget();
+    return Robot.jankoDrive.isOnTarget();
   }
 }
