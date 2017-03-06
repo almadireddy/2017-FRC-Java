@@ -55,6 +55,16 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
     rightMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
   }
   
+  public void prepareForSingleEncoderDrive() {
+    leftMaster.changeControlMode(CANTalon.TalonControlMode.Position);
+    rightMaster.changeControlMode(CANTalon.TalonControlMode.Follower);
+    leftSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
+    rightSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
+    rightMaster.set(leftMaster.getDeviceID());
+    rightSlave.set(leftMaster.getDeviceID());
+    leftSlave.set(leftMaster.getDeviceID());
+  }
+  
   public void setPID(double p, double i, double d) {
     leftMaster.setPID(p, i, d);
     rightMaster.setPID(p, i, d);

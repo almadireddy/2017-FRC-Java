@@ -14,12 +14,11 @@ public class driveOn extends Command {
   }
   
   public void initialize() {
-    Robot.jankoDrive.prepareForAuton();
+    Robot.jankoDrive.prepareForSingleEncoderDrive();
   }
   
   public void execute() {
     Robot.frontLeft.set(driveTarget);
-    Robot.frontRight.set(driveTarget);
   }
   
   public void end() {
