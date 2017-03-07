@@ -288,8 +288,6 @@ public class Robot extends IterativeRobot {
     
     jankoDrive.prepareForTeleop();
     stateTable.putBoolean("autonomousMode", false);
-    
-    
   }
   
   @Override
