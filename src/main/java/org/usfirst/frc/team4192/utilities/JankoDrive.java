@@ -53,16 +53,23 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   public void prepareForTeleop() {
     leftMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+    leftSlave.set(leftMaster.getDeviceID());
+    rightSlave.set(rightMaster.getDeviceID());
+    rightMaster.setInverted(false);
+    rightSlave.setInverted(false);
   }
   
   public void prepareForSingleEncoderDrive() {
     leftMaster.changeControlMode(CANTalon.TalonControlMode.Position);
+    leftMaster.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.Follower);
     leftSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
     rightSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
     rightMaster.set(leftMaster.getDeviceID());
     rightSlave.set(leftMaster.getDeviceID());
     leftSlave.set(leftMaster.getDeviceID());
+    rightMaster.setInverted(true);
+    rightSlave.setInverted(true);
   }
   
   public void setPID(double p, double i, double d) {
@@ -77,7 +84,6 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   
   public void setSetpoint(double setpoint) {
     leftMaster.setSetpoint(setpoint);
-    rightMaster.setSetpoint(setpoint);
   }
   
   public void set(DriveSignal signal) {
@@ -86,11 +92,15 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   }
   
   public boolean isOnTarget() {
-    return (leftMaster.getClosedLoopError() < threshold) && (rightMaster.getClosedLoopError() < threshold);
+    return (leftMaster.getClosedLoopError() < threshold);
   }
   
   public double getLeft() {
     return leftMaster.get();
+  }
+  
+  public double getleftValue() {
+    return leftMaster.getEncPosition();
   }
   
   public double getRight() {
@@ -105,6 +115,8 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   public void enable() {
     leftMaster.enable();
     rightMaster.enable();
+    leftSlave.enable();
+    rightSlave.enable();
   }
   
   public double getThreshold() {
@@ -123,5 +135,9 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   @Override
   public void pidWrite(double output) {
     set(output);
+  }
+  
+  public void zeroSensors() {
+    leftMaster.setEncPosition(0);
   }
 }

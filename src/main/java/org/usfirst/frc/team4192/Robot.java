@@ -189,7 +189,8 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
         SmartDashboard.putNumber("leftActualRPM", flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
-        
+        SmartDashboard.putNumber("LeftEncoder", jankoDrive.getleftValue());
+        SmartDashboard.putNumber("leftOut", jankoDrive.getLeft());
       }
     });
     dashboardUpdateThread.start();
@@ -211,6 +212,7 @@ public class Robot extends IterativeRobot {
   public void autonomousInit() {
     zeroSensors();
     updateGyroConstants();
+    updateDriveConstants();
     stateTable.putBoolean("autonomousMode", true);
     switch (SmartDashboard.getString("Selected Autonomous", "default")) {
       case "Red Left":
@@ -282,11 +284,12 @@ public class Robot extends IterativeRobot {
   @Override
   public void teleopInit() {
     zeroSensors();
-    
+    jankoDrive.prepareForTeleop();
     if (turnController.isEnabled())
       turnController.disable();
     
     jankoDrive.prepareForTeleop();
+    jankoDrive.zeroSensors();
     stateTable.putBoolean("autonomousMode", false);
     
     

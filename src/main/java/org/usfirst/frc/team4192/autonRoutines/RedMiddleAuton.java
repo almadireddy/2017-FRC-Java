@@ -1,7 +1,6 @@
 package org.usfirst.frc.team4192.autonRoutines;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
-import org.usfirst.frc.team4192.commands.Turn;
 import org.usfirst.frc.team4192.commands.driveOn;
 
 /**
@@ -9,7 +8,6 @@ import org.usfirst.frc.team4192.commands.driveOn;
  */
 public class RedMiddleAuton extends CommandGroup {
   public RedMiddleAuton() {
-    addSequential(new driveOn(120));
-    addSequential(new Turn(45));
+    addSequential(new driveOn(80));
   }
 }
