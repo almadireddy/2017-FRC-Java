@@ -3,6 +3,7 @@ package org.usfirst.frc.team4192.utilities;
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * Created by aahladmadireddy on 2/25/17.
@@ -22,10 +23,19 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
     
     leftMaster.setInverted(false);
     rightMaster.setInverted(false);
+    
+    leftMaster.enableBrakeMode(true);
+    leftSlave.enableBrakeMode(true);
+    rightMaster.enableBrakeMode(true);
+    rightSlave.enableBrakeMode(true);
   
     leftMaster.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     rightMaster.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
   
+    leftMaster.reverseOutput(false);
+    leftMaster.reverseSensor(true);
+    rightMaster.reverseOutput(true);
+    
     leftSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
     leftSlave.set(leftMaster.getDeviceID());
     rightSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
@@ -36,6 +46,8 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
     leftSlave.configPeakOutputVoltage(+12.0f, -12.0f);
     rightMaster.configNominalOutputVoltage(+0.0f, -0.0f);
     rightSlave.configPeakOutputVoltage(+12.0f, -12.0f);
+    
+    updatePID();
     
     setExpiration(0.1);
   }
@@ -48,11 +60,29 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   public void prepareForAuton() {
     leftMaster.changeControlMode(CANTalon.TalonControlMode.Position);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.Position);
+    
+    zeroEncoders();
   }
   
   public void prepareForTeleop() {
     leftMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+    zeroEncoders();
+  }
+  
+  public void updatePID() {
+    leftMaster.setP(SmartDashboard.getNumber("driveP", 0.0));
+    leftMaster.setI(SmartDashboard.getNumber("driveI", 0.0));
+    leftMaster.setD(SmartDashboard.getNumber("driveD", 0.0));
+  
+    rightMaster.setP(SmartDashboard.getNumber("driveP", 0.0));
+    rightMaster.setI(SmartDashboard.getNumber("driveI", 0.0));
+    rightMaster.setD(SmartDashboard.getNumber("driveD", 0.0));
+  }
+  
+  public void zeroEncoders() {
+    leftMaster.setEncPosition(0);
+    rightMaster.setEncPosition(0);
   }
   
   public void setPID(double p, double i, double d) {
@@ -85,6 +115,14 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   
   public double getRight() {
     return rightMaster.get();
+  }
+  
+  public double getLeftValue() {
+    return leftMaster.getEncPosition();
+  }
+  
+  public double getRightValue() {
+    return rightMaster.getEncPosition();
   }
   
   public void disable() {

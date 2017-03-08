@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4192.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.Robot;
 
 /**
@@ -11,6 +12,8 @@ public class driveOn extends Command {
   
   public driveOn(double inches) {
     driveTarget = inches / (6 * Math.PI); // driveTarget needs to be in wheel revolutions before being set as target. We are using 6 inch wheels.
+    SmartDashboard.putNumber("drive target inches", inches);
+    SmartDashboard.putNumber("drive target", driveTarget);
   }
   
   public void initialize() {
@@ -18,13 +21,14 @@ public class driveOn extends Command {
   }
   
   public void execute() {
-    Robot.frontLeft.set(driveTarget);
-    Robot.frontRight.set(driveTarget);
+    Robot.jankoDrive.setSetpoint(driveTarget);
+    SmartDashboard.putBoolean("Drive Forward On", true);
+    Robot.jankoDrive.updatePID();
   }
   
   public void end() {
-    Robot.frontLeft.disable();
-    Robot.frontRight.disable();
+    Robot.jankoDrive.disable();
+    SmartDashboard.putBoolean("Drive Forward On", false);
   }
   
   public void interrupted() {
@@ -33,6 +37,6 @@ public class driveOn extends Command {
   
   @Override
   protected boolean isFinished() {
-    return Robot.jankoDrive.isOnTarget();
+    return false;
   }
 }

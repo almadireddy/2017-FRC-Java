@@ -28,7 +28,6 @@ public class Robot extends IterativeRobot {
   public static CANTalon agitator;
   
   public static JankoDrive jankoDrive;
-  DriveHelper driveHelper;
   public static double driveSensitivity;
   
   private static int drivePIDThreshold = 10;
@@ -140,8 +139,6 @@ public class Robot extends IterativeRobot {
     jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
     jankoDrive.setSlewRate(60);
     driveSensitivity = 0.8;
-  
-    driveHelper = new DriveHelper();
     
     flywheel = new CANTalon(JankoConstants.flywheelID);
     lift = new CANTalon(JankoConstants.liftID);
@@ -149,7 +146,7 @@ public class Robot extends IterativeRobot {
     agitator = new CANTalon(JankoConstants.agitatorID);
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
-    flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.AnalogEncoder);
+    flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     flywheel.setProfile(0);
     
     joystick = new JaggernautJoystick(JankoConstants.joystick);
@@ -189,7 +186,8 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
         SmartDashboard.putNumber("leftActualRPM", flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
-        
+        SmartDashboard.putNumber("Left Encoder Value", jankoDrive.getLeftValue()/4096);
+        SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
       }
     });
     dashboardUpdateThread.start();
@@ -210,7 +208,7 @@ public class Robot extends IterativeRobot {
   @Override
   public void autonomousInit() {
     zeroSensors();
-    updateGyroConstants();
+    updatePIDConstants();
     stateTable.putBoolean("autonomousMode", true);
     switch (SmartDashboard.getString("Selected Autonomous", "default")) {
       case "Red Left":
