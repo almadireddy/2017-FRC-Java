@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="driving pid seems to be working but right side is much more out of tune than the left.">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JankoDrive.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoDrive.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin" />
@@ -545,9 +544,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so.3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/robotCommand" afterPath="$PROJECT_DIR$/build/robotCommand" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -642,21 +639,34 @@
           <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3564">
-                  <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="4" />
-                  <folding />
+                <state relative-caret-position="256">
+                  <caret line="269" column="34" lean-forward="true" selection-start-line="269" selection-start-column="34" selection-end-line="269" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#4027#4028#0" expanded="true" />
+                    <element signature="e#4076#4077#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="JaggernautJoystick.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="JaggernautJoystick.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="27">
-                  <caret line="41" column="2" lean-forward="false" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+                <state relative-caret-position="189">
+                  <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
                   <folding>
                     <element signature="docComment;class#JaggernautJoystick#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -707,7 +717,7 @@
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="348">
-                  <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+                  <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -1206,10 +1216,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JankoDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -1295,6 +1305,18 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="team4192" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1837,7 +1859,7 @@
       <workItem from="1489016991257" duration="86000" />
       <workItem from="1489033039694" duration="1677000" />
       <workItem from="1489034758295" duration="111000" />
-      <workItem from="1489034902471" duration="296000" />
+      <workItem from="1489034902471" duration="834000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -2007,15 +2029,22 @@
       <option name="project" value="LOCAL" />
       <updated>1488935718014</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added getDpad method to joystick that probably wont work">
+      <created>1489035268431</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1489035268431</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74543000" />
+    <option name="totallyTimeSpent" value="75081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2031,7 +2060,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.22992985" sideWeight="0.4975" order="8" side_tool="false" content_ui="tabs" x="795" y="320" width="658" height="169" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433162" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433162" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2077,7 +2106,8 @@
     <MESSAGE value="got gyro pid turning working. tuning needed." />
     <MESSAGE value="refactor turn to Turn" />
     <MESSAGE value="driving pid seems to be working but right side is much more out of tune than the left." />
-    <option name="LAST_COMMIT_MESSAGE" value="driving pid seems to be working but right side is much more out of tune than the left." />
+    <MESSAGE value="added getDpad method to joystick that probably wont work" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getDpad method to joystick that probably wont work" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2095,7 +2125,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="e#4076#4077#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2110,7 +2143,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="e#4076#4077#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2249,14 +2285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3564">
-          <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -2274,18 +2302,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="41" column="2" lean-forward="false" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        <state relative-caret-position="189">
+          <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
           <folding>
             <element signature="docComment;class#JaggernautJoystick#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="269" column="34" lean-forward="true" selection-start-line="269" selection-start-column="34" selection-end-line="269" selection-end-column="34" />
+          <folding>
+            <element signature="e#4027#4028#0" expanded="true" />
+            <element signature="e#4076#4077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>

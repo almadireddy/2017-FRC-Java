@@ -261,12 +261,13 @@ public class Robot extends IterativeRobot {
   }
   
   private void flywheelControl() {
+    updateFlywheelConstants();
     if (joystick.buttonPressed(JankoConstants.flywheelToggle)) {
       if (flywheel.isEnabled())
         flywheel.disable();
       else {
         flywheel.enable();
-        flywheel.set(flywheelTargetRPM);
+        updateFlywheelTargetRPM();
       }
     }
   }
