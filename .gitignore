@@ -53,3 +53,7 @@ build/tmp/compileJava/
 src/main/resources/
 /2017-FRC-Java.ipr
 /2017-FRC-Java.iws
+build/classes/main/org/usfirst/frc/team4192/commands/driveOn.class
+build/classes/main/org/usfirst/frc/team4192/utilities/CollisionDetector.class
+/build/
+/.gradle/

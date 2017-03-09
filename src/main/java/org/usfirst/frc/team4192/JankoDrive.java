@@ -1,9 +1,10 @@
-package org.usfirst.frc.team4192.utilities;
+package org.usfirst.frc.team4192;
 
 import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import org.usfirst.frc.team4192.utilities.DriveSignal;
 
 /**
  * Created by aahladmadireddy on 2/25/17.

@@ -12,7 +12,6 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4192.autonRoutines.*;
 import org.usfirst.frc.team4192.utilities.CollisionDetector;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
-import org.usfirst.frc.team4192.utilities.JankoDrive;
 
 /**
  * Created by Al on 1/22/2017.
@@ -192,7 +191,7 @@ public class Robot extends IterativeRobot {
     });
     dashboardUpdateThread.start();
   
-    collisionDetector.start();
+    //collisionDetector.start();
   }
   
   @Override
@@ -273,8 +272,8 @@ public class Robot extends IterativeRobot {
   }
   
   private void collisionRumble() {
-    if (collisionDetector.isCollisionDetected())
-      joystick.rumble();
+    //if (collisionDetector.isCollisionDetected())
+      //joystick.rumble();
   }
   
   @Override
@@ -296,7 +295,7 @@ public class Robot extends IterativeRobot {
     intakeControl();
     flywheelControl();
     sensitivityControl();
-    collisionRumble();
+    //collisionRumble();
   }
   
   public static boolean gyroOnTarget() {
