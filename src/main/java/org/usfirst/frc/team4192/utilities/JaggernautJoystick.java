@@ -60,6 +60,10 @@ public class JaggernautJoystick {
     return joystick.getPOV(1);
   }
   
+  public double getAxis(int axis) {
+    return joystick.getRawAxis(axis);
+  }
+  
   public boolean isHeldDown(int button) {
     return buttons[button] && lastButtons[button];
   }
