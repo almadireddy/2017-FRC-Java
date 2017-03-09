@@ -9,14 +9,15 @@ package org.usfirst.frc.team4192;
  * TODO: Replace with actual port mappings
  */
 public class JankoConstants {
-  public static int frontLeftID     = 1;
-  public static int frontRightID    = 4;
-  public static int rearLeftID      = 2;
-  public static int rearRightID     = 3;
-  public static int flywheelID      = 0;
-  public static int intakeID        = 0;
-  public static int agitatorID      = 0;
-  public static int liftID          = 0;
+  public static int intakeID        = 0;  // intake is on victor
+  public static int agitatorID      = 1;
+  public static int liftID          = 2;
+  public static int rightMasterID   = 3;
+  public static int rightSlaveID    = 4;
+  public static int triggerID       = 5;
+  public static int flywheelID      = 6;
+  public static int leftSlaveID     = 7;
+  public static int leftMasterID    = 8;
   
   public static int joystick        = 0;
   

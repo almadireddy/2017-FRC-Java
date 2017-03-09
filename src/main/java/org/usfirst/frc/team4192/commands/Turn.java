@@ -33,8 +33,8 @@ public class Turn extends Command {
   }
   
   public void end() {
-    Robot.frontLeft.set(0);
-    Robot.frontRight.set(0);
+    Robot.leftMaster.set(0);
+    Robot.rightMaster.set(0);
     Robot.turnController.disable();
   }
   

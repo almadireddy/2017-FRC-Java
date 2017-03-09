@@ -2,10 +2,7 @@ package org.usfirst.frc.team4192;
 
 import com.ctre.CANTalon;
 import com.kauailabs.navx.frc.AHRS;
-import edu.wpi.first.wpilibj.DriverStation;
-import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.PIDController;
-import edu.wpi.first.wpilibj.SPI;
+import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -17,14 +14,16 @@ import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
  * Created by Al on 1/22/2017.
  */
 public class Robot extends IterativeRobot {
-  public static CANTalon frontLeft;
-  public static CANTalon frontRight;
-  private static CANTalon rearLeft;
-  private static CANTalon rearRight;
-  public static CANTalon flywheel;
-  private static CANTalon lift;
-  public static CANTalon intake;
-  public static CANTalon agitator;
+  public static CANTalon leftMaster= new CANTalon(JankoConstants.leftMasterID);
+  public static CANTalon rightMaster= new CANTalon(JankoConstants.rightMasterID);
+  private static CANTalon leftSlave= new CANTalon(JankoConstants.leftSlaveID);
+  private static CANTalon rightSlave= new CANTalon(JankoConstants.rightSlaveID);
+  public static CANTalon flywheel= new CANTalon(JankoConstants.flywheelID);
+  public static CANTalon agitator= new CANTalon(JankoConstants.agitatorID);
+  private static CANTalon lift= new CANTalon(JankoConstants.liftID);
+  private static CANTalon trigger= new CANTalon(JankoConstants.triggerID);
+  
+  public static VictorSP intake;
   
   public static JankoDrive jankoDrive;
   public static double driveSensitivity;
@@ -32,7 +31,7 @@ public class Robot extends IterativeRobot {
   private static int drivePIDThreshold = 10;
   
   private JaggernautJoystick joystick;
-  private static AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
+  private static AHRS ahrs;          // the NavX board
   
   private static double gyroKp;      // Gyroscope PID constants
   private static double gyroKi;
@@ -127,28 +126,22 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void robotInit() {
-    frontLeft = new CANTalon(JankoConstants.frontLeftID);
-    frontRight = new CANTalon(JankoConstants.frontRightID);
-    rearLeft  = new CANTalon(JankoConstants.rearLeftID);
-    rearRight = new CANTalon(JankoConstants.rearRightID);
     
+    intake = new VictorSP(JankoConstants.intakeID);
+    
+    joystick = new JaggernautJoystick(JankoConstants.joystick);
+  
     NetworkTable.setServerMode();
     stateTable = NetworkTable.getTable("stateTable");
-    
-    jankoDrive = new JankoDrive(frontLeft, rearLeft, frontRight, rearRight);
+  
+    jankoDrive = new JankoDrive(leftMaster, leftSlave, rightMaster, rightSlave);
     jankoDrive.setSlewRate(60);
     driveSensitivity = 0.8;
-    
-    flywheel = new CANTalon(JankoConstants.flywheelID);
-    lift = new CANTalon(JankoConstants.liftID);
-    intake = new CANTalon(JankoConstants.intakeID);
-    agitator = new CANTalon(JankoConstants.agitatorID);
-    
+  
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     flywheel.setProfile(0);
     
-    joystick = new JaggernautJoystick(JankoConstants.joystick);
     
     ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
     DriverStation.reportWarning("instantiated navX MXP:  ", false);
@@ -252,12 +245,19 @@ public class Robot extends IterativeRobot {
   }
   
   private void intakeControl() {
-    if (joystick.isHeldDown(6))
+    if (joystick.isHeldDown(JankoConstants.intakeIn))
       intake.set(1);
-    else if (joystick.isHeldDown(7))
+    else if (joystick.isHeldDown(JankoConstants.intakeOut))
       intake.set(-1);
     else
       intake.set(0);
+  }
+  
+  private void liftControl() {
+    if (joystick.isHeldDown(JankoConstants.climberUp))
+      lift.set(1);
+    else
+      lift.set(0);
   }
   
   private void flywheelControl() {
@@ -272,9 +272,18 @@ public class Robot extends IterativeRobot {
     }
   }
   
+  private void agitatorControl() {
+    if (joystick.buttonPressed(JankoConstants.agitatorToggle)) {
+      if (agitator.isEnabled())
+        agitator.disable();
+      else
+        agitator.set(1);
+    }
+  }
+  
   private void collisionRumble() {
-    //if (collisionDetector.isCollisionDetected())
-      //joystick.rumble();
+    if (collisionDetector.isCollisionDetected())
+      joystick.rumble();
   }
   
   @Override
@@ -291,12 +300,11 @@ public class Robot extends IterativeRobot {
   @Override
   public void teleopPeriodic() {
     jankoDrive.arcadeDrive(-joystick.getYaxis()*driveSensitivity, -joystick.getXaxis()*driveSensitivity, true);
-//    jankoDrive.set(driveHelper.cheesyDrive(joystick.getYaxis(), -joystick.getXaxis(), joystick.isHeldDown(5)));
     joystick.update();
     intakeControl();
     flywheelControl();
     sensitivityControl();
-    //collisionRumble();
+    collisionRumble();
   }
   
   public static boolean gyroOnTarget() {

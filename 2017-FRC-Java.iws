@@ -1,550 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" line="62" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" line="61" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="driving pid seems to be working but right side is much more out of tune than the left.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/Robot.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/Robot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/utilities/JankoDrive.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/utilities/JankoDrive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/2017-FRC-Java.jar" afterPath="$PROJECT_DIR$/build/libs/2017-FRC-Java.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.iws" afterPath="$PROJECT_DIR$/2017-FRC-Java.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/C++ Export.yaml" afterPath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/C++ Export.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/Java Export.yaml" afterPath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/Java Export.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/PaletteDescription.yaml" afterPath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/PaletteDescription.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/help.html" afterPath="$PROJECT_DIR$/build/depUnzip/Toolsuite-Zip-4.4.1.8.zip/Robotbuilder/CAN Talon/help.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_can_CANJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_can_CANJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AccelerometerJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AccelerometerJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AnalogGyroJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AnalogGyroJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AnalogJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AnalogJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AnalogJNI_AnalogTriggerType.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_AnalogJNI_AnalogTriggerType.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_CompressorJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_CompressorJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_ConstantsJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_ConstantsJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_CounterJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_CounterJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_DIOJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_DIOJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_DigitalGlitchFilterJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_DigitalGlitchFilterJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_EncoderJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_EncoderJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tInstances.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tInstances.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tModuleType.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tModuleType.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tResourceType.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tResourceType.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tTargetClass.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_FRCNetComm_tTargetClass.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_HAL.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_HAL.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_HALUtil.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_HALUtil.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_I2CJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_I2CJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_InterruptJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_InterruptJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_InterruptJNI_InterruptJNIHandlerFunction.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_InterruptJNI_InterruptJNIHandlerFunction.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_JNIWrapper.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_JNIWrapper.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_NotifierJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_NotifierJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_NotifierJNI_NotifierJNIHandlerFunction.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_NotifierJNI_NotifierJNIHandlerFunction.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_OSSerialPortJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_OSSerialPortJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PDPJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PDPJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PWMJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PWMJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PortsJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PortsJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PowerJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_PowerJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_RelayJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_RelayJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_SPIJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_SPIJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_SerialPortJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_SerialPortJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_SolenoidJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_SolenoidJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_ThreadsJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-jni-2017.1.1.jar/include/edu_wpi_first_wpilibj_hal_ThreadsJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/RoboRIO_FRC_ChipObject_Aliases.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/RoboRIO_FRC_ChipObject_Aliases.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/fpgainterfacecapi/NiFpga.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/fpgainterfacecapi/NiFpga.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/nInterfaceGlobals.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/nInterfaceGlobals.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAO.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAO.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAccel.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAccel.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAccumulator.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAccumulator.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAlarm.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAlarm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAnalogTrigger.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tAnalogTrigger.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tBIST.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tBIST.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tCounter.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tCounter.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tDIO.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tDIO.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tDMA.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tDMA.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tEncoder.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tEncoder.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tGlobal.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tGlobal.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tInterrupt.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tInterrupt.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tPWM.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tPWM.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tPower.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tPower.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tRelay.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tRelay.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tSPI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tSPI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tSysWatchdog.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/nRoboRIO_FPGANamespace/tSysWatchdog.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/printFpgaVersion.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/printFpgaVersion.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tDMAChannelDescriptor.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tDMAChannelDescriptor.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tDMAManager.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tDMAManager.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tInterruptManager.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tInterruptManager.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tSystem.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tSystem.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tSystemInterface.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_FPGA_ChipObject/tSystemInterface.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/AICalibration.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/AICalibration.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/CANInterfacePlugin.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/CANInterfacePlugin.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/CANSessionMux.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/CANSessionMux.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/FRCComm.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/FRCComm.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/LoadOut.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/LoadOut.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/UsageReporting.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/FRC_NetworkCommunication/UsageReporting.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Accelerometer.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Accelerometer.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogAccumulator.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogAccumulator.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogGyro.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogGyro.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogInput.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogInput.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogOutput.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogOutput.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogTrigger.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/AnalogTrigger.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/CAN.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/CAN.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/ChipObject.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/ChipObject.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Compressor.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Compressor.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Constants.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Constants.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Counter.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Counter.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/DIO.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/DIO.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/DriverStation.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/DriverStation.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Encoder.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Encoder.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Errors.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Errors.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/HAL.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/HAL.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/I2C.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/I2C.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Interrupts.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Interrupts.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/LabVIEW/HAL.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/LabVIEW/HAL.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Notifier.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Notifier.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/OSSerialPort.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/OSSerialPort.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/PDP.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/PDP.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/PWM.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/PWM.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Ports.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Ports.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Power.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Power.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Relay.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Relay.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/SPI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/SPI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/SerialPort.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/SerialPort.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Solenoid.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Solenoid.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Threads.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Threads.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Types.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/Types.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/Log.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/Log.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/Semaphore.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/Semaphore.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/SerialHelper.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/SerialHelper.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/make_unique.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/make_unique.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/priority_condition_variable.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/priority_condition_variable.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/priority_mutex.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/cpp/priority_mutex.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/DigitalHandleResource.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/DigitalHandleResource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/HandlesInternal.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/HandlesInternal.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/IndexedClassedHandleResource.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/IndexedClassedHandleResource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/IndexedHandleResource.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/IndexedHandleResource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/LimitedClassedHandleResource.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/LimitedClassedHandleResource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/LimitedHandleResource.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/LimitedHandleResource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/UnlimitedHandleResource.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/HAL/handles/UnlimitedHandleResource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ctre/ctre_frames.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ctre/ctre_frames.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI_ConnectionListenerFunction.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI_ConnectionListenerFunction.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI_EntryListenerFunction.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI_EntryListenerFunction.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI_LoggerFunction.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/edu_wpi_first_wpilibj_networktables_NetworkTablesJNI_LoggerFunction.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/i2clib/i2c-lib.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/i2clib/i2c-lib.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/AlignOf.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/AlignOf.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/ArrayRef.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/ArrayRef.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Compiler.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Compiler.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/ConvertUTF.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/ConvertUTF.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/DenseMap.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/DenseMap.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/DenseMapInfo.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/DenseMapInfo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/EpochTracker.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/EpochTracker.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Format.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Format.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Hashing.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Hashing.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/MathExtras.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/MathExtras.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/None.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/None.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Optional.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/Optional.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/PointerLikeTypeTraits.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/PointerLikeTypeTraits.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/STLExtras.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/STLExtras.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallPtrSet.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallPtrSet.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallSet.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallSet.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallString.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallString.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallVector.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/SmallVector.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/StringExtras.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/StringExtras.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/StringMap.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/StringMap.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/StringRef.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/StringRef.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/WindowsError.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/WindowsError.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/iterator_range.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/iterator_range.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/raw_os_ostream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/raw_os_ostream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/raw_ostream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/raw_ostream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/type_traits.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/llvm/type_traits.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/networktables/NetworkTable.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/networktables/NetworkTable.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/nt_Value.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/nt_Value.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore_cpp.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore_cpp.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore_test.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/ntcore_test.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/spilib/spi-lib.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/spilib/spi-lib.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/Base64.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/Base64.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/ConcurrentQueue.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/ConcurrentQueue.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/Logger.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/Logger.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/SafeThread.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/SafeThread.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/atomic_static.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/atomic_static.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/deprecated.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/deprecated.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/jni_util.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/jni_util.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/leb128.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/leb128.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/raw_istream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/raw_istream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/raw_socket_istream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/raw_socket_istream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/raw_socket_ostream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/raw_socket_ostream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/timestamp.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/support/timestamp.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tables/ITable.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tables/ITable.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tables/ITableListener.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tables/ITableListener.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tables/TableKeyNotDefinedException.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tables/TableKeyNotDefinedException.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/NetworkAcceptor.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/NetworkAcceptor.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/NetworkStream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/NetworkStream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/SocketError.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/SocketError.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/TCPAcceptor.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/TCPAcceptor.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/TCPConnector.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/TCPConnector.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/TCPStream.h" afterPath="$PROJECT_DIR$/build/depUnzip/athena-runtime-2017.1.1.zip/include/tcpsockets/TCPStream.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_cpp.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_cpp.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_oo.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_oo.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_oo.inl" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/cscore_oo.inl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/edu_wpi_cscore_CameraServerJNI.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/edu_wpi_cscore_CameraServerJNI.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/edu_wpi_cscore_CameraServerJNI_LoggerFunction.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/edu_wpi_cscore_CameraServerJNI_LoggerFunction.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/calib3d.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/calib3d.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/calib3d/calib3d.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/calib3d/calib3d.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/calib3d/calib3d_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/calib3d/calib3d_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/affine.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/affine.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/base.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/base.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/bufferpool.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/bufferpool.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/core.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/core.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/core_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/core_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda.inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda.inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/block.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/block.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/border_interpolate.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/border_interpolate.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/color.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/color.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/common.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/common.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/datamov_utils.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/datamov_utils.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/color_detail.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/color_detail.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/reduce_key_val.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/reduce_key_val.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/transform_detail.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/transform_detail.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/type_traits_detail.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/type_traits_detail.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/vec_distance_detail.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/detail/vec_distance_detail.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/dynamic_smem.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/dynamic_smem.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/emulation.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/emulation.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/filters.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/filters.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/funcattrib.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/funcattrib.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/functional.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/functional.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/limits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/limits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/saturate_cast.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/saturate_cast.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/scan.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/scan.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/simd_functions.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/simd_functions.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/transform.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/transform.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/type_traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/type_traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/utility.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/utility.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/vec_distance.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/vec_distance.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/vec_math.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/vec_math.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/vec_traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/vec_traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/warp.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/warp.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/warp_reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/warp_reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/warp_shuffle.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda/warp_shuffle.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda_stream_accessor.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda_stream_accessor.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda_types.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cuda_types.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cvdef.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cvdef.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cvstd.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cvstd.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cvstd.inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/cvstd.inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/directx.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/directx.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/eigen.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/eigen.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/fast_math.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/fast_math.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/hal.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/hal.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/interface.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/interface.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin_cpp.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin_cpp.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin_neon.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin_neon.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin_sse.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/hal/intrin_sse.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ippasync.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ippasync.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/mat.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/mat.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/mat.inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/mat.inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/matx.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/matx.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/neon_utils.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/neon_utils.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ocl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ocl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ocl_genbase.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ocl_genbase.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/ocl_defs.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/ocl_defs.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/opencl_svm.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/opencl_svm.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_clamdblas.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_clamdblas.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_clamdfft.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_clamdfft.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_core.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_core.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_clamdblas.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_clamdblas.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_clamdfft.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_core.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_core.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_gl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_gl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_svm_20.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_svm_20.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opengl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/opengl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/operations.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/operations.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/optim.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/optim.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/persistence.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/persistence.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/private.cuda.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/private.cuda.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/private.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/private.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ptr.inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/ptr.inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/saturate.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/saturate.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/sse_utils.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/sse_utils.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/types.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/types.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/types_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/types_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/utility.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/utility.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/va_intel.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/va_intel.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/version.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/version.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/wimage.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/core/wimage.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaarithm.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaarithm.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudabgsegm.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudabgsegm.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudacodec.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudacodec.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudafeatures2d.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudafeatures2d.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudafilters.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudafilters.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaimgproc.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaimgproc.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCV.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCV.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCVBroxOpticalFlow.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCVBroxOpticalFlow.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCVHaarObjectDetection.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCVHaarObjectDetection.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCVPyramid.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NCVPyramid.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NPP_staging.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/NPP_staging.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/private.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudalegacy/private.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaobjdetect.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaobjdetect.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaoptflow.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudaoptflow.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudastereo.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudastereo.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudawarping.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudawarping.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/block.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/block.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/detail/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/detail/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/detail/reduce_key_val.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/detail/reduce_key_val.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/dynamic_smem.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/dynamic_smem.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/scan.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/scan.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/vec_distance.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/block/vec_distance.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/common.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/common.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/binary_func.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/binary_func.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/binary_op.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/binary_op.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/color.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/color.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/deriv.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/deriv.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/expr.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/expr.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/per_element_func.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/per_element_func.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/reduction.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/reduction.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/unary_func.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/unary_func.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/unary_op.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/unary_op.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/warping.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/expr/warping.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/color_cvt.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/color_cvt.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/detail/color_cvt.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/detail/color_cvt.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/functional.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/functional.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/tuple_adapter.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/functional/tuple_adapter.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/copy.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/copy.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/copy.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/copy.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/histogram.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/histogram.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/integral.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/integral.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/minmaxloc.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/minmaxloc.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/pyr_down.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/pyr_down.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/pyr_up.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/pyr_up.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/reduce_to_column.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/reduce_to_column.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/reduce_to_row.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/reduce_to_row.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/split_merge.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/split_merge.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/transform.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/transform.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/transpose.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/detail/transpose.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/histogram.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/histogram.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/integral.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/integral.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/pyramids.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/pyramids.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/reduce_to_vec.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/reduce_to_vec.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/split_merge.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/split_merge.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/transform.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/transform.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/transpose.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/grid/transpose.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/constant.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/constant.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/deriv.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/deriv.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/detail/gpumat.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/detail/gpumat.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/extrapolation.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/extrapolation.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/glob.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/glob.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/gpumat.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/gpumat.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/interpolation.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/interpolation.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/lut.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/lut.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/mask.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/mask.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/remap.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/remap.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/resize.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/resize.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/texture.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/texture.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/transform.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/transform.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/warping.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/warping.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/zip.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/ptr2d/zip.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/atomic.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/atomic.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/detail/tuple.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/detail/tuple.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/detail/type_traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/detail/type_traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/limits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/limits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/saturate_cast.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/saturate_cast.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/simd_functions.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/simd_functions.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/tuple.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/tuple.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/type_traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/type_traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/vec_math.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/vec_math.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/vec_traits.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/util/vec_traits.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/detail/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/detail/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/detail/reduce_key_val.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/detail/reduce_key_val.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/reduce.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/reduce.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/scan.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/scan.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/shuffle.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/shuffle.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/warp.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/cudev/warp/warp.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/features2d.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/features2d.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/features2d/features2d.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/features2d/features2d.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/all_indices.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/all_indices.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/allocator.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/allocator.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/any.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/any.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/autotuned_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/autotuned_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/composite_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/composite_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/config.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/config.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/defines.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/defines.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/dist.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/dist.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/dummy.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/dummy.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/dynamic_bitset.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/dynamic_bitset.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/flann.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/flann.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/flann_base.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/flann_base.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/general.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/general.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/ground_truth.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/ground_truth.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/hdf5.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/hdf5.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/heap.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/heap.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/hierarchical_clustering_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/hierarchical_clustering_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/index_testing.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/index_testing.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/kdtree_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/kdtree_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/kdtree_single_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/kdtree_single_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/kmeans_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/kmeans_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/linear_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/linear_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/logger.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/logger.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/lsh_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/lsh_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/lsh_table.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/lsh_table.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/matrix.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/matrix.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/miniflann.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/miniflann.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/nn_index.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/nn_index.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/object_factory.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/object_factory.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/params.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/params.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/random.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/random.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/result_set.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/result_set.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/sampling.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/sampling.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/saving.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/saving.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/simplex_downhill.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/simplex_downhill.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/timer.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/flann/timer.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui/highgui.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui/highgui.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui/highgui_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui/highgui_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui/highgui_winrt.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/highgui/highgui_winrt.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs/imgcodecs.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs/imgcodecs.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs/imgcodecs_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs/imgcodecs_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs/ios.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgcodecs/ios.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/detail/distortion_model.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/detail/distortion_model.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/imgproc.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/imgproc.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/imgproc_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/imgproc_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/types_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/imgproc/types_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ml.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ml.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ml/ml.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ml/ml.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect/detection_based_tracker.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect/detection_based_tracker.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect/objdetect.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect/objdetect.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect/objdetect_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/objdetect/objdetect_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo/cuda.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo/cuda.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo/photo.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo/photo.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo/photo_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/photo/photo_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/emdL1.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/emdL1.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/hist_cost.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/hist_cost.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/shape.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/shape.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/shape_distance.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/shape_distance.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/shape_transformer.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/shape/shape_transformer.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/autocalib.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/autocalib.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/blenders.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/blenders.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/camera.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/camera.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/exposure_compensate.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/exposure_compensate.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/matchers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/matchers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/motion_estimators.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/motion_estimators.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/seam_finders.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/seam_finders.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/timelapsers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/timelapsers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/util.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/util.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/util_inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/util_inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/warpers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/warpers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/warpers_inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/detail/warpers_inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/warpers.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/stitching/warpers.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/superres.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/superres.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/superres/optical_flow.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/superres/optical_flow.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/cuda_perf.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/cuda_perf.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/cuda_test.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/cuda_test.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ocl_perf.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ocl_perf.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ocl_test.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ocl_test.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ts_ext.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ts_ext.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ts_gtest.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ts_gtest.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ts_perf.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/ts/ts_perf.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/background_segm.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/background_segm.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/tracking.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/tracking.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/tracking_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/tracking_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/video.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/video/video.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/cap_ios.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/cap_ios.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/cap_winrt.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/cap_winrt.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/videoio.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/videoio.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/videoio_c.h" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videoio/videoio_c.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/deblurring.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/deblurring.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/fast_marching.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/fast_marching.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/fast_marching_inl.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/fast_marching_inl.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/frame_source.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/frame_source.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/global_motion.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/global_motion.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/inpainting.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/inpainting.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/log.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/log.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/motion_core.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/motion_core.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/motion_stabilizing.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/motion_stabilizing.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/optical_flow.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/optical_flow.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/outlier_rejection.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/outlier_rejection.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/ring_buffer.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/ring_buffer.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/stabilizer.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/stabilizer.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/wobble_suppression.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/videostab/wobble_suppression.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/types.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/types.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/viz3d.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/viz3d.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/vizcore.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/vizcore.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/widget_accessor.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/widget_accessor.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/widgets.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/viz/widgets.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/world.hpp" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/include/opencv2/world.hpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_calib3d.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_calib3d.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_calib3d.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_calib3d.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_core.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_core.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_core.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_core.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_features2d.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_features2d.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_features2d.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_features2d.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_flann.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_flann.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_flann.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_flann.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_highgui.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_highgui.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_highgui.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_highgui.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgcodecs.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgcodecs.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgcodecs.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgcodecs.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgproc.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgproc.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgproc.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_imgproc.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_ml.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_ml.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_ml.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_ml.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_objdetect.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_objdetect.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_objdetect.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_objdetect.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_photo.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_photo.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_photo.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_photo.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_shape.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_shape.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_shape.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_shape.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_stitching.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_stitching.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_stitching.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_stitching.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_superres.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_superres.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_superres.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_superres.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_video.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_video.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_video.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_video.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videoio.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videoio.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videoio.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videoio.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so.3" afterPath="$PROJECT_DIR$/build/depUnzip/cscore-1.0.0-athena-uberzip.zip/lib/libopencv_videostab.so.3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/robotCommand" afterPath="$PROJECT_DIR$/build/robotCommand" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -636,14 +100,18 @@
     <splitter split-orientation="horizontal" split-proportion="0.47786948">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="269" column="34" lean-forward="true" selection-start-line="269" selection-start-column="34" selection-end-line="269" selection-end-column="34" />
+                <state relative-caret-position="432">
+                  <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
                   <folding>
-                    <element signature="e#4027#4028#0" expanded="true" />
-                    <element signature="e#4076#4077#0" expanded="true" />
+                    <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+                    <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+                    <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+                    <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+                    <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+                    <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -652,21 +120,11 @@
           <file leaf-file-name="JaggernautJoystick.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+                <state relative-caret-position="270">
+                  <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
                   <folding>
                     <element signature="docComment;class#JaggernautJoystick#0" expanded="false" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="189">
-                  <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -690,34 +148,16 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="918">
                   <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#626#627#0" expanded="false" />
-                    <element signature="e#670#671#0" expanded="false" />
-                    <element signature="e#993#994#0" expanded="false" />
-                    <element signature="e#1008#1009#0" expanded="false" />
-                    <element signature="e#1058#1059#0" expanded="false" />
-                    <element signature="e#1080#1081#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JankoConstants.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="702">
-                  <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
+          <file leaf-file-name="JankoConstants.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="348">
-                  <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+                <state relative-caret-position="363">
+                  <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -739,6 +179,7 @@
       <find>pidget</find>
       <find>frontRight</find>
       <find>rumble</find>
+      <find>intake</find>
     </findStrings>
     <replaceStrings>
       <replace>rightMaster</replace>
@@ -1217,10 +658,10 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JankoDrive.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoDrive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
       </list>
     </option>
   </component>
@@ -1237,8 +678,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="2576" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1281,7 +722,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1307,23 +750,9 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="team4192" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1859,7 +1288,8 @@
       <workItem from="1489016991257" duration="86000" />
       <workItem from="1489033039694" duration="1677000" />
       <workItem from="1489034758295" duration="111000" />
-      <workItem from="1489034902471" duration="834000" />
+      <workItem from="1489034902471" duration="1329000" />
+      <workItem from="1489073730243" duration="2134000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -2036,14 +1466,21 @@
       <option name="project" value="LOCAL" />
       <updated>1489035268431</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="updated gitignore">
+      <created>1489035798196</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1489035798196</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75081000" />
+    <option name="totallyTimeSpent" value="77710000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2060,7 +1497,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.22992985" sideWeight="0.4975" order="8" side_tool="false" content_ui="tabs" x="795" y="320" width="658" height="169" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1433162" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.089825116" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2107,7 +1544,8 @@
     <MESSAGE value="refactor turn to Turn" />
     <MESSAGE value="driving pid seems to be working but right side is much more out of tune than the left." />
     <MESSAGE value="added getDpad method to joystick that probably wont work" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getDpad method to joystick that probably wont work" />
+    <MESSAGE value="updated gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -2126,8 +1564,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4027#4028#0" expanded="true" />
-            <element signature="e#4076#4077#0" expanded="true" />
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2144,8 +1586,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#4027#4028#0" expanded="true" />
-            <element signature="e#4076#4077#0" expanded="true" />
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2241,15 +1687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#670#671#0" expanded="false" />
-            <element signature="e#993#994#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
-            <element signature="e#1058#1059#0" expanded="false" />
-            <element signature="e#1080#1081#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2285,14 +1723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/athena/2017.1.1/ad72688c2145e332d4f9f55a0a7cf0299b82998d/athena-2017.1.1.jar!/edu/wpi/first/wpilibj/Joystick.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -2300,32 +1730,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="49" column="2" lean-forward="true" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
+        <state relative-caret-position="270">
+          <caret line="53" column="2" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="53" selection-end-column="2" />
           <folding>
             <element signature="docComment;class#JaggernautJoystick#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="269" column="34" lean-forward="true" selection-start-line="269" selection-start-column="34" selection-end-line="269" selection-end-column="34" />
-          <folding>
-            <element signature="e#4027#4028#0" expanded="true" />
-            <element signature="e#4076#4077#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="432">
+          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding>
+            <element signature="method#setFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateDriveConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateGyroConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updatePIDConstants#0;class#Robot#0" expanded="false" />
+            <element signature="method#updateFlywheelTargetRPM#0;class#Robot#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
