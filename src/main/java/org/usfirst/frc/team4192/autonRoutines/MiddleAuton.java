@@ -8,6 +8,6 @@ import org.usfirst.frc.team4192.commands.driveOn;
  */
 public class MiddleAuton extends CommandGroup {
   public MiddleAuton() {
-    addSequential(new driveOn(8*12), 10);
+    addSequential(new driveOn(8*12 -24), 10);
   }
 }

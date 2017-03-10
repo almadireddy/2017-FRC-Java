@@ -1,5 +1,4 @@
 package org.usfirst.frc.team4192.autonRoutines;
-
 import edu.wpi.first.wpilibj.command.CommandGroup;
 import org.usfirst.frc.team4192.commands.Turn;
 import org.usfirst.frc.team4192.commands.driveOn;
@@ -9,8 +8,8 @@ import org.usfirst.frc.team4192.commands.driveOn;
  */
 public class RightAuton extends CommandGroup {
   public RightAuton() {
-    addSequential(new driveOn(8*12), 5);
-    addSequential(new Turn(-45), 3);
-    addSequential(new driveOn(36), 5);
+    addSequential(new driveOn(75), 3.5);
+    addSequential(new Turn(-70), 3.5);
+    addSequential(new driveOn(44), 5);
   }
 }

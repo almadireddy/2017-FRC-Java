@@ -9,8 +9,8 @@ import org.usfirst.frc.team4192.commands.driveOn;
  */
 public class LeftAuton extends CommandGroup {
   public LeftAuton() {
-    addSequential(new driveOn(8*12), 5);
-    addSequential(new Turn(45), 3);
-    addSequential(new driveOn(36), 5);
+    addSequential(new driveOn(92), 3.5);
+    addSequential(new Turn(63), 3.5);
+    addSequential(new driveOn(34), 5);
   }
 }

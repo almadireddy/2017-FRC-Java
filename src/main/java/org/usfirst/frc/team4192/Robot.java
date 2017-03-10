@@ -6,7 +6,10 @@ import edu.wpi.first.wpilibj.*;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc.team4192.autonRoutines.*;
+import org.usfirst.frc.team4192.autonRoutines.DefaultAuton;
+import org.usfirst.frc.team4192.autonRoutines.LeftAuton;
+import org.usfirst.frc.team4192.autonRoutines.MiddleAuton;
+import org.usfirst.frc.team4192.autonRoutines.RightAuton;
 import org.usfirst.frc.team4192.utilities.CollisionDetector;
 import org.usfirst.frc.team4192.utilities.JaggernautJoystick;
 
@@ -92,6 +95,7 @@ public class Robot extends IterativeRobot {
     flywheel.setI(flywheelKi);
     flywheel.setD(flywheelKd);
     flywheel.setF(flywheelKf);
+    flywheel.setSetpoint(flywheelTargetRPM);
   }
   
   // calls the three constants update functions
@@ -124,10 +128,11 @@ public class Robot extends IterativeRobot {
     jankoDrive.setSlewRate(60);
     driveSensitivity = 0.8;
     
-    flywheel.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+    flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     flywheel.reverseSensor(true);
     flywheel.setProfile(0);
+    flywheel.disable();
     
     lift.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     agitator.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
@@ -153,6 +158,10 @@ public class Robot extends IterativeRobot {
     Thread flywheelControlThread = new Thread(() -> {
       while (!Thread.interrupted()) {
         updateFlywheelConstants();
+        if (Math.abs(flywheel.getEncVelocity()) > 7500)
+          SmartDashboard.putBoolean("flywheel ready", true);
+        else
+          SmartDashboard.putBoolean("flywheel ready", false);
       }
     });
     flywheelControlThread.start();
@@ -160,7 +169,7 @@ public class Robot extends IterativeRobot {
     Thread dashboardUpdateThread = new Thread(() -> {
       while (!Thread.interrupted()) {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
-        SmartDashboard.putNumber("leftActualRPM", flywheel.getEncVelocity());
+        SmartDashboard.putNumber("flywheelMeasuredRPM", -flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
         SmartDashboard.putNumber("Left Encoder Value", jankoDrive.getLeftValue()/4096);
         SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
@@ -169,6 +178,7 @@ public class Robot extends IterativeRobot {
     dashboardUpdateThread.start();
   
     collisionDetector.start();
+    CameraServer.getInstance().startAutomaticCapture();
   }
   
   @Override
@@ -221,10 +231,14 @@ public class Robot extends IterativeRobot {
   }
   
   private void triggerControl() {
-    if (joystick.getAxis(3) > 0.5)
-      trigger.set(1);
-    else
+    if (joystick.getRightTrigger() > 0) {
+      trigger.set(-joystick.getRightTrigger() * 0.5);
+      agitator.set(-1);
+    }
+    else {
       trigger.set(0);
+      agitator.set(0);
+    }
   }
   
   private void driveControl() {
@@ -236,13 +250,13 @@ public class Robot extends IterativeRobot {
       intake.set(0.75);
     else
       intake.set(0);
-    if (joystick.isHeldDown(1)) {
+    if (joystick.isHeldDown(JankoConstants.intakeReverse)) {
       intake.set(-0.75);
     }
   }
   
   private void liftControl() {
-    if (joystick.isHeldDown(JankoConstants.climberUp))
+    if (joystick.isHeldDown(JankoConstants.liftButton))
       lift.set(1);
     else
       lift.set(0);
@@ -250,11 +264,10 @@ public class Robot extends IterativeRobot {
   
   private void flywheelPIDControl() {
     if (joystick.buttonPressed(JankoConstants.flywheelOn))
-      if (flywheel.get() > 0) {
-        flywheel.setSetpoint(0);
+      if (flywheel.isEnabled()) {
+        flywheel.disable();
       }
       else {
-        flywheel.setSetpoint(flywheelTargetRPM);
         flywheel.enable();
       }
   }
@@ -282,10 +295,14 @@ public class Robot extends IterativeRobot {
   
   private void agitatorControl() {
     if (joystick.buttonPressed(JankoConstants.agitatorToggle)) {
-      if (agitator.get() > 0)
+      if (agitator.isEnabled()) {
         agitator.set(0);
-      else
+        agitator.disable();
+      }
+      else {
+        agitator.enable();
         agitator.set(-1);
+      }
     }
   }
   
@@ -307,13 +324,12 @@ public class Robot extends IterativeRobot {
   
   @Override
   public void teleopPeriodic() {
-    SmartDashboard.putNumber("flywheelRPM", flywheel.getEncVelocity());
     joystick.update();
     driveControl();
     intakeControl();
     liftControl();
     flywheelPIDControl();
-    agitatorControl();
+//    agitatorControl();
     triggerControl();
     sensitivityControl();
     collisionRumble();

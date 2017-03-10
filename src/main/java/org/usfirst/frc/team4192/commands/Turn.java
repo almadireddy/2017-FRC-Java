@@ -12,6 +12,7 @@ public class Turn extends Command {
   
   public Turn(double degrees) {
     gyroTarget = degrees;
+    SmartDashboard.putNumber("targetHeading", gyroTarget);
   }
   
   public Turn(double degrees, double p, double i, double d) {

@@ -21,26 +21,26 @@ public class JankoConstants {
   
   public static int joystick        = 0;
   
-  public static int agitatorToggle    = 5;
-  public static int flywheelOn        = 6;
-  public static int flywheelOff       = 8;
-  public static int intakeIn          = 1;
-  public static int intakeOut         = 2;
+  public static int intakeReverse     = 1;
+  public static int flywheelOn        = 2;
+  public static int sensitivityButton = 3;
   public static int climberUp         = 4;
+  public static int agitatorToggle    = 5;
+  public static int liftButton        = 6;
+  
+  public static int intakeAxis        = 2;
   public static int triggerWheelAxis  = 3;
   
-  public static int sensitivityButton = 3;
-  
-  public static double defaultDriveKp = 0.0;
+  public static double defaultDriveKp = 0.05;
   public static double defaultDriveKi = 0.0;
   public static double defaultDriveKd = 0.0;
   
-  public static double defaultGyroKp = 0.1;
+  public static double defaultGyroKp = 0.008;
   public static double defaultGyroKi = 0.0;
   public static double defaultGyroKd = 0.0;
   
-  public static double defaultFlywheelKp = 0.0;
+  public static double defaultFlywheelKp = 0.04;
   public static double defaultFlywheelKi = 0.0;
-  public static double defaultFlywheelKd = 0.0;
-  public static double defaultFlywheelKf = 0.0;
+  public static double defaultFlywheelKd = 0.7;
+  public static double defaultFlywheelKf = 0.2;
 }

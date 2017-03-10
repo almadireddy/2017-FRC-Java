@@ -13,7 +13,7 @@ public class driveOn extends Command {
   public driveOn(double inches) {
     driveTarget = inches / (6 * Math.PI);
     SmartDashboard.putNumber("drive target inches", inches);
-    SmartDashboard.putNumber("drive target", driveTarget);
+    SmartDashboard.putNumber("targetDistance", driveTarget);
   }
   
   public void initialize() {
