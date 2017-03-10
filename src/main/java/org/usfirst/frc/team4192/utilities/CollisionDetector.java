@@ -12,7 +12,7 @@ public class CollisionDetector {
   private double last_world_linear_accel_y;
   private boolean collisionDetected = false;
   
-  private final static double kCollisionThreshold_DeltaG = 0.1f;
+  private final static double kCollisionThreshold_DeltaG = 0.5f;
   
   public CollisionDetector(AHRS ahrs) {
     this.ahrs = ahrs;

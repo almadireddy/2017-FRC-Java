@@ -7,13 +7,13 @@ import edu.wpi.first.wpilibj.Joystick;
  * Created by Al on 2/23/2017.
  */
 public class JaggernautJoystick {
-  private boolean[] buttons;
+  private boolean[] currentButtons;
   private boolean[] lastButtons;
   private Joystick joystick;
   
   public JaggernautJoystick(int port) {
     joystick = new Joystick(port);
-    buttons = new boolean[joystick.getButtonCount()];
+    currentButtons = new boolean[joystick.getButtonCount()];
     lastButtons = new boolean[joystick.getButtonCount()];
     updateButtonStates();
   }
@@ -23,11 +23,11 @@ public class JaggernautJoystick {
   }
   
   private void updateButtonStates() {
-    if (buttons.length > 0) {
-      System.arraycopy(buttons, 0, lastButtons, 0, buttons.length);
+    if (currentButtons.length > 0) {
+      System.arraycopy(currentButtons, 0, lastButtons, 0, currentButtons.length);
     }
     for (int i = 1; i < joystick.getButtonCount(); i++) {
-      buttons[i] = joystick.getRawButton(i);
+      currentButtons[i] = joystick.getRawButton(i);
     }
   }
   
@@ -60,16 +60,20 @@ public class JaggernautJoystick {
     return joystick.getPOV(1);
   }
   
+  public double getAxis(int axis) {
+    return joystick.getRawAxis(axis);
+  }
+  
   public boolean isHeldDown(int button) {
-    return buttons[button] && lastButtons[button];
+    return currentButtons[button] && lastButtons[button];
   }
   
   public boolean buttonPressed(int button) {
-    return buttons[button] && !lastButtons[button];
+    return currentButtons[button] && !lastButtons[button];
   }
   
   public boolean buttonReleased(int button) {
-    return !buttons[button] && lastButtons[button];
+    return !currentButtons[button] && lastButtons[button];
   }
   
   public void rumble() {

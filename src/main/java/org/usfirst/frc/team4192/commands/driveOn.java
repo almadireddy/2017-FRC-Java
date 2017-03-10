@@ -11,13 +11,14 @@ public class driveOn extends Command {
   double driveTarget;
   
   public driveOn(double inches) {
-    driveTarget = inches / (6 * Math.PI); // driveTarget needs to be in wheel revolutions before being set as target. We are using 6 inch wheels.
+    driveTarget = inches / (6 * Math.PI);
     SmartDashboard.putNumber("drive target inches", inches);
     SmartDashboard.putNumber("drive target", driveTarget);
   }
   
   public void initialize() {
     Robot.jankoDrive.prepareForAuton();
+    Robot.jankoDrive.enable();
   }
   
   public void execute() {
