@@ -7,10 +7,10 @@ import org.usfirst.frc.team4192.commands.driveOn;
 /**
  * Created by Al on 2/8/2017.
  */
-public class RedLeftAuton extends CommandGroup {
-  public RedLeftAuton() {
-    addSequential(new Turn(45, 0.01111, 0.0, 0.001), 15);
-    addSequential(new Turn(-90, 0.01111, 0.0, 0.001), 15);
-    addSequential(new driveOn(120), 5);
+public class LeftAuton extends CommandGroup {
+  public LeftAuton() {
+    addSequential(new driveOn(8*12), 5);
+    addSequential(new Turn(45), 3);
+    addSequential(new driveOn(36), 5);
   }
 }

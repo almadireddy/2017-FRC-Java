@@ -50,13 +50,9 @@ public class Robot extends IterativeRobot {
   public static PIDController turnController;
   
   
-  private RedLeftAuton redLeftAuton;
-  private RedMiddleAuton redMiddleAuton;
-  private RedRightAuton redRightAuton;
-  
-  private BlueLeftAuton blueLeftAuton;
-  private BlueMiddleAuton blueMiddleAuton;
-  private BlueRightAuton blueRightAuton;
+  private LeftAuton leftAuton;
+  private MiddleAuton redMiddleAuton;
+  private RightAuton rightAuton;
   
   private DefaultAuton defaultAuton;
   
@@ -66,7 +62,6 @@ public class Robot extends IterativeRobot {
   
   //Flywheel Values
   private Boolean flywheelEnabled = false;
-  private int flywheelTarget = 10000;
   
   ////// End Instance Variables //////
   
@@ -192,36 +187,21 @@ public class Robot extends IterativeRobot {
     updatePIDConstants();
     stateTable.putBoolean("autonomousMode", true);
     switch (SmartDashboard.getString("Selected Autonomous", "default")) {
-      case "Red Left":
-        redLeftAuton = new RedLeftAuton();
-        redLeftAuton.start();
+      case "Left":
+        leftAuton = new LeftAuton();
+        leftAuton.start();
         break;
         
-      case "Red Middle":
-        redMiddleAuton = new RedMiddleAuton();
+      case "Middle":
+        redMiddleAuton = new MiddleAuton();
         redMiddleAuton.start();
         break;
       
-      case "Red Right":
-        redRightAuton = new RedRightAuton();
-        redRightAuton.start();
+      case "Right":
+        rightAuton = new RightAuton();
+        rightAuton.start();
         break;
-      
-      case "Blue Left":
-        blueLeftAuton = new BlueLeftAuton();
-        blueLeftAuton.start();
-        break;
-      
-      case "Blue Middle":
-        blueMiddleAuton = new BlueMiddleAuton();
-        blueMiddleAuton.start();
-        break;
-        
-      case "Blue Right":
-        blueRightAuton = new BlueRightAuton();
-        blueRightAuton.start();
-        break;
-        
+    
       default:
         defaultAuton = new DefaultAuton();
         defaultAuton.start();
@@ -252,14 +232,12 @@ public class Robot extends IterativeRobot {
   }
   
   private void intakeControl() {
-    if (joystick.buttonPressed(JankoConstants.intakeIn))
-      if(intake.get() > 0)
-        intake.set(0);
-      else
-        intake.set(0.5);
-    if (joystick.buttonPressed(JankoConstants.intakeOut)) {
-      double current = intake.get();
-      intake.set(-current);
+    if (joystick.getLeftTrigger() > 0.5)
+      intake.set(0.75);
+    else
+      intake.set(0);
+    if (joystick.isHeldDown(1)) {
+      intake.set(-0.75);
     }
   }
   
@@ -292,12 +270,14 @@ public class Robot extends IterativeRobot {
     }
     
     if (flywheelEnabled) {
-      if (Math.abs(flywheel.getEncVelocity()) > flywheelTarget) {
+      if (Math.abs(flywheel.getEncVelocity()) > flywheelTargetRPM) {
         flywheel.set(0.2);
       }
       else
         flywheel.set(0.8);
     }
+    else
+      flywheel.set(0);
   }
   
   private void agitatorControl() {

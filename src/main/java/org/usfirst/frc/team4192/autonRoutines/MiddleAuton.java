@@ -4,10 +4,10 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 import org.usfirst.frc.team4192.commands.driveOn;
 
 /**
- * Created by a faggot on 2/8/2017.
+ * Created by a Al on 2/8/2017.
  */
-public class RedMiddleAuton extends CommandGroup {
-  public RedMiddleAuton() {
-    addSequential(new driveOn(120), 50);
+public class MiddleAuton extends CommandGroup {
+  public MiddleAuton() {
+    addSequential(new driveOn(8*12), 10);
   }
 }

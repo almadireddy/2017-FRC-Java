@@ -52,8 +52,12 @@ public class JaggernautJoystick {
     return createDeadzone(joystick.getY());
   }
   
-  public boolean getLeftTrigger() {
-    return joystick.getTrigger(GenericHID.Hand.kLeft);
+  public double getLeftTrigger() {
+    return joystick.getRawAxis(2);
+  }
+  
+  public double getRightTrigger() {
+    return joystick.getRawAxis(3);
   }
   
   public double getDPad(int button) {
