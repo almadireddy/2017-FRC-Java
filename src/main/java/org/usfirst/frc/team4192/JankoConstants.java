@@ -31,9 +31,9 @@ public class JankoConstants {
   public static int intakeAxis        = 2;
   public static int triggerWheelAxis  = 3;
   
-  public static double defaultDriveKp = 0.05;
+  public static double defaultDriveKp = 0.04;
   public static double defaultDriveKi = 0.0;
-  public static double defaultDriveKd = 0.0;
+  public static double defaultDriveKd = 0.25;
   
   public static double defaultGyroKp = 0.008;
   public static double defaultGyroKi = 0.0;

@@ -73,8 +73,10 @@ public class Robot extends IterativeRobot {
     driveKp = SmartDashboard.getNumber("driveP", JankoConstants.defaultDriveKp);
     driveKi = SmartDashboard.getNumber("driveI", JankoConstants.defaultDriveKi);
     drivekd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
-    jankoDrive.setPID(0.05, 0, 0.0);
+//    jankoDrive.setPID(0.04, 0, 0.25);
+    jankoDrive.setPID(driveKp, driveKi, drivekd);
   }
+  
   
   // updates all the gyro pid constants to what they are on the dashboard
   private void updateGyroConstants() {
@@ -171,8 +173,8 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
         SmartDashboard.putNumber("flywheelMeasuredRPM", -flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
-        SmartDashboard.putNumber("Left Encoder Value", jankoDrive.getLeftValue()/4096);
-        SmartDashboard.putNumber("Right Encoder Value", -jankoDrive.getRightValue()/4096);
+        SmartDashboard.putNumber("Left Encoder Value", -jankoDrive.getLeftValue()/4096);
+        SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
       }
     });
     dashboardUpdateThread.start();
@@ -232,7 +234,7 @@ public class Robot extends IterativeRobot {
   
   private void triggerControl() {
     if (joystick.getRightTrigger() > 0) {
-      trigger.set(-joystick.getRightTrigger() * 0.5);
+      trigger.set(-joystick.getRightTrigger() * 0.5 + 0.15);
       agitator.set(-1);
     }
     else {
@@ -329,7 +331,6 @@ public class Robot extends IterativeRobot {
     intakeControl();
     liftControl();
     flywheelPIDControl();
-//    agitatorControl();
     triggerControl();
     sensitivityControl();
     collisionRumble();
