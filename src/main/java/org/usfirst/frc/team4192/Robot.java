@@ -36,22 +36,20 @@ public class Robot extends IterativeRobot {
   private JaggernautJoystick joystick;
   private static AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
   
-  private static double gyroKp;      // Gyroscope PID constants
-  private static double gyroKi;
-  private static double gyroKd;
+  private static double driveKp = 0.04;     // Drive PID constants
+  private static double driveKi = 0.0;
+  private static double driveKd = 0.25;
   
-  private static double driveKp;     // Drive PID constants
-  private static double driveKi;
-  private static double drivekd;
+  private static double gyroKp = 0.08;      // Gyroscope PID constants
+  private static double gyroKi = 0;
+  private static double gyroKd = 0;
   
-  private static double flywheelKp;  // Drive PID constants
-  private static double flywheelKi;
-  private static double flywheelKd;
-  private static double flywheelKf;
+  private static double flywheelKp = 0.04;  // Drive PID constants
+  private static double flywheelKi = 0.0;
+  private static double flywheelKd = 0.7;
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  
   
   private LeftAuton leftAuton;
   private MiddleAuton redMiddleAuton;
@@ -64,7 +62,7 @@ public class Robot extends IterativeRobot {
   private CollisionDetector collisionDetector;
   
   //Flywheel Values
-  private Boolean flywheelEnabled = false;
+  private boolean flywheelEnabled = false;
   
   ////// End Instance Variables //////
   
@@ -72,9 +70,8 @@ public class Robot extends IterativeRobot {
   private void updateDriveConstants() {
     driveKp = SmartDashboard.getNumber("driveP", JankoConstants.defaultDriveKp);
     driveKi = SmartDashboard.getNumber("driveI", JankoConstants.defaultDriveKi);
-    drivekd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
-//    jankoDrive.setPID(0.04, 0, 0.25);
-    jankoDrive.setPID(driveKp, driveKi, drivekd);
+    driveKd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
+    jankoDrive.setPID(driveKp, driveKi, driveKd);
   }
   
   
@@ -83,7 +80,7 @@ public class Robot extends IterativeRobot {
     gyroKp = SmartDashboard.getNumber("gyroP", JankoConstants.defaultGyroKp);
     gyroKi = SmartDashboard.getNumber("gyroI", JankoConstants.defaultGyroKi);
     gyroKd = SmartDashboard.getNumber("gyroD", JankoConstants.defaultGyroKd);
-    turnController.setPID(0.008, 0, 0);
+    turnController.setPID(gyroKp, gyroKi, gyroKd);
   }
   
   // updates all the flywheelID pid constants to what they are on the dashboard
@@ -91,12 +88,8 @@ public class Robot extends IterativeRobot {
     flywheelKp = SmartDashboard.getNumber("flywheelP", JankoConstants.defaultFlywheelKp);
     flywheelKi = SmartDashboard.getNumber("flywheelI", JankoConstants.defaultFlywheelKi);
     flywheelKd = SmartDashboard.getNumber("flywheelD", JankoConstants.defaultFlywheelKd);
-    flywheelKf = SmartDashboard.getNumber("flywheelF", JankoConstants.defaultFlywheelKf);
     flywheelTargetRPM = SmartDashboard.getNumber("flywheelTarget", 0.0);
-    flywheel.setP(0.04);
-    flywheel.setI(flywheelKi);
-    flywheel.setD(0.7);
-    flywheel.setF(0.0);
+    flywheel.setPID(flywheelKp, flywheelKi, flywheelKd);
     flywheel.setSetpoint(flywheelTargetRPM);
   }
   
