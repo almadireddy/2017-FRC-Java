@@ -73,7 +73,7 @@ public class Robot extends IterativeRobot {
     driveKp = SmartDashboard.getNumber("driveP", JankoConstants.defaultDriveKp);
     driveKi = SmartDashboard.getNumber("driveI", JankoConstants.defaultDriveKi);
     drivekd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
-    jankoDrive.setPID(drivekd, driveKi, drivekd);
+    jankoDrive.setPID(0.05, 0, 0.0);
   }
   
   // updates all the gyro pid constants to what they are on the dashboard
@@ -81,7 +81,7 @@ public class Robot extends IterativeRobot {
     gyroKp = SmartDashboard.getNumber("gyroP", JankoConstants.defaultGyroKp);
     gyroKi = SmartDashboard.getNumber("gyroI", JankoConstants.defaultGyroKi);
     gyroKd = SmartDashboard.getNumber("gyroD", JankoConstants.defaultGyroKd);
-    turnController.setPID(gyroKp, gyroKi, gyroKd);
+    turnController.setPID(0.008, 0, 0);
   }
   
   // updates all the flywheelID pid constants to what they are on the dashboard
@@ -91,10 +91,10 @@ public class Robot extends IterativeRobot {
     flywheelKd = SmartDashboard.getNumber("flywheelD", JankoConstants.defaultFlywheelKd);
     flywheelKf = SmartDashboard.getNumber("flywheelF", JankoConstants.defaultFlywheelKf);
     flywheelTargetRPM = SmartDashboard.getNumber("flywheelTarget", 0.0);
-    flywheel.setP(flywheelKp);
+    flywheel.setP(0.04);
     flywheel.setI(flywheelKi);
-    flywheel.setD(flywheelKd);
-    flywheel.setF(flywheelKf);
+    flywheel.setD(0.7);
+    flywheel.setF(0.0);
     flywheel.setSetpoint(flywheelTargetRPM);
   }
   
@@ -172,7 +172,7 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("flywheelMeasuredRPM", -flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
         SmartDashboard.putNumber("Left Encoder Value", jankoDrive.getLeftValue()/4096);
-        SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
+        SmartDashboard.putNumber("Right Encoder Value", -jankoDrive.getRightValue()/4096);
       }
     });
     dashboardUpdateThread.start();

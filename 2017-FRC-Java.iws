@@ -6,29 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3a5a9a4-1dd1-4d89-b14a-92955a1efa60" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/BlueLeftAuton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/BlueMiddleAuton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/BlueRightAuton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedLeftAuton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/autonRoutines/RedRightAuton.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.2.1/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/JankoConstants.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/JankoConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/Robot.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/Robot.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/commands/turn.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/commands/turn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/utilities/JaggernautJoystick.class" afterPath="$PROJECT_DIR$/build/classes/main/org/usfirst/frc/team4192/utilities/JaggernautJoystick.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/2017-FRC-Java.jar" afterPath="$PROJECT_DIR$/build/libs/2017-FRC-Java.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2017-FRC-Java.iws" afterPath="$PROJECT_DIR$/2017-FRC-Java.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/LeftAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/LeftAuton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/MiddleAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/MiddleAuton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RightAuton.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RightAuton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" afterPath="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -123,11 +105,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5706941">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="Robot.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Robot.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
-                  <caret line="183" column="11" lean-forward="true" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
+                <state relative-caret-position="351">
+                  <caret line="75" column="34" lean-forward="false" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -162,11 +144,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CollisionDetector.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CollisionDetector.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/CollisionDetector.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="351">
-                  <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+                <state relative-caret-position="405">
+                  <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
@@ -189,7 +171,7 @@
           <file leaf-file-name="DefaultAuton.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/DefaultAuton.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="108">
+                <state relative-caret-position="135">
                   <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -201,8 +183,8 @@
           <file leaf-file-name="LeftAuton.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/LeftAuton.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+                <state relative-caret-position="270">
+                  <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -211,8 +193,8 @@
           <file leaf-file-name="RightAuton.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RightAuton.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="217">
-                  <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+                <state relative-caret-position="190">
+                  <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -222,10 +204,10 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/MiddleAuton.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="216">
-                  <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+                  <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
                   <folding>
                     <element signature="e#262#263#0" expanded="true" />
-                    <element signature="e#312#313#0" expanded="true" />
+                    <element signature="e#306#307#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -736,11 +718,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RedMiddleAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/Turn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/MiddleAuton.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/LeftAuton.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RightAuton.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java" />
       </list>
     </option>
   </component>
@@ -1361,7 +1343,7 @@
       <workItem from="1489099961307" duration="5724000" />
       <workItem from="1489155266570" duration="8287000" />
       <workItem from="1489171205904" duration="5873000" />
-      <workItem from="1489184742243" duration="4010000" />
+      <workItem from="1489184742243" duration="5976000" />
     </task>
     <task id="LOCAL-00001" summary="not much">
       <created>1485317152784</created>
@@ -1559,11 +1541,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489156124820</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="OMG everytihng kinda works the way it should.">
+      <created>1489188904718</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1489188904718</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112162000" />
+    <option name="totallyTimeSpent" value="114128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1577,7 +1566,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41722745" sideWeight="0.51992285" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2651413" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2651413" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3951676" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2416212" sideWeight="0.48007712" order="10" side_tool="false" content_ui="tabs" x="362" y="113" width="1038" height="364" />
@@ -1665,7 +1654,8 @@
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="Flywheel PID needs tuning, other than that everything seems to be working." />
     <MESSAGE value="Refactor autons and remove unnecessary auton routines" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor autons and remove unnecessary auton routines" />
+    <MESSAGE value="OMG everytihng kinda works the way it should." />
+    <option name="LAST_COMMIT_MESSAGE" value="OMG everytihng kinda works the way it should." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1771,27 +1761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/MiddleAuton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/DefaultAuton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/JaggernautJoystick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -1811,14 +1780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/LeftAuton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/commands/driveOn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
@@ -1835,6 +1796,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/CollisionDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/MiddleAuton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding>
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/LeftAuton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/DefaultAuton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/JankoConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -1845,26 +1843,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/Robot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="183" column="11" lean-forward="true" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
+        <state relative-caret-position="351">
+          <caret line="75" column="34" lean-forward="false" selection-start-line="75" selection-start-column="34" selection-end-line="75" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/utilities/CollisionDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="14" column="62" lean-forward="false" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/usfirst/frc/team4192/autonRoutines/RightAuton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        <state relative-caret-position="190">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding />
         </state>
       </provider>
