@@ -10,11 +10,12 @@ package org.usfirst.frc.team4192;
  */
 public class JankoConstants {
   public static int intakeID        = 0;  // intake is on victor
+  public static int triggerID       = 1;  // trigger is on spark
   public static int agitatorID      = 1;
   public static int liftID          = 2;
   public static int rightMasterID   = 3;
   public static int rightSlaveID    = 4;
-  public static int triggerID       = 5;
+  public static int actuatorID      = 5;
   public static int flywheelID      = 6;
   public static int leftSlaveID     = 7;
   public static int leftMasterID    = 8;
@@ -24,7 +25,8 @@ public class JankoConstants {
   public static int intakeReverse     = 1;
   public static int flywheelOn        = 2;
   public static int sensitivityButton = 3;
-  public static int climberUp         = 4;
+  public static int actuatorToggle    = 4;
+  public static int actuatorScore     = 8;
   public static int agitatorToggle    = 5;
   public static int liftButton        = 6;
   
@@ -43,4 +45,8 @@ public class JankoConstants {
   public static double defaultFlywheelKi = 0.0;
   public static double defaultFlywheelKd = 0.7;
   public static double defaultFlywheelKf = 0.2;
+  
+  public static double gearScorePosition = 100;
+  public static double gearLoadPosition  = 0;
+  public static double gearScore         = 150;
 }

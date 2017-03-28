@@ -23,15 +23,18 @@ public class Robot extends IterativeRobot {
   private static CANTalon rightSlave;
   public static CANTalon flywheel;
   private static CANTalon lift;
-  public static CANTalon trigger;
+  public static CANTalon actuator;
   public static CANTalon agitator;
   
   public static VictorSP intake;
+  public static Spark trigger;
   
   public static JankoDrive jankoDrive;
   public static double driveSensitivity;
   
   private static int drivePIDThreshold = 10;
+  
+  boolean scoringPosition = false;
   
   private JaggernautJoystick joystick;
   private static AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
@@ -107,11 +110,12 @@ public class Robot extends IterativeRobot {
   @Override
   public void robotInit() {
     intake = new VictorSP(JankoConstants.intakeID);
+    trigger = new Spark(JankoConstants.triggerID);
     agitator = new CANTalon(JankoConstants.agitatorID);
     lift = new CANTalon(JankoConstants.liftID);
     rightMaster = new CANTalon(JankoConstants.rightMasterID);
     rightSlave = new CANTalon(JankoConstants.rightSlaveID);
-    trigger = new CANTalon(JankoConstants.triggerID);
+    actuator = new CANTalon(JankoConstants.actuatorID);
     flywheel = new CANTalon(JankoConstants.flywheelID);
     leftSlave = new CANTalon(JankoConstants.leftSlaveID);
     leftMaster = new CANTalon(JankoConstants.leftMasterID);
@@ -131,8 +135,8 @@ public class Robot extends IterativeRobot {
     
     lift.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     agitator.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-    trigger.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-    
+    actuator.changeControlMode(CANTalon.TalonControlMode.Position);
+    actuator.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Absolute);
     joystick = new JaggernautJoystick(JankoConstants.joystick);
     
     ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
@@ -236,6 +240,26 @@ public class Robot extends IterativeRobot {
     }
   }
   
+  private void actuatorControl() {
+    if (joystick.buttonPressed(JankoConstants.actuatorToggle)) {
+      if (scoringPosition) {
+        actuator.setSetpoint(JankoConstants.gearLoadPosition);
+        scoringPosition = false;
+      } else {
+        actuator.setSetpoint(JankoConstants.gearScorePosition);
+        scoringPosition = true;
+      }
+    }
+  }
+  
+  private void actuatorScore(){
+    if (joystick.buttonPressed(JankoConstants.actuatorScore)){
+      if(scoringPosition) {
+        actuator.setSetpoint(JankoConstants.gearScore);
+      }
+    }
+  }
+  
   private void driveControl() {
     jankoDrive.arcadeDrive(-joystick.getYaxis()*driveSensitivity, -joystick.getXaxis()*driveSensitivity, true);
   }
@@ -267,40 +291,6 @@ public class Robot extends IterativeRobot {
       }
   }
   
-  private void flywheelBangBangControl() {
-    if (joystick.buttonPressed(JankoConstants.flywheelOn)) {
-      if (flywheel.get() > 0) {
-        flywheelEnabled = !flywheelEnabled;
-      }
-      else {
-        flywheelEnabled = true;
-      }
-    }
-    
-    if (flywheelEnabled) {
-      if (Math.abs(flywheel.getEncVelocity()) > flywheelTargetRPM) {
-        flywheel.set(0.2);
-      }
-      else
-        flywheel.set(0.8);
-    }
-    else
-      flywheel.set(0);
-  }
-  
-  private void agitatorControl() {
-    if (joystick.buttonPressed(JankoConstants.agitatorToggle)) {
-      if (agitator.isEnabled()) {
-        agitator.set(0);
-        agitator.disable();
-      }
-      else {
-        agitator.enable();
-        agitator.set(-1);
-      }
-    }
-  }
-  
   private void collisionRumble() {
     if (collisionDetector.isCollisionDetected())
       joystick.rumble();
@@ -327,6 +317,7 @@ public class Robot extends IterativeRobot {
     triggerControl();
     sensitivityControl();
     collisionRumble();
+    actuatorControl();
   }
   
   public static boolean gyroOnTarget() {
