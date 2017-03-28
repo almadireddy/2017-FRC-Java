@@ -33,6 +33,9 @@ public class JankoConstants {
   public static int intakeAxis        = 2;
   public static int triggerWheelAxis  = 3;
   
+  public static int reverseLimitSwitch = 0;
+  public static int forwardLimitSwitch = 1;
+  
   public static double defaultDriveKp = 0.04;
   public static double defaultDriveKi = 0.0;
   public static double defaultDriveKd = 0.25;
@@ -46,7 +49,6 @@ public class JankoConstants {
   public static double defaultFlywheelKd = 0.7;
   public static double defaultFlywheelKf = 0.2;
   
-  public static double gearScorePosition = 100;
-  public static double gearLoadPosition  = 0;
-  public static double gearScore         = 150;
+  public static double gearScorePosition = 65;
+  public static double gearLoadPosition  = 5;
 }

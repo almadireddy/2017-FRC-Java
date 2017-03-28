@@ -32,6 +32,9 @@ public class Robot extends IterativeRobot {
   public static JankoDrive jankoDrive;
   public static double driveSensitivity;
   
+  public static DigitalInput backSwitch;
+  public static DigitalInput frontSwitch;
+  
   private static int drivePIDThreshold = 10;
   
   boolean scoringPosition = false;
@@ -119,6 +122,9 @@ public class Robot extends IterativeRobot {
     flywheel = new CANTalon(JankoConstants.flywheelID);
     leftSlave = new CANTalon(JankoConstants.leftSlaveID);
     leftMaster = new CANTalon(JankoConstants.leftMasterID);
+  
+    backSwitch = new DigitalInput(0);
+    frontSwitch = new DigitalInput(1);
     
     NetworkTable.setServerMode();
     stateTable = NetworkTable.getTable("stateTable");
@@ -135,8 +141,7 @@ public class Robot extends IterativeRobot {
     
     lift.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     agitator.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
-    actuator.changeControlMode(CANTalon.TalonControlMode.Position);
-    actuator.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Absolute);
+    actuator.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     joystick = new JaggernautJoystick(JankoConstants.joystick);
     
     ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
@@ -172,6 +177,9 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
         SmartDashboard.putNumber("Left Encoder Value", -jankoDrive.getLeftValue()/4096);
         SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
+        SmartDashboard.putBoolean("Front Limit Switch", frontSwitch.get());
+        SmartDashboard.putBoolean("Back Limit Switch", backSwitch.get());
+        
       }
     });
     dashboardUpdateThread.start();
@@ -241,24 +249,19 @@ public class Robot extends IterativeRobot {
   }
   
   private void actuatorControl() {
-    if (joystick.buttonPressed(JankoConstants.actuatorToggle)) {
-      if (scoringPosition) {
-        actuator.setSetpoint(JankoConstants.gearLoadPosition);
-        scoringPosition = false;
-      } else {
-        actuator.setSetpoint(JankoConstants.gearScorePosition);
-        scoringPosition = true;
-      }
+    double outputValue = joystick.getRightTrigger() - joystick.getLeftTrigger();
+  
+    if (outputValue < 0 && !backSwitch.get()) {
+      outputValue = 0;
     }
+    
+    if (outputValue > 0 && !frontSwitch.get()) {
+      outputValue = 0;
+    }
+    
+    actuator.set(outputValue*0.5);
   }
   
-  private void actuatorScore(){
-    if (joystick.buttonPressed(JankoConstants.actuatorScore)){
-      if(scoringPosition) {
-        actuator.setSetpoint(JankoConstants.gearScore);
-      }
-    }
-  }
   
   private void driveControl() {
     jankoDrive.arcadeDrive(-joystick.getYaxis()*driveSensitivity, -joystick.getXaxis()*driveSensitivity, true);
@@ -311,7 +314,7 @@ public class Robot extends IterativeRobot {
   public void teleopPeriodic() {
     joystick.update();
     driveControl();
-    intakeControl();
+//    intakeControl();
     liftControl();
     flywheelPIDControl();
     triggerControl();
