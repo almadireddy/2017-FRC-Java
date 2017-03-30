@@ -2,6 +2,7 @@ package org.usfirst.frc.team4192.utilities;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * Created by Al on 2/23/2017.
@@ -13,8 +14,9 @@ public class JaggernautJoystick {
   
   public JaggernautJoystick(int port) {
     joystick = new Joystick(port);
-    currentButtons = new boolean[joystick.getButtonCount()];
-    lastButtons = new boolean[joystick.getButtonCount()];
+    SmartDashboard.putNumber("Joystick Buttons", joystick.getButtonCount());
+    currentButtons = new boolean[11];
+    lastButtons = new boolean[11];
     updateButtonStates();
   }
   

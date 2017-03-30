@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4192.autonRoutines;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import org.usfirst.frc.team4192.commands.ActuatorInitialize;
 import org.usfirst.frc.team4192.commands.driveOn;
 
 /**
@@ -8,6 +9,7 @@ import org.usfirst.frc.team4192.commands.driveOn;
  */
 public class DefaultAuton extends CommandGroup {
   public DefaultAuton() {
+    addParallel(new ActuatorInitialize(), 5);
     addSequential(new driveOn(100));
   }
 }

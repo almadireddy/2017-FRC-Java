@@ -49,6 +49,6 @@ public class JankoConstants {
   public static double defaultFlywheelKd = 0.7;
   public static double defaultFlywheelKf = 0.2;
   
-  public static double gearScorePosition = 65;
-  public static double gearLoadPosition  = 5;
+  public static double gearScorePosition = 78;
+  public static double gearLoadPosition  = 10;
 }

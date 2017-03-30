@@ -131,7 +131,7 @@ public class Robot extends IterativeRobot {
     
     jankoDrive = new JankoDrive(leftMaster, leftSlave, rightMaster, rightSlave);
     jankoDrive.setSlewRate(60);
-    driveSensitivity = 0.8;
+    driveSensitivity = 1.0;
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
@@ -142,6 +142,7 @@ public class Robot extends IterativeRobot {
     lift.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     agitator.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     actuator.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+    actuator.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
     joystick = new JaggernautJoystick(JankoConstants.joystick);
     
     ahrs = new AHRS(SPI.Port.kMXP); // set the NavX board to use the MXP port in the middle of the roboRIO
@@ -179,13 +180,14 @@ public class Robot extends IterativeRobot {
         SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
         SmartDashboard.putBoolean("Front Limit Switch", frontSwitch.get());
         SmartDashboard.putBoolean("Back Limit Switch", backSwitch.get());
-        
+        SmartDashboard.putNumber("Actuator Encoder Position", actuator.getEncPosition());
       }
     });
     dashboardUpdateThread.start();
   
     collisionDetector.start();
     CameraServer.getInstance().startAutomaticCapture();
+    
   }
   
   @Override
@@ -233,8 +235,12 @@ public class Robot extends IterativeRobot {
   
   
   private void sensitivityControl() {
-    if (joystick.isHeldDown(JankoConstants.sensitivityButton)) driveSensitivity = 0.5;
-    else driveSensitivity = 0.9;
+    if (joystick.buttonPressed(JankoConstants.sensitivityButton)) {
+      if (driveSensitivity == 0.65)
+        driveSensitivity = 1;
+      else
+        driveSensitivity = 0.65;
+    }
   }
   
   private void triggerControl() {
@@ -249,17 +255,15 @@ public class Robot extends IterativeRobot {
   }
   
   private void actuatorControl() {
-    double outputValue = joystick.getRightTrigger() - joystick.getLeftTrigger();
-  
-    if (outputValue < 0 && !backSwitch.get()) {
-      outputValue = 0;
+    if (joystick.buttonPressed(JankoConstants.actuatorToggle)) {
+      if (scoringPosition) {
+        actuator.setSetpoint(JankoConstants.gearLoadPosition);
+        scoringPosition = false;
+      } else {
+        actuator.setSetpoint(JankoConstants.gearScorePosition);
+        scoringPosition = true;
+      }
     }
-    
-    if (outputValue > 0 && !frontSwitch.get()) {
-      outputValue = 0;
-    }
-    
-    actuator.set(outputValue*0.5);
   }
   
   
@@ -310,8 +314,20 @@ public class Robot extends IterativeRobot {
     stateTable.putBoolean("autonomousMode", false);
   }
   
+  int var = 0;
+  
   @Override
   public void teleopPeriodic() {
+    if (var == 0) {
+      while (backSwitch.get()) {
+        actuator.set(-0.15);
+      }
+      actuator.set(0);
+      actuator.changeControlMode(CANTalon.TalonControlMode.Position);
+      actuator.setEncPosition(0);
+      
+      var = 1;
+    }
     joystick.update();
     driveControl();
 //    intakeControl();
