@@ -17,6 +17,7 @@ public class ActuatorForward extends Command {
   @Override
   protected void initialize() {
     Robot.actuator.changeControlMode(CANTalon.TalonControlMode.Position);
+    Robot.actuator.enable();
   }
   
   @Override

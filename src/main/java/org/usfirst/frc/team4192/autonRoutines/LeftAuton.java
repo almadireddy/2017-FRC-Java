@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4192.autonRoutines;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import org.usfirst.frc.team4192.commands.ActuatorInitialize;
 import org.usfirst.frc.team4192.commands.Turn;
 import org.usfirst.frc.team4192.commands.driveOn;
 
@@ -9,8 +10,9 @@ import org.usfirst.frc.team4192.commands.driveOn;
  */
 public class LeftAuton extends CommandGroup {
   public LeftAuton() {
-    addSequential(new driveOn(68), 3.5);
+    addParallel(new ActuatorInitialize(), 10);
+    addSequential(new driveOn(50), 3.5);
     addSequential(new Turn(70), 2);
-    addSequential(new driveOn(48), 5);
+    addSequential(new driveOn(66), 5);
   }
 }

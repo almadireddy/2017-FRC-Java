@@ -21,19 +21,18 @@ public class Robot extends IterativeRobot {
   public static CANTalon rightMaster;
   private static CANTalon leftSlave;
   private static CANTalon rightSlave;
-  public static CANTalon flywheel;
+  private static CANTalon flywheel;
   private static CANTalon lift;
   public static CANTalon actuator;
-  public static CANTalon agitator;
+  private static CANTalon agitator;
   
-  public static VictorSP intake;
-  public static Spark trigger;
+  private static VictorSP intake;
+  private static Spark trigger;
   
   public static JankoDrive jankoDrive;
-  public static double driveSensitivity;
+  private static double driveSensitivity;
   
   public static DigitalInput backSwitch;
-  public static DigitalInput frontSwitch;
   
   private static int drivePIDThreshold = 10;
   
@@ -42,26 +41,9 @@ public class Robot extends IterativeRobot {
   private JaggernautJoystick joystick;
   private static AHRS ahrs;          // the NavX board, I'm calling it ahrs because thats what all the examples call it.
   
-  private static double driveKp = 0.04;     // Drive PID constants
-  private static double driveKi = 0.0;
-  private static double driveKd = 0.25;
-  
-  private static double gyroKp = 0.08;      // Gyroscope PID constants
-  private static double gyroKi = 0;
-  private static double gyroKd = 0;
-  
-  private static double flywheelKp = 0.04;  // Drive PID constants
-  private static double flywheelKi = 0.0;
-  private static double flywheelKd = 0.7;
   private static double flywheelTargetRPM;
   
   public static PIDController turnController;
-  
-  private LeftAuton leftAuton;
-  private MiddleAuton redMiddleAuton;
-  private RightAuton rightAuton;
-  
-  private DefaultAuton defaultAuton;
   
   private NetworkTable stateTable;
   
@@ -74,28 +56,18 @@ public class Robot extends IterativeRobot {
   
   // updates all the drive pid constants to what they are on the dashboard
   private void updateDriveConstants() {
-    driveKp = SmartDashboard.getNumber("driveP", JankoConstants.defaultDriveKp);
-    driveKi = SmartDashboard.getNumber("driveI", JankoConstants.defaultDriveKi);
-    driveKd = SmartDashboard.getNumber("driveD", JankoConstants.defaultDriveKd);
-    jankoDrive.setPID(driveKp, driveKi, driveKd);
+    jankoDrive.setPID(JankoConstants.defaultDriveKp, JankoConstants.defaultDriveKi, JankoConstants.defaultDriveKd);
   }
   
-  
-  // updates all the gyro pid constants to what they are on the dashboard
+  // updates all the gyro pid constant8s to what they are on the dashboard
   private void updateGyroConstants() {
-    gyroKp = SmartDashboard.getNumber("gyroP", JankoConstants.defaultGyroKp);
-    gyroKi = SmartDashboard.getNumber("gyroI", JankoConstants.defaultGyroKi);
-    gyroKd = SmartDashboard.getNumber("gyroD", JankoConstants.defaultGyroKd);
-    turnController.setPID(gyroKp, gyroKi, gyroKd);
+    turnController.setPID(JankoConstants.defaultGyroKp, JankoConstants.defaultGyroKi, JankoConstants.defaultGyroKd);
   }
   
   // updates all the flywheelID pid constants to what they are on the dashboard
   private void updateFlywheelConstants() {
-    flywheelKp = SmartDashboard.getNumber("flywheelP", JankoConstants.defaultFlywheelKp);
-    flywheelKi = SmartDashboard.getNumber("flywheelI", JankoConstants.defaultFlywheelKi);
-    flywheelKd = SmartDashboard.getNumber("flywheelD", JankoConstants.defaultFlywheelKd);
     flywheelTargetRPM = SmartDashboard.getNumber("flywheelTarget", 0.0);
-    flywheel.setPID(flywheelKp, flywheelKi, flywheelKd);
+    flywheel.setPID(JankoConstants.defaultFlywheelKp, JankoConstants.defaultFlywheelKi, JankoConstants.defaultFlywheelKd);
     flywheel.setSetpoint(flywheelTargetRPM);
   }
   
@@ -124,14 +96,13 @@ public class Robot extends IterativeRobot {
     leftMaster = new CANTalon(JankoConstants.leftMasterID);
   
     backSwitch = new DigitalInput(0);
-    frontSwitch = new DigitalInput(1);
     
     NetworkTable.setServerMode();
     stateTable = NetworkTable.getTable("stateTable");
     
     jankoDrive = new JankoDrive(leftMaster, leftSlave, rightMaster, rightSlave);
     jankoDrive.setSlewRate(60);
-    driveSensitivity = 1.0;
+    driveSensitivity = 0.85;
     
     flywheel.changeControlMode(CANTalon.TalonControlMode.Speed);
     flywheel.setFeedbackDevice(CANTalon.FeedbackDevice.CtreMagEncoder_Relative);
@@ -155,8 +126,6 @@ public class Robot extends IterativeRobot {
     turnController.setAbsoluteTolerance(3.0);
     turnController.setContinuous(true);
     turnController.disable();
-
-    updatePIDConstants();
     
     collisionDetector = new CollisionDetector(ahrs);
 
@@ -174,11 +143,11 @@ public class Robot extends IterativeRobot {
     Thread dashboardUpdateThread = new Thread(() -> {
       while (!Thread.interrupted()) {
         SmartDashboard.putNumber("actualHeading", ahrs.getAngle());
+        SmartDashboard.putNumber("Climber Current", lift.getOutputCurrent());
         SmartDashboard.putNumber("flywheelMeasuredRPM", -flywheel.getEncVelocity());
         SmartDashboard.putNumber("targetRPM", flywheelTargetRPM);
         SmartDashboard.putNumber("Left Encoder Value", -jankoDrive.getLeftValue()/4096);
         SmartDashboard.putNumber("Right Encoder Value", jankoDrive.getRightValue()/4096);
-        SmartDashboard.putBoolean("Front Limit Switch", frontSwitch.get());
         SmartDashboard.putBoolean("Back Limit Switch", backSwitch.get());
         SmartDashboard.putNumber("Actuator Encoder Position", actuator.getEncPosition());
       }
@@ -186,8 +155,9 @@ public class Robot extends IterativeRobot {
     dashboardUpdateThread.start();
   
     collisionDetector.start();
-    CameraServer.getInstance().startAutomaticCapture();
-    
+  
+    stateTable.putBoolean("autonomousMode", false);
+    stateTable.putBoolean("teleop", false);
   }
   
   @Override
@@ -205,6 +175,13 @@ public class Robot extends IterativeRobot {
     zeroSensors();
     updatePIDConstants();
     stateTable.putBoolean("autonomousMode", true);
+    stateTable.putBoolean("teleop", false);
+    
+    LeftAuton leftAuton;
+    MiddleAuton middleAuton;
+    RightAuton rightAuton;
+    DefaultAuton defaultAuton;
+    
     switch (SmartDashboard.getString("Selected Autonomous", "default")) {
       case "Left":
         leftAuton = new LeftAuton();
@@ -212,8 +189,8 @@ public class Robot extends IterativeRobot {
         break;
         
       case "Middle":
-        redMiddleAuton = new MiddleAuton();
-        redMiddleAuton.start();
+        middleAuton = new MiddleAuton();
+        middleAuton.start();
         break;
       
       case "Right":
@@ -237,7 +214,7 @@ public class Robot extends IterativeRobot {
   private void sensitivityControl() {
     if (joystick.buttonPressed(JankoConstants.sensitivityButton)) {
       if (driveSensitivity == 0.65)
-        driveSensitivity = 1;
+        driveSensitivity = 0.90;
       else
         driveSensitivity = 0.65;
     }
@@ -306,36 +283,30 @@ public class Robot extends IterativeRobot {
   @Override
   public void teleopInit() {
     zeroSensors();
+    updatePIDConstants();
+    actuator.enable();
     
     if (turnController.isEnabled())
       turnController.disable();
     
     jankoDrive.prepareForTeleop();
     stateTable.putBoolean("autonomousMode", false);
+    stateTable.putBoolean("teleop", true);
+    
+    jankoDrive.setSlewRate(60);
   }
   
-  int var = 0;
   
   @Override
   public void teleopPeriodic() {
-    if (var == 0) {
-      while (backSwitch.get()) {
-        actuator.set(-0.15);
-      }
-      actuator.set(0);
-      actuator.changeControlMode(CANTalon.TalonControlMode.Position);
-      actuator.setEncPosition(0);
-      
-      var = 1;
-    }
     joystick.update();
     driveControl();
 //    intakeControl();
     liftControl();
-    flywheelPIDControl();
-    triggerControl();
+//    flywheelPIDControl();
+//    triggerControl();
     sensitivityControl();
-    collisionRumble();
+//    collisionRumble();
     actuatorControl();
   }
   

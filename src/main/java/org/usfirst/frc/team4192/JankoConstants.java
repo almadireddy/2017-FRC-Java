@@ -36,11 +36,12 @@ public class JankoConstants {
   public static int reverseLimitSwitch = 0;
   public static int forwardLimitSwitch = 1;
   
-  public static double defaultDriveKp = 0.04;
-  public static double defaultDriveKi = 0.0;
-  public static double defaultDriveKd = 0.25;
+  public static double defaultDriveKp  = 0.025;
+  public static double defaultDriveKi  = 0.0;
+  public static double defaultDriveKd  = 0.5;
+  public static double defaultRampRate = 1;
   
-  public static double defaultGyroKp = 0.008;
+  public static double defaultGyroKp = 0.08;
   public static double defaultGyroKi = 0.0;
   public static double defaultGyroKd = 0.0;
   
@@ -49,6 +50,6 @@ public class JankoConstants {
   public static double defaultFlywheelKd = 0.7;
   public static double defaultFlywheelKf = 0.2;
   
-  public static double gearScorePosition = 78;
-  public static double gearLoadPosition  = 10;
+  public static double gearScorePosition = 81;
+  public static double gearLoadPosition  = 7;
 }

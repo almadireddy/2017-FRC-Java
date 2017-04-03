@@ -59,6 +59,8 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   }
   
   public void prepareForAuton() {
+    leftMaster.setProfile(0);
+    rightMaster.setProfile(0);
     leftMaster.changeControlMode(CANTalon.TalonControlMode.Position);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.Position);
     
@@ -68,6 +70,7 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   public void prepareForTeleop() {
     leftMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
     rightMaster.changeControlMode(CANTalon.TalonControlMode.PercentVbus);
+    setSlewRate(60);
     zeroEncoders();
   }
   
