@@ -4,10 +4,9 @@ import com.ctre.CANTalon;
 import edu.wpi.first.wpilibj.PIDOutput;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc.team4192.utilities.DriveSignal;
 
 /**
- * Created by aahladmadireddy on 2/25/17.
+ * Created by Al on 2/25/17.
  */
 public class JankoDrive extends RobotDrive implements PIDOutput {
   private CANTalon leftMaster, leftSlave, rightMaster, rightSlave;
@@ -42,7 +41,6 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
     rightSlave.changeControlMode(CANTalon.TalonControlMode.Follower);
     rightSlave.set(rightMaster.getDeviceID());
     
-    /* set the peak and nominal outputs, 12V means full */
     leftMaster.configNominalOutputVoltage(+0.0f, -0.0f);
     leftSlave.configPeakOutputVoltage(+12.0f, -12.0f);
     rightMaster.configNominalOutputVoltage(+0.0f, -0.0f);
@@ -102,11 +100,6 @@ public class JankoDrive extends RobotDrive implements PIDOutput {
   public void setSetpoint(double setpoint) {
     leftMaster.setSetpoint(setpoint);
     rightMaster.setSetpoint(setpoint);
-  }
-  
-  public void set(DriveSignal signal) {
-    leftMaster.set(signal.leftMotor);
-    rightMaster.set(signal.rightMotor);
   }
   
   public boolean isOnTarget() {

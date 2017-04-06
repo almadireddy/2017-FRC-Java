@@ -4,15 +4,15 @@ import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
- * Created by szydlikr on 3/4/2017.
+ * Created by Al on 3/4/2017.
  */
 public class CollisionDetector {
   private AHRS ahrs;
-  private double last_world_linear_accel_x;
-  private double last_world_linear_accel_y;
+  private double lastWorldAccelX;
+  private double lastWorldAccelY;
   private boolean collisionDetected = false;
   
-  private final static double kCollisionThreshold_DeltaG = 0.5f;
+  private final static double collisionThreshold = 0.5f;
   
   public CollisionDetector(AHRS ahrs) {
     this.ahrs = ahrs;
@@ -22,15 +22,15 @@ public class CollisionDetector {
     while (!Thread.interrupted()) {
       collisionDetected = false;
   
-      double curr_world_linear_accel_x = ahrs.getWorldLinearAccelX();
-      double currentJerkX = curr_world_linear_accel_x - last_world_linear_accel_x;
-      last_world_linear_accel_x = curr_world_linear_accel_x;
-      double curr_world_linear_accel_y = ahrs.getWorldLinearAccelY();
-      double currentJerkY = curr_world_linear_accel_y - last_world_linear_accel_y;
-      last_world_linear_accel_y = curr_world_linear_accel_y;
+      double currentWorldAccelX = ahrs.getWorldLinearAccelX();
+      double currentJerkX = currentWorldAccelX - lastWorldAccelX;
+      lastWorldAccelX = currentWorldAccelX;
+      double currWorldAccelY = ahrs.getWorldLinearAccelY();
+      double currentJerkY = currWorldAccelY - lastWorldAccelY;
+      lastWorldAccelY = currWorldAccelY;
   
-      if ( ( Math.abs(currentJerkX) > kCollisionThreshold_DeltaG ) ||
-          ( Math.abs(currentJerkY) > kCollisionThreshold_DeltaG) ) {
+      if (Math.abs(currentJerkX) > collisionThreshold ||
+          Math.abs(currentJerkY) > collisionThreshold) {
         collisionDetected = true;
       }
       SmartDashboard.putBoolean("CollisionDetected", collisionDetected);

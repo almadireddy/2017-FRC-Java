@@ -6,7 +6,6 @@ package org.usfirst.frc.team4192;
 
 /*
  * This class contains all the port mappings on Janko Fett
- * TODO: Replace with actual port mappings
  */
 public class JankoConstants {
   public static int intakeID        = 0;  // intake is on victor

@@ -7,10 +7,10 @@ import org.usfirst.frc.team4192.Robot;
 /**
  * Created by Al on 2/8/2017.
  */
-public class driveOn extends Command {
+public class Move extends Command {
   double driveTarget;
   
-  public driveOn(double inches) {
+  public Move(double inches) {
     driveTarget = inches / (6 * Math.PI);
     SmartDashboard.putNumber("drive target inches", inches);
     SmartDashboard.putNumber("targetDistance", driveTarget);

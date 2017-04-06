@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc.team4192.Robot;
 
 /**
- * Created by darkb on 3/29/2017.
+ * Created by Al on 3/29/2017.
  */
 public class ActuatorInitialize extends Command {
   public ActuatorInitialize() {
